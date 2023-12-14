@@ -1,0 +1,42 @@
+---
+title: "Gustavo Frosi"
+comments: false
+image: "ima/t1.jpeg"
+toc: false
+about: 
+  template: jolla
+  id: hero-heading
+  links: 
+    - icon: github
+      text: Github
+      href: https://github.com/FGu5tav0
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/gustavo-frosi-78aa8516b/
+    - icon: envelope
+      text: Email
+      href: "mailto:gustavofrosi@hotmail.com" 
+    - icon: ""
+      text: CV.Lattes
+      href: "http://lattes.cnpq.br/3002134643485531"
+    - icon: ""
+      text: ResearchGate
+      href: "https://www.researchgate.net/profile/Gustavo_Frosi"
+---
+
+
+:::{#hero-heading}
+
+:::
+
+
+Olá! Sou Gustavo Frosi, formado em engenharia agronômica e mestre em ciência do solo. Atualmente, estou cursando doutorado na mesma área, concentrando minhas pesquisas e interesses de estudo na **química** e **mineralogia** do solo. Durante meu mestrado, investigamos o impacto da aplicação de resíduo industrial nos parâmetros químicos e mineralógicos do solo. No doutorado, meu foco é estabelecer a relação entre a mineralogia do solo como componente fundamental para a adubação de potássio e a capacidade de prever, por meio da mineralogia, o comportamento do nutriente e sua dinâmica no solo.
+
+Ao longo da minha trajetória acadêmica, mantive contato constante com dados e análises estatísticas, o que ao longo dos anos me levou a desenvolver um verdadeiro interesse por essa área.
+
+> A estatística é a gramática da ciência - Karl Pearson
+
+A frase de Pearson ilustra bem meu apego é minha dedicação no estudo da análise de dados e da estatística. Isso me motivou a avançar com estudos na área não só da estatística como da análise de dados como um todo. 
+
+
+

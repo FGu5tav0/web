@@ -1,0 +1,64 @@
+[
+  {
+    "objectID": "Projetos/um.html",
+    "href": "Projetos/um.html",
+    "title": "Primeiro",
+    "section": "",
+    "text": "Teste dois de graduação",
+    "crumbs": [
+      "Primeiro"
+    ]
+  },
+  {
+    "objectID": "Projetos/dois.html",
+    "href": "Projetos/dois.html",
+    "title": "Segundo",
+    "section": "",
+    "text": "tESTE DE LIXO",
+    "crumbs": [
+      "Segundo"
+    ]
+  },
+  {
+    "objectID": "CV/index.html",
+    "href": "CV/index.html",
+    "title": "Gustavo Frosi",
+    "section": "",
+    "text": "O Diogo e lindo e gay"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gustavo Frosi",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n  \n     CV.Lattes\n  \n  \n     ResearchGate\n  \n\n\n\nOlá! Sou Gustavo Frosi, formado em engenharia agronômica e mestre em ciência do solo. Atualmente, estou cursando doutorado na mesma área, concentrando minhas pesquisas e interesses de estudo na química e mineralogia do solo. Durante meu mestrado, investigamos o impacto da aplicação de resíduo industrial nos parâmetros químicos e mineralógicos do solo. No doutorado, meu foco é estabelecer a relação entre a mineralogia do solo como componente fundamental para a adubação de potássio e a capacidade de prever, por meio da mineralogia, o comportamento do nutriente e sua dinâmica no solo.\nAo longo da minha trajetória acadêmica, mantive contato constante com dados e análises estatísticas, o que ao longo dos anos me levou a desenvolver um verdadeiro interesse por essa área.\n\nA estatística é a gramática da ciência - Karl Pearson\n\nA frase de Pearson ilustra bem meu apego é minha dedicação no estudo da análise de dados e da estatística. Isso me motivou a avançar com estudos na área não só da estatística como da análise de dados como um todo."
+  },
+  {
+    "objectID": "Projetos/index.html",
+    "href": "Projetos/index.html",
+    "title": "Gustavo Frosi",
+    "section": "",
+    "text": "Aqui começa a brincadeira\n\n\nAqui é dois\n\n\nAqui mais um"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Gustavo Frosi",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Gustavo Frosi",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018\n\nThis content appears below the formatted about page content."
+  }
+]
