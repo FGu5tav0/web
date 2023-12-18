@@ -1,0 +1,19 @@
+---
+title: ""
+code-fold: true
+toc: true
+listing:
+  id: recap-listings
+  contents: recap
+  sort: "date desc"
+  categories:  true
+  type: grid
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+page-navigation: true
+---
+
+::: {#recap-listings}
+:::

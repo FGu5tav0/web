@@ -4,6 +4,7 @@ comments: false
 image: "ima/t1.jpeg"
 toc: false
 about: 
+  image-shape: round
   template: jolla
   id: hero-heading
   links: 
@@ -22,21 +23,57 @@ about:
     - icon: ""
       text: ResearchGate
       href: "https://www.researchgate.net/profile/Gustavo_Frosi"
+lang: pt
 ---
 
-
-:::{#hero-heading}
-
+::: {#hero-heading}
 :::
-
 
 Olá! Sou Gustavo Frosi, formado em engenharia agronômica e mestre em ciência do solo. Atualmente, estou cursando doutorado na mesma área, concentrando minhas pesquisas e interesses de estudo na **química** e **mineralogia** do solo. Durante meu mestrado, investigamos o impacto da aplicação de resíduo industrial nos parâmetros químicos e mineralógicos do solo. No doutorado, meu foco é estabelecer a relação entre a mineralogia do solo como componente fundamental para a adubação de potássio e a capacidade de prever, por meio da mineralogia, o comportamento do nutriente e sua dinâmica no solo.
 
-Ao longo da minha trajetória acadêmica, mantive contato constante com dados e análises estatísticas, o que ao longo dos anos me levou a desenvolver um verdadeiro interesse por essa área.
+Ao longo da minha trajetória acadêmica, estabeleci um contato constante com dados e análises estatísticas, o que, ao longo dos anos, conduziu ao desenvolvimento de um verdadeiro interesse por essa área. Inegavelmente, ciência e dados caminham lado a lado.
 
 > A estatística é a gramática da ciência - Karl Pearson
 
-A frase de Pearson ilustra bem meu apego é minha dedicação no estudo da análise de dados e da estatística. Isso me motivou a avançar com estudos na área não só da estatística como da análise de dados como um todo. 
+Esta frase de Pearson descreve bem meu apego e dedicação ao estudo da análise de dados e estatística, motivando-me a avançar nos estudos nessa área.
+
+# Interesses
+
+```{r, echo=F}
+data.frame(solo = c("Mineralogia",
+                                       "Química",
+                                       "Fertilidade"),
+                 dados = c("Manipulação",
+                                        "Inferência",
+                                        "Visualização")) |> 
+  kableExtra::kbl(col.names = c("Ciência do Solo", "Análise de dados"), align = "c", booktabs = T) |> 
+  kableExtra::row_spec(1:3, bold = T, color = "black", background = "white")
+  
+```
 
 
+<!-- | Ciência do Solo | Análise de dados | -->
+<!-- |:---------------:|:----------------:| -->
+<!-- |   Mineralogia   |   Manipulação    | -->
+<!-- |     Química     |    Inferência    | -->
+<!-- |   Fertilidade   |   Visualização   | -->
 
+# Habilidades
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> **R**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Markdown**/**Quarto**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Visualização**/**Manipulação de dados**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Inferência**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Python**
+
+# Educação
+
+<i class="bi bi-mortarboard"></i> Atualmente, doutorando em ciência do solo pela Universidade Federal do Rio Grande do Sul [<i class="bi bi-box-arrow-up-right"></i>](https://www.ufrgs.br/agronomia/joomla/index.php/ensino/pos-graduacao/pg-em-ciencia-do-solo) (2022 - ).
+
+<i class="bi bi-mortarboard"></i> Mestre em ciência do solo pela Universidade Federal do Rio Grande do Sul (UFRGS) (2020 - 2022).
+
+<i class="bi bi-mortarboard"></i> Engenheiro agrônomo pelo Instituto Federal do Paraná [<i class="bi bi-box-arrow-up-right"></i>](https://ifpragronomia.wixsite.com/agro) (2015 - 2019).

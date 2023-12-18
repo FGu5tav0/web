@@ -1,0 +1,15 @@
+{
+  "hash": "d7391d44cbac15d36ca516e2f5b1ccd9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nname: Marie\nsurname: Curie\nposition: \"Professor\"\naddress: \"School of Physics & Chemistry, École Normale Supérieure\"\nphone: +1 22 3333 4444\nwww: mariecurie.com\nemail: \"Marie.Curie@ens.fr\"\ntwitter: mariecurie\ngithub: mariecurie\nlinkedin: mariecurie\ndate: \"December 2023\"\noutput: vitae::moderncv\n---\n\n\n\n\n# Some stuff about me\n\n * I poisoned myself doing research.\n * I was the first woman to win a Nobel prize\n * I was the first person and only woman to win a Nobel prize in two different sciences.\n\n# Education\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 3 × 5\n  what                  when    with                where          why      \n  <chr>                 <chr>   <chr>               <chr>          <list>   \n1 Informal studies      1889-91 Flying University   Warsaw, Poland <chr [0]>\n2 Master of Physics     1893    Sorbonne Université Paris, France  <chr [0]>\n3 Master of Mathematics 1894    Sorbonne Université Paris, France  <chr [0]>\n```\n\n\n:::\n:::\n\n\n# Nobel Prizes\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n# A tibble: 2 × 3\n  what                      when with                                           \n  <glue>                   <dbl> <chr>                                          \n1 Nobel Prize in Physics    1903 Awarded for her work on radioactivity with Pie…\n2 Nobel Prize in Chemistry  1911 Awarded for the discovery of radium and poloni…\n```\n\n\n:::\n:::\n\n\n# Publications\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n::: {#refs-66a2490d32f83d033679bc618513c6bd}\n:::\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,13 +1,38 @@
 [
   {
-    "objectID": "Projetos/um.html",
-    "href": "Projetos/um.html",
-    "title": "Primeiro",
+    "objectID": "recap.html",
+    "href": "recap.html",
+    "title": "Gustavo Frosi",
     "section": "",
-    "text": "Teste dois de graduação",
-    "crumbs": [
-      "Primeiro"
-    ]
+    "text": "Trabalhos - XXIII CLACS | XXXVIII CBCS\n\n\n\nR\n\n\nSolos\n\n\n\nExplorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS.\n\n\n\nGustavo Frosi, Dayana Eckert\n\n\n17 de dez. de 2023\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+  },
+  {
+    "objectID": "recap/dois.html",
+    "href": "recap/dois.html",
+    "title": "Segundo",
+    "section": "",
+    "text": "tESTE DE LIXO"
+  },
+  {
+    "objectID": "Projetos/index.html",
+    "href": "Projetos/index.html",
+    "title": "Gustavo Frosi",
+    "section": "",
+    "text": "Em construção…"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gustavo Frosi",
+    "section": "",
+    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n  \n     CV.Lattes\n  \n  \n     ResearchGate\n  \n\n\n\nOlá! Sou Gustavo Frosi, formado em engenharia agronômica e mestre em ciência do solo. Atualmente, estou cursando doutorado na mesma área, concentrando minhas pesquisas e interesses de estudo na química e mineralogia do solo. Durante meu mestrado, investigamos o impacto da aplicação de resíduo industrial nos parâmetros químicos e mineralógicos do solo. No doutorado, meu foco é estabelecer a relação entre a mineralogia do solo como componente fundamental para a adubação de potássio e a capacidade de prever, por meio da mineralogia, o comportamento do nutriente e sua dinâmica no solo.\nAo longo da minha trajetória acadêmica, estabeleci um contato constante com dados e análises estatísticas, o que, ao longo dos anos, conduziu ao desenvolvimento de um verdadeiro interesse por essa área. Inegavelmente, ciência e dados caminham lado a lado.\n\nA estatística é a gramática da ciência - Karl Pearson\n\nEsta frase de Pearson descreve bem meu apego e dedicação ao estudo da análise de dados e estatística, motivando-me a avançar nos estudos nessa área.\n\nInteresses\n\n\n\n\n\nCiência do Solo\nAnálise de dados\n\n\n\n\nMineralogia\nManipulação\n\n\nQuímica\nInferência\n\n\nFertilidade\nVisualização\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHabilidades\n     R\n     Markdown/Quarto\n     Visualização/Manipulação de dados\n     Inferência\n     Python\n\n\nEducação\n Atualmente, doutorando em ciência do solo pela Universidade Federal do Rio Grande do Sul  (2022 - ).\n Mestre em ciência do solo pela Universidade Federal do Rio Grande do Sul (UFRGS) (2020 - 2022).\n Engenheiro agrônomo pelo Instituto Federal do Paraná  (2015 - 2019)."
+  },
+  {
+    "objectID": "CV/index.html",
+    "href": "CV/index.html",
+    "title": "Gustavo Frosi",
+    "section": "",
+    "text": "Página em construção"
   },
   {
     "objectID": "Projetos/dois.html",
@@ -20,45 +45,118 @@
     ]
   },
   {
-    "objectID": "CV/index.html",
-    "href": "CV/index.html",
-    "title": "Gustavo Frosi",
+    "objectID": "Projetos/um.html",
+    "href": "Projetos/um.html",
+    "title": "Primeiro",
     "section": "",
-    "text": "O Diogo e lindo e gay"
+    "text": "Teste dois de graduação",
+    "crumbs": [
+      "Primeiro"
+    ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "recap/um.html",
+    "href": "recap/um.html",
+    "title": "RStudio & Quarto",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Aviso\n\n\n\nTo follow along, you’ll need:\n\nR & RStudio installed (find the latest RStudio release here)\nQuarto installed – Quarto is now included with RStudio v2022.07.1+"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "recap/um.html#using-quarto-in-the-rstudio-ide",
+    "href": "recap/um.html#using-quarto-in-the-rstudio-ide",
+    "title": "RStudio & Quarto",
+    "section": "Using Quarto in the RStudio IDE",
+    "text": "Using Quarto in the RStudio IDE\n\nVisual editor\nRStudio’s visual editor mode includes extensive support for authoring documents.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisual editor documentation \n\n\n\nOutline"
+  },
+  {
+    "objectID": "recap/um.html#yaml-intelligence",
+    "href": "recap/um.html#yaml-intelligence",
+    "title": "RStudio & Quarto",
+    "section": "YAML intelligence",
+    "text": "YAML intelligence\nYAML intelligence is available for project files, YAML front matter, and executable cell options.\n\n\n\n\n\n\n\n\n\n\n\n\n\n  Incorrect YAML fields will be highlighted:"
+  },
+  {
+    "objectID": "index.html#ciência-do-solo",
+    "href": "index.html#ciência-do-solo",
     "title": "Gustavo Frosi",
+    "section": "Ciência do solo:",
+    "text": "Ciência do solo:\n\nMineralogia;\nQuímica;\nFertilidade."
+  },
+  {
+    "objectID": "index.html#análise-de-dados",
+    "href": "index.html#análise-de-dados",
+    "title": "Gustavo Frosi",
+    "section": "Análise de dados",
+    "text": "Análise de dados\n\nManipulação;\nInferência;\nVisualização.\n\n\n\n\nCiência do Solo\nAnálise de dados\n\n\n\n\nMineralogia\nManipulação\n\n\nQuímica\nInferência\n\n\nFertilidade\nVisualização"
+  },
+  {
+    "objectID": "CV/CV/CV.html",
+    "href": "CV/CV/CV.html",
+    "title": "Some stuff about me",
     "section": "",
-    "text": "Github\n  \n  \n    \n     LinkedIn\n  \n  \n    \n     Email\n  \n  \n     CV.Lattes\n  \n  \n     ResearchGate\n  \n\n\n\nOlá! Sou Gustavo Frosi, formado em engenharia agronômica e mestre em ciência do solo. Atualmente, estou cursando doutorado na mesma área, concentrando minhas pesquisas e interesses de estudo na química e mineralogia do solo. Durante meu mestrado, investigamos o impacto da aplicação de resíduo industrial nos parâmetros químicos e mineralógicos do solo. No doutorado, meu foco é estabelecer a relação entre a mineralogia do solo como componente fundamental para a adubação de potássio e a capacidade de prever, por meio da mineralogia, o comportamento do nutriente e sua dinâmica no solo.\nAo longo da minha trajetória acadêmica, mantive contato constante com dados e análises estatísticas, o que ao longo dos anos me levou a desenvolver um verdadeiro interesse por essa área.\n\nA estatística é a gramática da ciência - Karl Pearson\n\nA frase de Pearson ilustra bem meu apego é minha dedicação no estudo da análise de dados e da estatística. Isso me motivou a avançar com estudos na área não só da estatística como da análise de dados como um todo."
+    "text": "Some stuff about me\n\nI poisoned myself doing research.\nI was the first woman to win a Nobel prize\nI was the first person and only woman to win a Nobel prize in two different sciences.\n\n\n\nEducation\n\n\n# A tibble: 3 × 5\n  what                  when    with                where          why      \n  &lt;chr&gt;                 &lt;chr&gt;   &lt;chr&gt;               &lt;chr&gt;          &lt;list&gt;   \n1 Informal studies      1889-91 Flying University   Warsaw, Poland &lt;chr [0]&gt;\n2 Master of Physics     1893    Sorbonne Université Paris, France  &lt;chr [0]&gt;\n3 Master of Mathematics 1894    Sorbonne Université Paris, France  &lt;chr [0]&gt;\n\n\n\n\nNobel Prizes\n\n\n# A tibble: 2 × 3\n  what                      when with                                           \n  &lt;glue&gt;                   &lt;dbl&gt; &lt;chr&gt;                                          \n1 Nobel Prize in Physics    1903 Awarded for her work on radioactivity with Pie…\n2 Nobel Prize in Chemistry  1911 Awarded for the discovery of radium and poloni…\n\n\n\n\nPublications"
   },
   {
-    "objectID": "Projetos/index.html",
-    "href": "Projetos/index.html",
-    "title": "Gustavo Frosi",
+    "objectID": "CV/cv.html",
+    "href": "CV/cv.html",
+    "title": "Beatriz Milz",
     "section": "",
-    "text": "Aqui começa a brincadeira\n\n\nAqui é dois\n\n\nAqui mais um"
+    "text": "Hi! I’m a co-organizer of R-Ladies São Paulo since 2018, and I have taught in several meetups and workshops. All the slides are available here: beamilz.com/talks/. I’m also a co-organizer of satRday São Paulo and LatinR.\n\n\n\n tidyverse certified trainer by RStudio.   The Carpentries instructor.\n\n\n\nPortuguese: Native  English: Proficient  Spanish: Proficient\n\n\n\n rstudio::conf() 2022 - Diversity Scholarship.\n FAPESP. Doctorate Scholarship - 2019-2021.\n useR! 2019 - Diversity Scholarship.\n LatinR 2019 - Diversity Scholarship.\n\n\n\n R OpenSci: reviews available here.\n\n\n\n Package {dados} - Available on CRAN - Co-Author.\n Package {mananciais} - Author, maintainer.\n\n\n\n R   tidyverse   RMarkdown / Quarto   Git   GitHub   Markdown   HTML   CSS \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurrent  |  2022\nConsultant at Curso-R/R6.  Main activities: developing and maintaining Shiny Apps, developing parametrized and reproducible reports with R Markdown, Web Scraping with R, Automating tasks with R and GitHub Actions. &lt;i class=\n\n\nCurrent  |  2020\nTeacher at Curso-R.  Courses taught:Reporting with R  R for Data Science I  R Packages  Data Visualization  Introduction to Programming with R\n\n\n2015  |  2014\nIntern in Environmental Managment at the City Hall of Sao Paulo.  Main activities: Preparation of reports, creating maps using Quantum GIS. &lt;i class=\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2023  |  2022\nSummer Course: Reproducible Reports with R - 2022, 2023  Institute of Mathematics and Statistics, University of São Paulo (IME/USP)\n\n\n2022\nTeaching Assistant (TA) - Course: Data Treatment and Analysis  Bachelor Program in Environmental Management. School of Arts, Sciences and Humanities - University of São Paulo (EACH/USP) &lt;i class=\n\n\n2022\nTeaching Assistant (TA) - Building tidy tools Workshop  rstudio::conf(2022) &lt;i class=\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2022\nrstudio::conf(2022)  Making awesome automations with GitHub Actions - Video &lt;i class=\n\n\n2022\nSER UFF - International Seminar on Statistics with R   Quarto - Getting to Know the Evolution of R Markdown\n\n\n2022\nLatin-R 2022  Creating presentations with Quarto/Criando apresentações com Quarto\n\n\n2021\nPython Brasil 2021  Making friends with the reticulated Python: Introduction to using Python and R in RStudio with {reticulate}\n\n\n2019\nuseR! 2019  MILZ, B.; WUNDERVALD, B. The evolution and importance of the R-Ladies São Paulo chapter in Brazil. - Youtube Video &lt;i class=\n\n\n\n\n\n\n\nSee more in beamilz.com/talks/\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCurrent  |  2019\nDoctoral Student in Environmental Science  Institute of Energy and Environment - University of São Paulo (IEE/USP) - Graduate Program in Environmental Science (PROCAM) &lt;i class=\n\n\n2018  |  2016\nMaster in Sciences - Dissertation  Federal University of São Paulo (UNIFESP) - Institute of Environmental, Chemical and Pharmaceutical Sciences - Graduate Program in Integrated Environmental Analysis &lt;i class=\n\n\n2015  |  2012\nBachelor degree in Environmental Management  School of Arts, Sciences and Humanities – University of São Paulo (EACH/USP) &lt;i class=\n\n\n\n\n\n\n\n\nResume made with 💜 and Quarto. Last updated on Dec 17, 2023.  Code available on  GitHub. License: CC BY-SA 2.0."
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Gustavo Frosi",
-    "section": "Education",
-    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+    "objectID": "CV/cv.html#work",
+    "href": "CV/cv.html#work",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "Current  |  2022\nConsultant at Curso-R/R6.  Main activities: developing and maintaining Shiny Apps, developing parametrized and reproducible reports with R Markdown, Web Scraping with R, Automating tasks with R and GitHub Actions. &lt;i class=\n\n\nCurrent  |  2020\nTeacher at Curso-R.  Courses taught:Reporting with R  R for Data Science I  R Packages  Data Visualization  Introduction to Programming with R\n\n\n2015  |  2014\nIntern in Environmental Managment at the City Hall of Sao Paulo.  Main activities: Preparation of reports, creating maps using Quantum GIS. &lt;i class="
   },
   {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Gustavo Frosi",
-    "section": "Experience",
-    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018\n\nThis content appears below the formatted about page content."
+    "objectID": "CV/cv.html#selected-teaching-experience",
+    "href": "CV/cv.html#selected-teaching-experience",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "2023  |  2022\nSummer Course: Reproducible Reports with R - 2022, 2023  Institute of Mathematics and Statistics, University of São Paulo (IME/USP)\n\n\n2022\nTeaching Assistant (TA) - Course: Data Treatment and Analysis  Bachelor Program in Environmental Management. School of Arts, Sciences and Humanities - University of São Paulo (EACH/USP) &lt;i class=\n\n\n2022\nTeaching Assistant (TA) - Building tidy tools Workshop  rstudio::conf(2022) &lt;i class="
+  },
+  {
+    "objectID": "CV/cv.html#selected-talks-workshops",
+    "href": "CV/cv.html#selected-talks-workshops",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "2022\nrstudio::conf(2022)  Making awesome automations with GitHub Actions - Video &lt;i class=\n\n\n2022\nSER UFF - International Seminar on Statistics with R   Quarto - Getting to Know the Evolution of R Markdown\n\n\n2022\nLatin-R 2022  Creating presentations with Quarto/Criando apresentações com Quarto\n\n\n2021\nPython Brasil 2021  Making friends with the reticulated Python: Introduction to using Python and R in RStudio with {reticulate}\n\n\n2019\nuseR! 2019  MILZ, B.; WUNDERVALD, B. The evolution and importance of the R-Ladies São Paulo chapter in Brazil. - Youtube Video &lt;i class=\n\n\n\n\n\n\n\nSee more in beamilz.com/talks/"
+  },
+  {
+    "objectID": "CV/cv.html#education",
+    "href": "CV/cv.html#education",
+    "title": "Beatriz Milz",
+    "section": "",
+    "text": "Current  |  2019\nDoctoral Student in Environmental Science  Institute of Energy and Environment - University of São Paulo (IEE/USP) - Graduate Program in Environmental Science (PROCAM) &lt;i class=\n\n\n2018  |  2016\nMaster in Sciences - Dissertation  Federal University of São Paulo (UNIFESP) - Institute of Environmental, Chemical and Pharmaceutical Sciences - Graduate Program in Integrated Environmental Analysis &lt;i class=\n\n\n2015  |  2012\nBachelor degree in Environmental Management  School of Arts, Sciences and Humanities – University of São Paulo (EACH/USP) &lt;i class=\n\n\n\n\n\n\n\n\nResume made with 💜 and Quarto. Last updated on Dec 17, 2023.  Code available on  GitHub. License: CC BY-SA 2.0."
+  },
+  {
+    "objectID": "recap/2023-12-17 CBCS 2023/index.html",
+    "href": "recap/2023-12-17 CBCS 2023/index.html",
+    "title": "Trabalhos - XXIII CLACS | XXXVIII CBCS",
+    "section": "",
+    "text": "O Congresso Brasileiro de Ciência do Solo (CBCS) é um evento técnico-científico que ocorre a cada dois anos (anos ímpares). O objetivo deste evento é reunir alunos, professores, pesquisadores e profissionais das áreas afins para a troca de conhecimento e discussão sobre as futuras perspectivas da ciência do solo.\nEsse ano o XXXVIII CBCS ocorreu em Florianopolis – SC, concomitante a ele ocorreu o XXIII Congresso Latino-Americado de Ciência do solo (CLACS). O evento em conjunto foi chamado de SOLOS FLORIPA 2023, com organização das sociedades Latino-americana (SLCS) e Brasileira (SBCS) da Ciência do Solo e realização da Empresa de Pesquisa Agropecuária e Extensão Rural de Santa Catarina (Epagri).\nUma das características mais importante do congresso, é a possibilidade de os “pesquisadores” apresentarem trabalhos técnico-científicos sobre seus respectivos objetos de estudo. Diante disso, surge a dúvida em saber quais as áreas/subáreas teve as maiores quantidades de trabalhos apresentados e talvez entender o foco das pesquisas em Ciência do Solo na atualidade. Para sanar essa dúvida (pelo menos parcialmente) apresento nesse post uma forma de retirar os dados do site do congresso e realizar uma apresentação gráfica sobre os trabalhos. Para isso utilizo a linguagem de programação R.\nPara mais informações acesse o site: https://solosfloripa2023.com.br/solos2023"
+  },
+  {
+    "objectID": "recap/2023-12-17 CBCS 2023/index.html#dados",
+    "href": "recap/2023-12-17 CBCS 2023/index.html#dados",
+    "title": "Trabalhos - XXIII CLACS | XXXVIII CBCS",
+    "section": "Dados",
+    "text": "Dados\nOs dados do número de trabalhos está na página de Trabalho Aprovados no site. A captura dos dados foi realizada com o endereço eletrónico da página. Um avaliação prévia de como se conportava a página e como os dados aparaciam foi realizada.\n\n\nCódigo\nprimeira_parte &lt;- \"https://solosfloripa2023.com.br/evento/solos2023/trabalhosaprovados?titulo=&autor=&t1area_id=\"\n\nid &lt;- c(1, 2, 3, 8, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16)\n\nsegunda_parte &lt;- \"&modeloformaapresentacaofinal_id=&btBuscar=Buscar\"\n\n\nCom um entendimento prévio um loop foi realizado para remover os dados de cada uma das áreas e subareas.\n\n\nCódigo\ndf &lt;- as.data.frame(x = 1:length(id))\nfor (i in 1:16) {\n  dados &lt;- httr::GET(paste0(primeira_parte, id[i], segunda_parte))\n  get_content &lt;- httr::content(dados)\n\n  raw_table &lt;- get_content |&gt;\n    rvest::html_nodes(\".container-fluid\")\n\n  df[i, ] &lt;-\n    raw_table[[3]] |&gt;\n    rvest::html_text() |&gt;\n    strsplit(\"\\n\") |&gt;\n    unlist() |&gt;\n    enframe(name = NULL, value = \"linha\") |&gt;\n    dplyr::filter(stringr::str_detect(linha, pattern = \".*registro\"))\n}\n\n\nAlém de captar as iformações, foi realizado um processamento e manipulação para organizar os dados.\n\n\nCódigo\ndivi &lt;- raw_table[[3]] |&gt;\n  rvest::html_text() |&gt;\n  strsplit(\"\\n\") |&gt;\n  unlist() |&gt;\n  enframe(name = NULL, value = \"linha\") |&gt;\n  dplyr::filter(stringr::str_detect(linha, pattern = \" TODASDivisã\")) |&gt;\n  str_split(pattern = \"Di\", simplify = T) |&gt;\n  as.data.frame() |&gt;\n  pivot_longer(cols = 2:17, names_to = \"Divi\", values_to = \"nome\") |&gt;\n  filter(Divi != \"V1\") |&gt;\n  mutate(di = \"Di\") |&gt;\n  transmute(Divi = paste(di, nome, sep = \"\"))\n\n\nd_final &lt;- cbind(divi, df)\n\ndados.ok &lt;- d_final |&gt;\n  mutate(\n    partici = str_extract(`1:length(id)`,\n      pattern = \"[:digit:]{1,}\"\n    ),\n    partici = as.numeric(partici)\n  ) \n\n\ncomi &lt;- str_split(d_final$Divi, \":\")\ndata_separado &lt;- data.frame(do.call(rbind, comi))\n\ndf_ok &lt;- cbind(data_separado, dados.ok)\n\ndf_ok &lt;- df_ok |&gt; mutate(remover = str_sub(df_ok$X2, start = 16, end = 90))\n\nfont_add(\"Didot\", \"GFS_Didot/GFSDidot-Regular.ttf\")\n\nshowtext_auto()"
+  },
+  {
+    "objectID": "recap/2023-12-17 CBCS 2023/index.html#trabalhos-dentro-de-cada-divisão",
+    "href": "recap/2023-12-17 CBCS 2023/index.html#trabalhos-dentro-de-cada-divisão",
+    "title": "Trabalhos - XXIII CLACS | XXXVIII CBCS",
+    "section": "Trabalhos dentro de cada divisão",
+    "text": "Trabalhos dentro de cada divisão\n\nDivisão 1Divisão 2Divisão 3Divisão 4\n\n\n\n\nCódigo\ndf_ok |&gt;\n  filter(X1 == \"Divisão 1 – Solo no espaço e no tempo\") |&gt;\n  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +\n  coord_flip() +\n  geom_col(fill = \"#ef8118\", col = \"#bc6a1d\") +\n  # facet_wrap(~X1, scales = \"free\") +\n  labs(\n    x = NULL, y = \"Nº de trabalhos\",\n    title = 'Resumos no &lt;span style = \"color:#ef8118\"&gt; XXIII CLACS | XXXVIII CBCS &lt;/span&gt;',\n    subtitle = \"Divisão 1 – Solo no espaço e no tempo\"\n  ) +\n  geom_text(aes(label = partici), nudge_y = -2, col = \"black\", size = 5) +\n  theme_minimal(24) +\n  theme(\n    text = element_text(family = \"Didot\"),\n    plot.title = ggtext::element_markdown()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\ndf_ok |&gt;\n  filter(X1 == \"Divisão 2 – Processos e Propriedades do Solo\") |&gt;\n  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +\n  coord_flip() +\n  geom_col(fill = \"#ef8118\", col = \"#bc6a1d\") +\n  # facet_wrap(~X1, scales = \"free\") +\n  labs(\n    x = NULL, y = \"Nº de trabalhos\",\n    title = 'Resumos no &lt;span style = \"color:#ef8118\"&gt; XXIII CLACS | XXXVIII CBCS &lt;/span&gt;',\n    subtitle = \"Divisão 2 – Processos e Propriedades do Solo\"\n  ) +\n  geom_text(aes(label = partici), nudge_y = -4, col = \"black\", size = 6) +\n  theme_minimal(24) +\n  theme(\n    text = element_text(family = \"Didot\"),\n     plot.title  = element_markdown()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\ndf_ok |&gt;\n  filter(X1 == \"Divisão 3 – Uso e Manejo do Solo\") |&gt; \nmutate(remover = factor(remover, levels = c(\n  \" Fertilidade do Solo e Nutrição de Plantas\",\n  \" Corretivos e Fertilizantes\", \n  \" Manejo e Conservação do Solo e da Água\", \n  \" Planejamento do Uso da Terra\", \n  \" Poluição, Remediação do Solo e Recuperação de Áreas Degradadas\"\n), labels = c(\n  \"Fertilidade do Solo e \\n Nutrição de Plantas\",\n  \"Corretivos e Fertilizantes\",\n  \"Manejo e Conservação \\n do Solo e da Água\",\n  \"Planejamento do Uso da Terra\",\n  \"Poluição, Remediação do Solo e \\n Recuperação de Áreas Degradadas\"\n))) |&gt;\n  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +\n  coord_flip() +\n  geom_col(fill = \"#ef8118\", col = \"#bc6a1d\") +\n  # facet_wrap(~X1, scales = \"free\") +\n  labs(\n    x = NULL, y = \"Nº de trabalhos\",\n    title = 'Resumos no &lt;span style = \"color:#ef8118\"&gt; XXIII CLACS | XXXVIII CBCS &lt;/span&gt;',\n    subtitle = \"Divisão 3 – Uso e Manejo do Solo\"\n  ) +\n  geom_text(aes(label = partici), nudge_y = -13, col = \"black\", size = 6) +\n  theme_minimal(24) +\n  theme(\n    text = element_text(family = \"Didot\"),\n    plot.title = element_markdown()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\nCódigo\ndf_ok |&gt;\n  filter(X1 == \"Divisão 4 - Solo, Ambiente e Sociedade\") |&gt;\n  mutate(remover = factor(remover, labels = c(\n    \"Educação em Solos e \\n Percepção Pública do Solo\",\n    \"História, Epistemologia e \\n Sociologia da Ciência\",\n    \"Solos e Segurança Alimentar\"\n  ))) |&gt;\n  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +\n  coord_flip() +\n  geom_col(fill = \"#ef8118\", col = \"#bc6a1d\") +\n  # facet_wrap(~X1, scales = \"free\") +\n  labs(\n    x = NULL, y = \"Nº de trabalhos\",\n    title = 'Resumos no &lt;span style = \"color:#ef8118\"&gt; XXIII CLACS | XXXVIII CBCS &lt;/span&gt;',\n    subtitle = \"Divisão 4 - Solo, Ambiente e Sociedade\"\n  ) +\n  geom_text(aes(label = partici), nudge_y = -2, col = \"black\", size = 6) +\n  theme_minimal(24) +\n  theme(\n    text = element_text(family = \"Didot\"),\n     plot.title  = element_markdown()\n  )"
+  },
+  {
+    "objectID": "recap/2023-12-17 CBCS 2023/index.html#trabalhos-entre-as-divisões",
+    "href": "recap/2023-12-17 CBCS 2023/index.html#trabalhos-entre-as-divisões",
+    "title": "Trabalhos - XXIII CLACS | XXXVIII CBCS",
+    "section": "Trabalhos entre as divisões",
+    "text": "Trabalhos entre as divisões\nDe forma geral, observa-se que a maioria dos trabalhos submetidos e apresentados no evento pertence à divisão científica 3 – Uso e Manejo do Solo, totalizando 829 trabalhos. Em contrapartida, a divisão 4 – Solo, Ambiente e Sociedade apresentou o menor número de trabalhos, com apenas 58.\nNão podemos afirmar que esses números representam a totalidade dos trabalhos realizados em cada área, mas eles podem fornecer uma amostra do cenário atual das pesquisas em Ciência do Solo.\nA disparidade nos estudos entre as áreas da Ciência do Solo levanta questionamentos sobre a direção da pesquisa nesse campo. É pertinente refletir se nossas investigações estão se aproximando das necessidades da sociedade e se estão verdadeiramente cumprindo o papel que a Ciência deve desempenhar.\nEssa discrepância nos números sugere a importância de uma análise mais aprofundada sobre os temas predominantes e as lacunas existentes na pesquisa em Ciência do Solo. Incentivar a discussão dentro da comunidade científica pode ser valioso para garantir que as pesquisas estejam alinhadas com as demandas sociais e ambientais atuais.\n\n\nCódigo\ndf_ok |&gt;\n  group_by(X1) |&gt;\n  summarise(soma = sum(partici)) |&gt;\n  mutate(\n    X1 = factor(X1, labels = c(\n      \"Divisão 1 – Solo no \\n espaço e no tempo\",\n      \"Divisão 2 – Processos e \\n  Propriedades do Solo\",\n      \"Divisão 3 – Uso e \\n Manejo do Solo\",\n      \"Divisão 4 - Solo, \\n Ambiente e Sociedade\"\n    )),\n    total = sum(soma)\n  ) |&gt;\n  ggplot(aes(y = soma, x = fct_reorder(X1, soma))) +\n  coord_flip() +\n  geom_col(fill = \"#ef8118\", col = \"#bc6a1d\") +\n  # facet_wrap(~X1, scales = \"free\") +\n  labs(\n    x = NULL, y = \"Nº de trabalhos\",\n    title = 'Resumos no &lt;span style = \"color:#ef8118\"&gt; XXIII CLACS | XXXVIII CBCS &lt;/span&gt;',\n    subtitle = \"Total por divisão\"\n  ) +\n  geom_text(aes(label = soma), nudge_y = -32, col = \"black\", size = 6) +\n  theme_minimal(24) +\n  theme(\n    text = element_text(family = \"Didot\"),\n    plot.title = element_markdown()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNota\n\n\n\nOs códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas."
   }
 ]

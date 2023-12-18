@@ -1,0 +1,329 @@
+---
+title: "Trabalhos - XXIII CLACS | XXXVIII CBCS"
+author: 
+  - name: Gustavo Frosi
+    orcid: ""
+    email: gustavofrosi@hotmail.com
+  - name: Dayana Eckert
+    orcid: ""
+    email: dayanaeckert.14@gmail.com
+code-fold: true
+categories: 
+  - R
+  - Solos
+toc: true
+description: "Explorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS."
+image: logo.png
+image-alt: ""
+date: "2023/12/17"
+lang: pt
+editor_options: 
+  chunk_output_type: console
+---
+
+# Introdução
+
+O Congresso Brasileiro de Ciência do Solo (CBCS) é um evento
+técnico-científico que ocorre a cada dois anos (anos ímpares). O
+objetivo deste evento é reunir alunos, professores, pesquisadores e
+profissionais das áreas afins para a troca de conhecimento e discussão
+sobre as futuras perspectivas da ciência do solo.
+
+Esse ano o XXXVIII CBCS ocorreu em Florianopolis -- SC, concomitante a
+ele ocorreu o XXIII Congresso Latino-Americado de Ciência do solo
+(CLACS). O evento em conjunto foi chamado de SOLOS FLORIPA 2023, com
+organização das sociedades Latino-americana (SLCS) e Brasileira (SBCS)
+da Ciência do Solo e realização da Empresa de Pesquisa Agropecuária e
+Extensão Rural de Santa Catarina (Epagri).
+
+Uma das características mais importante do congresso é a possibilidade
+de os "pesquisadores" apresentarem trabalhos técnico-científicos sobre
+seus respectivos objetos de estudo. Diante disso, surge a dúvida em
+saber quais as áreas/subáreas teve as maiores quantidades de
+trabalhos apresentados e talvez entender o foco das pesquisas em Ciência
+do Solo na atualidade. Para sanar essa dúvida (pelo menos parcialmente)
+apresento nesse post uma forma de retirar os dados do site do congresso
+e realizar uma apresentação gráfica sobre os trabalhos. Para isso
+utilizo a linguagem de programação R.
+
+Para mais informações acesse o site:
+<https://solosfloripa2023.com.br/solos2023>
+
+# Pacotes 
+
+Para essa análise vou utilizar os seguintes pacotes do R
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(pdftools)
+library(rvest)
+library(httr)
+library(showtext)
+library(ggtext)
+```
+
+
+Atualmente, a **SBCS** possui **4** divisões científicas com 16
+subdivisões, sendo:
+
+- 1. Solo no espaço e no tempo
+    - 1.1. Gênese e Morfologia do Solo
+    - 1.2. Levantamento e Classificação do Solo
+    - 1.3. Pedometria
+    - 1.4. Paleopedologia
+
+- 2. Processos e propriedades do solo
+    - 2.1. Biologia do Solo; 
+    - 2.2. Física do Solo
+    - 2.3. Mineralogia do Solo 
+    - 2.4. Química do Solo
+
+- 3. Uso e manejo do solo
+    - 3.1. Fertilidade do Solo e Nutrição de Plantas
+    - 3.2. Corretivos e Fertilizantes
+    - 3.3. Manejo e Conservação do Solo e da Água
+    - 3.4. Planejamento do Uso da Terra
+    - 3.5. Poluição, Remediação do Solo e Recuperação de Áreas Degradadas
+
+- 4.Solos, ambiente e sociedade
+    - 4.1. Educação em Solos e Percepção Pública do Solo
+    - 4.2. Solos e Segurança Alimentar
+    - 4.3. História, Epistemiologia e Sociologia da Ciência do Solo
+
+
+
+## Dados
+
+Os dados do número de trabalhos está na página de **Trabalho Aprovados** no site. A captura dos dados foi realizada com o endereço eletrónico da página. Um avaliação prévia de como se conportava a página e como os dados aparaciam foi realizada.
+
+```{r}
+primeira_parte <- "https://solosfloripa2023.com.br/evento/solos2023/trabalhosaprovados?titulo=&autor=&t1area_id="
+
+id <- c(1, 2, 3, 8, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16)
+
+segunda_parte <- "&modeloformaapresentacaofinal_id=&btBuscar=Buscar"
+```
+
+Um loop foi realizado para remover os dados de cada uma das áreas e subareas.
+
+```{r}
+df <- as.data.frame(x = 1:length(id))
+for (i in 1:16) {
+  dados <- httr::GET(paste0(primeira_parte, id[i], segunda_parte))
+  get_content <- httr::content(dados)
+
+  raw_table <- get_content |>
+    rvest::html_nodes(".container-fluid")
+
+  df[i, ] <-
+    raw_table[[3]] |>
+    rvest::html_text() |>
+    strsplit("\n") |>
+    unlist() |>
+    enframe(name = NULL, value = "linha") |>
+    dplyr::filter(stringr::str_detect(linha, pattern = ".*registro"))
+}
+```
+
+Além de captar as iformações, foi realizado um processamento e manipulação para organizar os dados.
+
+```{r}
+divi <- raw_table[[3]] |>
+  rvest::html_text() |>
+  strsplit("\n") |>
+  unlist() |>
+  enframe(name = NULL, value = "linha") |>
+  dplyr::filter(stringr::str_detect(linha, pattern = " TODASDivisã")) |>
+  str_split(pattern = "Di", simplify = T) |>
+  as.data.frame() |>
+  pivot_longer(cols = 2:17, names_to = "Divi", values_to = "nome") |>
+  filter(Divi != "V1") |>
+  mutate(di = "Di") |>
+  transmute(Divi = paste(di, nome, sep = ""))
+
+
+d_final <- cbind(divi, df)
+
+dados.ok <- d_final |>
+  mutate(
+    partici = str_extract(`1:length(id)`,
+      pattern = "[:digit:]{1,}"
+    ),
+    partici = as.numeric(partici)
+  ) 
+
+
+comi <- str_split(d_final$Divi, ":")
+data_separado <- data.frame(do.call(rbind, comi))
+
+df_ok <- cbind(data_separado, dados.ok)
+
+df_ok <- df_ok |> mutate(remover = str_sub(df_ok$X2, start = 16, end = 90))
+
+font_add("Didot", "GFS_Didot/GFSDidot-Regular.ttf")
+
+showtext_auto()
+
+```
+# Resultados
+
+Com os dados devidamente organizados foi realizado a visualização gráfica.
+
+## Trabalhos dentro de cada divisão
+
+::: {.panel-tabset}
+## Divisão 1
+
+``` {r}
+df_ok |>
+  filter(X1 == "Divisão 1 – Solo no espaço e no tempo") |>
+  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +
+  coord_flip() +
+  geom_col(fill = "#ef8118", col = "#bc6a1d") +
+  # facet_wrap(~X1, scales = "free") +
+  labs(
+    x = NULL, y = "Nº de trabalhos",
+    title = 'Resumos no <span style = "color:#ef8118"> XXIII CLACS | XXXVIII CBCS </span>',
+    subtitle = "Divisão 1 – Solo no espaço e no tempo"
+  ) +
+  geom_text(aes(label = partici), nudge_y = -2, col = "black", size = 5) +
+  theme_minimal(24) +
+  theme(
+    text = element_text(family = "Didot"),
+    plot.title = ggtext::element_markdown()
+  )
+```
+
+## Divisão 2
+
+``` {r}
+df_ok |>
+  filter(X1 == "Divisão 2 – Processos e Propriedades do Solo") |>
+  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +
+  coord_flip() +
+  geom_col(fill = "#ef8118", col = "#bc6a1d") +
+  # facet_wrap(~X1, scales = "free") +
+  labs(
+    x = NULL, y = "Nº de trabalhos",
+    title = 'Resumos no <span style = "color:#ef8118"> XXIII CLACS | XXXVIII CBCS </span>',
+    subtitle = "Divisão 2 – Processos e Propriedades do Solo"
+  ) +
+  geom_text(aes(label = partici), nudge_y = -4, col = "black", size = 6) +
+  theme_minimal(24) +
+  theme(
+    text = element_text(family = "Didot"),
+     plot.title  = element_markdown()
+  )
+```
+
+## Divisão 3
+
+```{r}
+df_ok |>
+  filter(X1 == "Divisão 3 – Uso e Manejo do Solo") |> 
+mutate(remover = factor(remover, levels = c(
+  " Fertilidade do Solo e Nutrição de Plantas",
+  " Corretivos e Fertilizantes", 
+  " Manejo e Conservação do Solo e da Água", 
+  " Planejamento do Uso da Terra", 
+  " Poluição, Remediação do Solo e Recuperação de Áreas Degradadas"
+), labels = c(
+  "Fertilidade do Solo e \n Nutrição de Plantas",
+  "Corretivos e Fertilizantes",
+  "Manejo e Conservação \n do Solo e da Água",
+  "Planejamento do Uso da Terra",
+  "Poluição, Remediação do Solo e \n Recuperação de Áreas Degradadas"
+))) |>
+  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +
+  coord_flip() +
+  geom_col(fill = "#ef8118", col = "#bc6a1d") +
+  # facet_wrap(~X1, scales = "free") +
+  labs(
+    x = NULL, y = "Nº de trabalhos",
+    title = 'Resumos no <span style = "color:#ef8118"> XXIII CLACS | XXXVIII CBCS </span>',
+    subtitle = "Divisão 3 – Uso e Manejo do Solo"
+  ) +
+  geom_text(aes(label = partici), nudge_y = -13, col = "black", size = 6) +
+  theme_minimal(24) +
+  theme(
+    text = element_text(family = "Didot"),
+    plot.title = element_markdown()
+  )
+```
+
+## Divisão 4
+
+```{r}
+df_ok |>
+  filter(X1 == "Divisão 4 - Solo, Ambiente e Sociedade") |>
+  mutate(remover = factor(remover, labels = c(
+    "Educação em Solos e \n Percepção Pública do Solo",
+    "História, Epistemologia e \n Sociologia da Ciência",
+    "Solos e Segurança Alimentar"
+  ))) |>
+  ggplot(aes(y = partici, x = fct_reorder(remover, partici))) +
+  coord_flip() +
+  geom_col(fill = "#ef8118", col = "#bc6a1d") +
+  # facet_wrap(~X1, scales = "free") +
+  labs(
+    x = NULL, y = "Nº de trabalhos",
+    title = 'Resumos no <span style = "color:#ef8118"> XXIII CLACS | XXXVIII CBCS </span>',
+    subtitle = "Divisão 4 - Solo, Ambiente e Sociedade"
+  ) +
+  geom_text(aes(label = partici), nudge_y = -2, col = "black", size = 6) +
+  theme_minimal(24) +
+  theme(
+    text = element_text(family = "Didot"),
+     plot.title  = element_markdown()
+  )
+```
+
+:::
+
+## Trabalhos entre as divisões
+
+De forma geral, observa-se que a maioria dos trabalhos submetidos e apresentados no evento pertence à divisão científica 3 – Uso e Manejo do Solo, totalizando 829 trabalhos. Em contrapartida, a divisão 4 – Solo, Ambiente e Sociedade apresentou o menor número de trabalhos, com apenas 58.
+
+Não podemos afirmar que esses números representam a totalidade dos trabalhos realizados em cada área, mas eles podem fornecer uma amostra do cenário atual das pesquisas em Ciência do Solo.
+
+A disparidade nos estudos entre as áreas da Ciência do Solo levanta questionamentos sobre a direção da pesquisa nesse campo. É pertinente refletir se nossas investigações estão se aproximando das necessidades da sociedade e se estão verdadeiramente cumprindo o papel que a Ciência deve desempenhar.
+
+Essa discrepância nos números sugere a importância de uma análise mais aprofundada sobre os temas predominantes e as lacunas existentes na pesquisa em Ciência do Solo. Incentivar a discussão dentro da comunidade científica pode ser valioso para garantir que as pesquisas estejam alinhadas com as demandas sociais e ambientais atuais.
+
+```{r}
+df_ok |>
+  group_by(X1) |>
+  summarise(soma = sum(partici)) |>
+  mutate(
+    X1 = factor(X1, labels = c(
+      "Divisão 1 – Solo no \n espaço e no tempo",
+      "Divisão 2 – Processos e \n  Propriedades do Solo",
+      "Divisão 3 – Uso e \n Manejo do Solo",
+      "Divisão 4 - Solo, \n Ambiente e Sociedade"
+    )),
+    total = sum(soma)
+  ) |>
+  ggplot(aes(y = soma, x = fct_reorder(X1, soma))) +
+  coord_flip() +
+  geom_col(fill = "#ef8118", col = "#bc6a1d") +
+  # facet_wrap(~X1, scales = "free") +
+  labs(
+    x = NULL, y = "Nº de trabalhos",
+    title = 'Resumos no <span style = "color:#ef8118"> XXIII CLACS | XXXVIII CBCS </span>',
+    subtitle = "Total por divisão"
+  ) +
+  geom_text(aes(label = soma), nudge_y = -32, col = "black", size = 6) +
+  theme_minimal(24) +
+  theme(
+    text = element_text(family = "Didot"),
+    plot.title = element_markdown()
+  )
+```
+
+::: {.callout-note}
+
+Os códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas.
+:::

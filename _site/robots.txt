@@ -1,1 +1,1 @@
-Sitemap: https://gugaf.quarto.pub/gustavo-frosi/sitemap.xml
+Sitemap: /sitemap.xml
