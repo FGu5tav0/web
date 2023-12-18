@@ -13,7 +13,7 @@ website:
   search: TRUE
   google-analytics: "G-8L8YC0LJJY"
   page-footer: 
-    left: "Website construído em [Quarto](https://quarto.org/), por Gustavo Frosi. Licença: [xxxx](https://creativecommons)."
+    left: "Website em quarto © 2023 by Gustavo Frosi is licensed under CC BY-SA 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/"
     right: 
       - icon: github
         href: https://github.com/FGu5tav0
@@ -52,6 +52,8 @@ format:
     # css: styles.css
     toc: true
 
+execute:
+  freeze: auto
 
 
 # comments:
