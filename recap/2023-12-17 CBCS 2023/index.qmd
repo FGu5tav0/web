@@ -2,10 +2,8 @@
 title: "Trabalhos - XXIII CLACS | XXXVIII CBCS"
 author: 
   - name: Gustavo Frosi
-    orcid: ""
     email: gustavofrosi@hotmail.com
   - name: Dayana Eckert
-    orcid: ""
     email: dayanaeckert.14@gmail.com
 code-fold: true
 categories: 
