@@ -95,7 +95,7 @@ subdivisões, sendo:
 
 ## Dados
 
-Os dados do número de trabalhos está na página de **Trabalho Aprovados** no site. A captura dos dados foi realizada com o endereço eletrónico da página. Um avaliação prévia de como se conportava a página e como os dados aparaciam foi realizada.
+Os dados do número de trabalhos está na página de **Trabalho Aprovados** no site. A captura dos dados foi realizada com o endereço eletrônico da página. Um avaliação prévia de como se conportava a página e como os dados aparaciam foi realizada.
 
 ```{r}
 primeira_parte <- "https://solosfloripa2023.com.br/evento/solos2023/trabalhosaprovados?titulo=&autor=&t1area_id="
