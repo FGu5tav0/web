@@ -7,6 +7,7 @@ project:
 lang: pt
 
 website: 
+  favicon: "ima/FS2.png"
   site-url: ""
   open-graph: true
   page-navigation: true

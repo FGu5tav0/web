@@ -11,7 +11,7 @@
     "href": "recap.html",
     "title": "Gustavo Frosi",
     "section": "",
-    "text": "Trabalhos - XXIII CLACS | XXXVIII CBCS\n\n\n\nR\n\n\nSolos\n\n\n\nExplorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS.\n\n\n\nGustavo Frosi, Dayana Eckert\n\n\n17 de dez. de 2023\n\n\n\n\n\n\n\n\nNenhum item correspondente"
+    "text": "Web scraping Nota Fiscal Gaúcha\n\n\n\nR\n\n\npython\n\n\nWeb scraping\n\n\n\nAutomatizando o download de notas para consumidor final e a extração de dados.\n\n\n\nGustavo Frosi\n\n\n5 de jan. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrabalhos - XXIII CLACS | XXXVIII CBCS\n\n\n\nR\n\n\nSolos\n\n\n\nExplorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS.\n\n\n\nGustavo Frosi, Dayana Eckert\n\n\n17 de dez. de 2023\n\n\n\n\n\n\n\n\nNenhum item correspondente"
   },
   {
     "objectID": "Projetos/index.html",
@@ -54,5 +54,54 @@
     "title": "Trabalhos - XXIII CLACS | XXXVIII CBCS",
     "section": "Trabalhos entre as divisões",
     "text": "Trabalhos entre as divisões\nDe forma geral, observa-se que a maioria dos trabalhos submetidos e apresentados no evento pertence à divisão científica 3 – Uso e Manejo do Solo, totalizando 829 trabalhos. Em contrapartida, a divisão 4 – Solo, Ambiente e Sociedade apresentou o menor número de trabalhos, com apenas 58.\nNão podemos afirmar que esses números representam a totalidade dos trabalhos realizados em cada área, mas eles podem fornecer uma amostra do cenário atual das pesquisas em Ciência do Solo.\nA disparidade nos estudos entre as áreas da Ciência do Solo levanta questionamentos sobre a direção da pesquisa nesse campo. É pertinente refletir se nossas investigações estão se aproximando das necessidades da sociedade e se estão verdadeiramente cumprindo o papel que a Ciência deve desempenhar.\nEssa discrepância nos números sugere a importância de uma análise mais aprofundada sobre os temas predominantes e as lacunas existentes na pesquisa em Ciência do Solo. Incentivar a discussão dentro da comunidade científica pode ser valioso para garantir que as pesquisas estejam alinhadas com as demandas sociais e ambientais atuais.\n\n\nCódigo\ndf_ok |&gt;\n  group_by(X1) |&gt;\n  summarise(soma = sum(partici)) |&gt;\n  mutate(\n    X1 = factor(X1, labels = c(\n      \"Divisão 1 – Solo no \\n espaço e no tempo\",\n      \"Divisão 2 – Processos e \\n  Propriedades do Solo\",\n      \"Divisão 3 – Uso e \\n Manejo do Solo\",\n      \"Divisão 4 - Solo, \\n Ambiente e Sociedade\"\n    )),\n    total = sum(soma)\n  ) |&gt;\n  ggplot(aes(y = soma, x = fct_reorder(X1, soma))) +\n  coord_flip() +\n  geom_col(fill = \"#ef8118\", col = \"#bc6a1d\") +\n  # facet_wrap(~X1, scales = \"free\") +\n  labs(\n    x = NULL, y = \"Nº de trabalhos\",\n    title = 'Resumos no &lt;span style = \"color:#ef8118\"&gt; XXIII CLACS | XXXVIII CBCS &lt;/span&gt;',\n    subtitle = \"Total por divisão\"\n  ) +\n  geom_text(aes(label = soma), nudge_y = -32, col = \"black\", size = 6) +\n  theme_minimal(24) +\n  theme(\n    text = element_text(family = \"Didot\"),\n    plot.title = element_markdown()\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNota\n\n\n\nOs códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas."
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html",
+    "href": "recap/2024-02-05 webscraping python/index.html",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "",
+    "text": "Você já se perguntou quanto gastou no mercado? E quais os itens que mais comprou? Bom, se você disse que não, acho melhor começar a pensar, e se você disse que sim, mas não sabe como fazer para buscar esses dados, eu tenho uma boa notícia!\nNeste texto, descrevo como utilizei o Python na criação de um código que automatizou o download das minhas notas fiscais pessoais (NFC: Nota Fiscal de Consumidor). Deixo claro que o código é destinado ao uso pessoal e doméstico. Minha intenção é apenas o controle de gastos financeiros (e outras brincadeiras com dados).\nO exemplo que utilizo aqui é para o site Nota Fiscal Gaúcha e serve apenas para quem utiliza o “benefício”. Fica obvio que é necessário colocar o CPF em todas as compras né.\nAntes de começar a codificar, é necessário baixar o webdriver, uma ferramenta para testes de automação que oferece uma série de recursos para utilizar o navegador. O webdriver a ser baixado depende do navegador que você utiliza e da versão instalada. No meu caso, vou ensinar com o navegador da Google, o Google Chrome na versão 121.0.6167.140.\nPara fazer o download do webdriver, basta acessar o link\nDepois de baixado, é necessário colar o webdriver na pasta onde está o executável do Python. No meu caso, como utilizo o Anaconda, colei no diretório do Anaconda, o mesmo onde fica o Python.\nAgora sim! Com isso, já é possível começar a escrever códigos."
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html#manipulação-de-banco-baixado",
+    "href": "recap/2024-02-05 webscraping python/index.html#manipulação-de-banco-baixado",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "Manipulação de banco baixado",
+    "text": "Manipulação de banco baixado\nDa planilha baixada do site, apenas a coluna que contém a chave de acesso da nota fiscal é relevante. Realizei uma pequena manipulação na planilha, removendo os espaços da coluna da chave de acesso, e a salvei como arquivo CSV.\n\n\nCódigo\nlibrary(tidyverse)\n\n\ndados &lt;- readxl::read_excel(\"notas/Nota Fiscal Gaúcha.xlsx\") |&gt;\n  janitor::clean_names() |&gt;\n  mutate(chave = chave_de_acesso |&gt; str_remove_all(pattern = \"\\\\s\")) |&gt;\n  select(chave)\n\n\n\nwrite.csv(x = dados, file = \"notas/para_auto.csv\")\n\n\n\n\n\n\n\n\nNota\n\n\n\nOs códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas."
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html#ajustando-a-planilha-com-a-chave-de-acesso",
+    "href": "recap/2024-02-05 webscraping python/index.html#ajustando-a-planilha-com-a-chave-de-acesso",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "Ajustando a planilha com a chave de acesso",
+    "text": "Ajustando a planilha com a chave de acesso\nDa planilha baixada do site, apenas a coluna que contém a chave de acesso da nota fiscal é relevante. Realizei uma pequena manipulação na planilha, removendo os espaços da coluna da chave de acesso, e a salvei como arquivo CSV.\n\nlibrary(tidyverse)\n\n\ndados &lt;- readxl::read_excel(\"Nota Fiscal Gaúcha.xlsx\") |&gt;\n  janitor::clean_names() |&gt;\n  mutate(chave = chave_de_acesso |&gt; str_remove_all(pattern = \"\\\\s\")) |&gt;\n  select(chave)\n\nwrite.csv(x = dados, file = \"notas/para_auto.csv\")\n\n\n\n\n\n\n\nNota\n\n\n\nOs códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas."
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html#ajuste-da-chave-de-acesso",
+    "href": "recap/2024-02-05 webscraping python/index.html#ajuste-da-chave-de-acesso",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "Ajuste da chave de acesso",
+    "text": "Ajuste da chave de acesso\nDa planilha baixada do site, apenas a coluna que contém a chave de acesso da nota fiscal é relevante. Realizei uma pequena manipulação na planilha, removendo os espaços da coluna da chave de acesso, e a salvei como arquivo CSV.\n\n\n\n\n\n\nNota\n\n\n\nCódigos em R\n\n\n\nlibrary(tidyverse)\n\ndados &lt;- readxl::read_excel(\"Nota Fiscal Gaúcha.xlsx\") |&gt;\n  janitor::clean_names() |&gt;\n  mutate(chave = chave_de_acesso |&gt; str_remove_all(pattern = \"\\\\s\")) |&gt;\n  select(chave)\n\nwrite.csv(x = dados, file = \"notas/para_auto.csv\")"
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html#encontrando-os-pontos-de-click",
+    "href": "recap/2024-02-05 webscraping python/index.html#encontrando-os-pontos-de-click",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "Encontrando os pontos de click",
+    "text": "Encontrando os pontos de click\n\n\n\n\n\n\nNota\n\n\n\nAgora serão apenas códigos em python\n\n\nO procedimento que apresento aqui é baseado em um algoritmo que controla o mouse do computador, realizando cliques e movimentos programados. Como é de se esperar, é necessário fornecer as coordenadas para guiar os movimentos. Essa é uma tarefa manual, porém, é realizada apenas uma vez e se aplica a todas as notas (baixei mais de 200 notas).\nUtilizei o MouseInfo para identificar os pontos. Após abrir o console do python (melhor fazer pelo console) é só dar os seguintes comandos:\n\nfrom mouseinfo import mouseInfo\n\nmouseInfo()\n\nBasta realizar um teste com o MouseInfo aberto. Abra o site onde as notas serão baixadas e identifique os pontos onde será necessário realizar os cliques.\n\n\n\n\n\n\nNota\n\n\n\nOs códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas."
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html#encontrando-os-pontos-de-clique",
+    "href": "recap/2024-02-05 webscraping python/index.html#encontrando-os-pontos-de-clique",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "Encontrando os pontos de clique",
+    "text": "Encontrando os pontos de clique\n\n\n\n\n\n\nNota\n\n\n\nAgora serão apenas códigos em python\n\n\nO procedimento que apresento aqui é baseado em um algoritmo que controla o mouse do computador, realizando cliques e movimentos programados. Como é de se esperar, é necessário fornecer as coordenadas para guiar os movimentos. Essa é uma tarefa manual, porém, é realizada apenas uma vez e se aplica a todas as notas (baixei mais de 200 notas).\nUtilizei o MouseInfo para identificar os pontos. Após abrir o console do python (melhor fazer pelo console) é só dar os seguintes comandos:\n\nfrom mouseinfo import mouseInfo\n\nmouseInfo()\n\nO vídeo abaixo demonstra o funcionamento do MouseInfo, exibindo as marcações das coordenadas x e y à medida que o mouse é movido.\nVideo\nPara encontar os ponto certo basta realizar um teste com o MouseInfo aberto. Abra o site onde as notas serão baixadas e identifique os pontos onde será necessário realizar os cliques. O atalho F6 pode ser utilizado no MouseInfo para marcar as pontos x e y. Siga os passo:\n1º Passo: Clique em avançar e depois em imprimir Figura 2\n\n\n\n\n\n\nFigura 2\n\n\n\n2º Passo: Clique em imprimir na parte do pdf Figura 3\n\n\n\n\n\n\nFigura 3\n\n\n\n3º Passo: Clique em salvar Figura 4\n\n\n\n\n\n\nFigura 4\n\n\n\nPor padrão, o Windows salva na pasta de downloads, mas é possível alterar para a pasta desejada. Basta encontrar o ponto de clique e realizar a mudança de destino."
+  },
+  {
+    "objectID": "recap/2024-02-05 webscraping python/index.html#resultado",
+    "href": "recap/2024-02-05 webscraping python/index.html#resultado",
+    "title": "Web scraping Nota Fiscal Gaúcha",
+    "section": "Resultado",
+    "text": "Resultado\nO vídeo exibe o “robô” em ação, realizando a impressão e salvando automaticamente cada uma das notas. Na minha análise, as 205 notas que obtive foram processadas em quase 20 minutos, o que equivale a quase 1 minuto por nota (Um computador melhor fara em menos tempo). E você, ocupado com diversas tarefas, conseguiria realizar isso de maneira mais rápida? Mesmo ao atingir a nota de número 100 e perceber que ainda falta mais da metade. Se acha que não, a resposta para isso é simples: programação!\nVideo\nE agora, o que fazer com essas notas? Começar a extrair os dados manualmente? Pagar alguém para fazer? Excluir do computador e dar um ponto final?\nA resposta óbvia é sim, dar um ponto final e excluir. No entanto, se ainda assim você deseja extrair informações dos seus dados, eu aconselho a conferir um próximo post (no futuro), no qual explico o que fazer com as notas.\n\n\n\n\n\n\nNota\n\n\n\nOs códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas."
   }
 ]

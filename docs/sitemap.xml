@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>/index.html</loc>
-    <lastmod>2023-12-18T03:00:35.846Z</lastmod>
+    <lastmod>2024-02-06T03:44:36.410Z</lastmod>
   </url>
   <url>
     <loc>/recap.html</loc>
@@ -15,5 +15,9 @@
   <url>
     <loc>/recap/2023-12-17 CBCS 2023/index.html</loc>
     <lastmod>2024-01-26T14:15:47.856Z</lastmod>
+  </url>
+  <url>
+    <loc>/recap/2024-02-05 webscraping python/index.html</loc>
+    <lastmod>2024-02-06T03:28:11.361Z</lastmod>
   </url>
 </urlset>
