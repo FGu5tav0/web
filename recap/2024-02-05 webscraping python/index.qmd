@@ -12,7 +12,7 @@ toc: true
 description: "Automatizando o download de notas para consumidor final e a extração de dados."
 image: logo.jpg
 image-alt: ""
-date: "2024/01/05"
+date: "2024/02/06"
 lang: pt
 editor_options: 
   chunk_output_type: console
