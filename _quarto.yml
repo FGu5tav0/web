@@ -14,7 +14,7 @@ website:
   search: TRUE
   google-analytics: "G-8L8YC0LJJY"
   page-footer: 
-    left: "Website em quarto © 2023 by Gustavo Frosi is licensed under CC BY-SA 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/"
+    left: "Website made with quarto © 2023 by Gustavo Frosi is licensed under CC BY-SA 4.0."
     right: 
       - icon: github
         href: https://github.com/FGu5tav0
@@ -30,20 +30,22 @@ website:
     left: 
       - text: "CV"
         href: CV/index.qmd
-      - sidebar:Projetos
+      - text: "Projetos"
+        href: projetos.qmd
       - text: "Posts"
         href: recap.qmd
 
-  sidebar:
-    - id: Projetos
-      title: "Projetos"
-      style: "docked"
-      background: light
-      collapse-level: 2
-      contents: 
-        - Projetos/um.qmd
-        - Projetos/dois.qmd
-        # navigation items
+  # sidebar:
+  #   - id: Projetos
+  #     title: "Projetos"
+  #     style: "docked"
+  #     background: light
+  #     collapse-level: 2
+  #     contents: 
+  #       - projetos.qmd
+  #       - projetos/um.qmd
+  #       - projetos/dois.qmd
+  #       # navigation items
 
 format:
   html:

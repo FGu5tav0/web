@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gustavo Frosi">
+<meta name="author" content="Diogo Bolzan">
+<meta name="description" content="Análise exploratória de gastos do mercado com o R com foco em visualização.">
+
+<title>Gustavo Frosi - BananaBudget</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../ima/FS2.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8L8YC0LJJY"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
+</script>
+
+
+<meta property="og:title" content="Gustavo Frosi - BananaBudget">
+<meta property="og:description" content="Análise exploratória de gastos do mercado com o R com foco em visualização.">
+<meta property="og:image" content="/recap/2024-02-15 BananBudget1/pao_choco.jpg">
+<meta property="og:site_name" content="Gustavo Frosi">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../ima/FS2.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Gustavo Frosi</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Procurar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../CV/index.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projetos.html"> 
+<span class="menu-text">Projetos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../recap.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Nesta página</h2>
+   
+  <ul>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#extração-de-dados-dos-pdfs" id="toc-extração-de-dados-dos-pdfs" class="nav-link" data-scroll-target="#extração-de-dados-dos-pdfs">Extração de dados dos pdfs</a></li>
+  <li><a href="#organização-dos-dados" id="toc-organização-dos-dados" class="nav-link" data-scroll-target="#organização-dos-dados">Organização dos dados</a></li>
+  <li><a href="#gasto-total-por-categoria" id="toc-gasto-total-por-categoria" class="nav-link" data-scroll-target="#gasto-total-por-categoria"><strong>Gasto total por categoria</strong></a></li>
+  <li><a href="#gasto-mensal-das-principais-categorias" id="toc-gasto-mensal-das-principais-categorias" class="nav-link" data-scroll-target="#gasto-mensal-das-principais-categorias"><strong>Gasto mensal das principais categorias</strong></a></li>
+  <li><a href="#gasto-mensal-e-total-dos-principais-produtos" id="toc-gasto-mensal-e-total-dos-principais-produtos" class="nav-link" data-scroll-target="#gasto-mensal-e-total-dos-principais-produtos"><strong>Gasto mensal e total dos principais produtos</strong></a></li>
+  <li><a href="#conclusão" id="toc-conclusão" class="nav-link" data-scroll-target="#conclusão"><strong>Conclusão</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">BananaBudget</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">DataViz</div>
+    <div class="quarto-category">ggplot2</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Análise exploratória de gastos do mercado com o R com foco em visualização.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autores</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gustavo Frosi <a href="mailto:gustavofrosi@hotmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+             <p>Diogo Bolzan <a href="mailto:diogovierib@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">15 de fevereiro de 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p><em>Você já pensou qual seu gasto no mercado? Quais os produtos que mais compra? Qual a frequência que vai ao mercado?</em></p>
+<p><em>Eu e o <a href="https://diogovieri.rbind.io/">Diogo</a> já!</em></p>
+<p>Neste texto, vamos mostrar como manipulamos notas fiscais de mercado para responder às questões iniciais por meio da programação. Morando em Porto Alegre com mais duas pessoas (totalizando quatro), é fundamental ter um controle de gastos. Após vários meses registrando todos os gastos no mercado, surgiu a seguinte pergunta: “Será que podemos identificar quais produtos compramos com maior ou menor frequência?” <em>(coisa de doido, né?)</em>. De certa forma, já sabíamos que, ao utilizar o CPF nas compras, as notas ficam armazenadas em algum lugar, mas não tínhamos certeza de onde.</p>
+<p>No Rio Grande do Sul, assim como em outros estados, existe um sistema de “recompensa” chamado Nota Fiscal Gaúcha. Ao adicionar o CPF nas notas, você concorre a prêmios e outras vantagens. Além disso, é possível acessar todas as notas fiscais, com informações como data, produtos adquiridos, preços e estabelecimentos.</p>
+<p>Uma maneira de obter essas notas é por meio de <em>“web scraping”</em>. Para saber mais sobre esse processo, você pode conferir o <a href="https://gustavofrosi.com.br/recap/2024-02-05%20webscraping%20python/">Post</a>, onde descrevemos como realizá-lo.</p>
+<p>Com notas na mão (ou no pc) é hora de organizar os dados!</p>
+</section>
+<section id="extração-de-dados-dos-pdfs" class="level1">
+<h1>Extração de dados dos pdfs</h1>
+<p>Criamos uma função chamada “pega_produto()”, essa função identifica padrões no texto e separa as informações em um <em>data frame</em>, onde cada linha representa um produto comprado. Ao aplicar essa função em todas as notas, obtemos uma base de dados com os seguintes campos: Data, Hora, Nome do Produto, Preço do Produto… (<a href="#fig-tabela" class="quarto-xref">Figura&nbsp;1</a>)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Carregando os pacotes</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pdftools) <span class="co"># manipulação de pdf</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># conjunto de pacotes para manipulação e visualização</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Primeiro defini o diretório da pasta com as notas.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>pasta <span class="ot">&lt;-</span> <span class="st">"notas/notas/"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># lista os arquivos dentro da pasta</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>docs <span class="ot">&lt;-</span> <span class="fu">list.files</span>(pasta, <span class="at">full.names =</span> T)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># a função 'pega_produto' será responsável por encontrar cada linha da nota com os produtos</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pega_produto <span class="ot">&lt;-</span> <span class="cf">function</span>(pdf) {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pdf_text</span>(pdf) <span class="sc">|&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">strsplit</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unlist</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">enframe</span>(<span class="at">name =</span> <span class="cn">NULL</span>, <span class="at">value =</span> <span class="st">"linha"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  data <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">str_detect</span>(linha, <span class="at">pattern =</span> <span class="st">"Data de Emissão"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_extract</span>(<span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">d{2}.</span><span class="sc">\\</span><span class="st">d{2}.</span><span class="sc">\\</span><span class="st">d{4}.</span><span class="sc">\\</span><span class="st">d{2}.</span><span class="sc">\\</span><span class="st">d{2}.</span><span class="sc">\\</span><span class="st">d{2}"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  produtos <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">str_detect</span>(linha, <span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">S</span><span class="sc">\\</span><span class="st">d{4,}"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="fu">str_detect</span>(linha, <span class="at">pattern =</span> <span class="st">"^</span><span class="sc">\\</span><span class="st">s{4,}</span><span class="sc">\\</span><span class="st">d"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">linha =</span> linha <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(<span class="at">pattern =</span> <span class="st">"[</span><span class="sc">\\</span><span class="st">s]{3,}"</span>, <span class="at">replacement =</span> <span class="st">"---"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">separate</span>(</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="at">col =</span> linha, <span class="at">into =</span> <span class="fu">c</span>(</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ts"</span>, <span class="st">"id"</span>, <span class="st">"nome"</span>, <span class="st">"quant"</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">"unidade"</span>, <span class="st">"valor_uni"</span>, <span class="st">"valor_total"</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">sep =</span> <span class="st">"---"</span>, <span class="at">convert =</span> F</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  dados_fim <span class="ot">&lt;-</span> <span class="fu">mutate</span>(</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">.data =</span> produtos,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">rep</span>(</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>      data,</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>      <span class="fu">length</span>(produtos<span class="sc">$</span>id)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">separate</span>(<span class="at">col =</span> data, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"data"</span>, <span class="st">"hora"</span>), <span class="at">sep =</span> <span class="st">" "</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">hora =</span> hora <span class="sc">|&gt;</span> <span class="fu">str_extract</span>(<span class="at">pattern =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">d{2}</span><span class="sc">\\</span><span class="st">:</span><span class="sc">\\</span><span class="st">d{2}</span><span class="sc">\\</span><span class="st">:</span><span class="sc">\\</span><span class="st">d{2}"</span>),</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">valor_uni =</span> valor_uni <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>        <span class="at">pattern =</span> <span class="st">"[</span><span class="sc">\\</span><span class="st">,]"</span>,</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement =</span> <span class="st">"."</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>      <span class="at">valor_total =</span> valor_total <span class="sc">|&gt;</span> stringr<span class="sc">::</span><span class="fu">str_replace_all</span>(</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>        <span class="at">pattern =</span> <span class="st">"[</span><span class="sc">\\</span><span class="st">,]"</span>,</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        <span class="at">replacement =</span> <span class="st">"."</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">relocate</span>(data, hora) <span class="sc">|&gt;</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> <span class="fu">dmy</span>(data),</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>      <span class="at">id =</span> <span class="fu">as.factor</span>(id),</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>      <span class="at">valor_uni =</span> <span class="fu">as.numeric</span>(valor_uni),</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>      <span class="at">valor_total =</span> <span class="fu">as.numeric</span>(valor_total)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(dados_fim)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co"># criando a base de dados</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">data =</span> <span class="cn">NULL</span>)</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co"># para utilizar a função pega_produto() em cada nota usamos um loop for e juntamos as linhas com a função bind_rows()</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(docs)) {</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  b1 <span class="ot">&lt;-</span> <span class="fu">pega_produto</span>(docs[i])</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  base <span class="ot">&lt;-</span> base <span class="sc">|&gt;</span> <span class="fu">bind_rows</span>(b1)</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a><span class="co"># aqui visualizamos a base</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>base <span class="sc">|&gt;</span> <span class="fu">glimpse</span>()</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a><span class="co"># e por fim salvamos</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="fu">save</span>(base, <span class="at">file =</span> <span class="st">"notas/base.RData"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="fig-tabela" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tabela-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ima/data_base.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tabela-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: base de dados
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="organização-dos-dados" class="level1">
+<h1>Organização dos dados</h1>
+<p>Nossa base de dados foi construída com 205 notas fiscais do período de janeiro a dezembro de 2023. Após uma visualização prévia, decidimos criar uma variável relacionada ao tipo de produto, resultando na variável “categoria” (conforme apresentado na <strong>Tabela 1</strong>). O número de categorias foi determinado subjetivamente, com a intenção de discriminar adequadamente os produtos.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Categoria</th>
+<th style="text-align: left;">Item</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Carboidratos</td>
+<td style="text-align: left;">Pão, Massas, Arroz…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Doces</td>
+<td style="text-align: left;">Chocolate, Sorvete, Bolacha…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bebidas</td>
+<td style="text-align: left;">Leite, Refrigerante, Água…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Embutidos</td>
+<td style="text-align: left;">Queijo, Linguiça Calabresa, Bacon…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Carnes E Ovos</td>
+<td style="text-align: left;">Ovo, Carnes Vermelhas, Peito de Frango…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Higiene</td>
+<td style="text-align: left;">Desodorante, Sabonete…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Frutas</td>
+<td style="text-align: left;">Banana, Maça, Uva…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Verduras</td>
+<td style="text-align: left;">Tomate, Pepino, Alface…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Limpeza</td>
+<td style="text-align: left;">Amaciante, Detergente…</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Temperos E Molhos</td>
+<td style="text-align: left;">Massa de Tomate, Salsa, Orégano…</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Tivemos que tomar algumas decisões em relação aos produtos que iríamos incluir na tabela. O primeiro ponto foi determinar que produtos que tivessem apenas uma compra seriam excluídos. Nossa pergunta inicial não visa produtos específicos, mas sim um padrão de consumo geral.</p>
+<p>Uma maneira que encontramos para agrupar produtos foi utilizar apenas a primeira palavra do nome do item. No entanto, observamos dois problemas: o primeiro foi a ocorrência de produtos iguais com nomes iniciais diferentes, enquanto o segundo foi a presença de produtos diferentes com nomes iniciais iguais.</p>
+<p><strong>Exemplo 1:A palavra CHOC e CHO representava o mesmo produto, chocolate.</strong></p>
+<p><strong>Exemplo 2: A palavra MINI era observada no MINI TOMATE e no MINI PANETONE.</strong></p>
+<p>Esses casos foram tratados de forma manual e caso a caso.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># realizamos uma organização após uma visualização prêvia das categorias </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>base <span class="ot">&lt;-</span> base <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">categoria =</span> <span class="fu">as.factor</span>(cat),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">hora =</span> <span class="fu">hms</span>(hora),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">mes =</span> <span class="fu">month</span>(data),</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">inicial =</span> ini</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(cat, ini)) <span class="sc">|&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">mes =</span> <span class="fu">case_match</span>(</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      mes,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="dv">1</span> <span class="sc">~</span> <span class="st">"jan"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="dv">2</span> <span class="sc">~</span> <span class="st">"fev"</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="dv">3</span> <span class="sc">~</span> <span class="st">"mar"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>      <span class="dv">4</span> <span class="sc">~</span> <span class="st">"abr"</span>,</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>      <span class="dv">5</span> <span class="sc">~</span> <span class="st">"mai"</span>,</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="dv">6</span> <span class="sc">~</span> <span class="st">"jun"</span>,</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="dv">7</span> <span class="sc">~</span> <span class="st">"jul"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="dv">8</span> <span class="sc">~</span> <span class="st">"ago"</span>,</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      <span class="dv">9</span> <span class="sc">~</span> <span class="st">"set"</span>,</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      <span class="dv">10</span> <span class="sc">~</span> <span class="st">"out"</span>,</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>      <span class="dv">11</span> <span class="sc">~</span> <span class="st">"nov"</span>,</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>      <span class="dv">12</span> <span class="sc">~</span> <span class="st">"dez"</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">mes =</span> <span class="fu">str_to_title</span>(mes),</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">categoria =</span> <span class="fu">str_to_title</span>(categoria),</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">mes =</span> <span class="fu">factor</span>(mes, <span class="at">ordered =</span> T, <span class="at">levels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Jan"</span>, <span class="st">"Fev"</span>, <span class="st">"Mar"</span>, <span class="st">"Abr"</span>, <span class="st">"Mai"</span>,</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Jun"</span>, <span class="st">"Jul"</span>, <span class="st">"Ago"</span>, <span class="st">"Set"</span>, <span class="st">"Out"</span>, <span class="st">"Nov"</span>, <span class="st">"Dez"</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>( <span class="co"># aqui é onde realizamos a junção mencionadas nos exemplos 1 e 2 </span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">inicial =</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"CHO"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"BOMBOM"</span> <span class="sc">~</span> <span class="st">"CHOC"</span>,</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"SORVETE"</span> <span class="sc">~</span> <span class="st">"SORV"</span>,</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"BISCOITO"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"COOKIE"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"CLUB"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"BARRA"</span> <span class="sc">~</span> <span class="st">"BISC"</span>,</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"DOCE"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"ECLAIR"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"BIBIS"</span> <span class="sc">~</span> <span class="st">"BALA"</span>,</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"CONFEITO"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"MIST"</span> <span class="sc">~</span> <span class="st">"BOLO"</span>,</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"REFR"</span> <span class="sc">|</span> inicial <span class="sc">==</span> <span class="st">"BIPACK"</span> <span class="sc">~</span> <span class="st">"REFRIG"</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"VH"</span> <span class="sc">~</span> <span class="st">"VHO"</span>,</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    inicial <span class="sc">==</span> <span class="st">"MINI"</span> <span class="sc">~</span> <span class="st">"TOMATE"</span>,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">.default =</span> <span class="fu">as.character</span>(inicial)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="gasto-total-por-categoria" class="level1">
+<h1><strong>Gasto total por categoria</strong></h1>
+<p>A primeira visualização foi focada em observar o gasto total em cada uma das categorias e o número de compras efetuadas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pacotes utilizados em todos os gráficos</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>base <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(categoria) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor_total =</span> <span class="fu">sum</span>(valor_total),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">numero =</span> <span class="fu">n</span>()</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">fct_reorder</span>(categoria, valor_total), <span class="at">y =</span> valor_total) <span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_col(fill = "firebrick") +</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"firebrick"</span>) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_richtext</span>(</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">label =</span> <span class="st">"O nº diz respeito a quantidade &lt;br&gt; de itens comprados"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="dv">2000</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    ), <span class="at">size =</span> <span class="dv">4</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"gray70"</span>, <span class="at">label.color =</span> <span class="cn">NA</span>,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">"Black Ops One"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">label.padding =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.30</span>, <span class="fl">0.30</span>, <span class="fl">0.30</span>, <span class="fl">0.30</span>), <span class="st">"lines"</span>),</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Valor total [R$]"</span>,</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Gasto total por categoria"</span>,</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> social_caption</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste</span>(<span class="st">"nº"</span>, numero)),</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> <span class="sc">-</span><span class="dv">125</span>, <span class="at">col =</span> <span class="st">"gray98"</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">fontface =</span> <span class="st">"bold"</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="dv">23</span>) <span class="sc">+</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Black Ops One"</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"gray90"</span>),</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_textbox_simple</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ima/cat_total.jpeg" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gasto-mensal-das-principais-categorias" class="level1">
+<h1><strong>Gasto mensal das principais categorias</strong></h1>
+<p>O segundo gráfico mostra o gasto mês-a-mês para cada categoria. Para isso utilizamos apenas as 5 maiores categorias em total de gasto.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>gg_bonito <span class="ot">&lt;-</span> base <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(categoria, mes) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor_total =</span> <span class="fu">sum</span>(valor_total),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">numero =</span> <span class="fu">n</span>()</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>categoria <span class="sc">%in%</span> <span class="fu">c</span>(</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Temperos E Molhos"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Limpeza"</span>, <span class="st">"Verduras"</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Frutas"</span>, <span class="st">"Higiene"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>gg_bonito2 <span class="ot">&lt;-</span> gg_bonito <span class="sc">|&gt;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(mes) <span class="sc">|&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_mensal =</span> <span class="fu">sum</span>(valor_total),</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor_cat =</span> total_mensal <span class="sc">-</span> valor_total</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(gg_bonito) <span class="sc">+</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> mes,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">node =</span> categoria,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> categoria,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> valor_total</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sankey_bump</span>(</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">space =</span> <span class="dv">0</span>,</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">type =</span> <span class="st">"alluvial"</span>,</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"transparent"</span>,</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">smooth =</span> <span class="dv">6</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"A"</span>, <span class="at">alpha =</span> .<span class="dv">8</span>) <span class="sc">+</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_sankey_bump</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">expand =</span> <span class="fu">c</span>(.<span class="dv">01</span>, .<span class="dv">001</span>)) <span class="sc">+</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="co"># coord_cartesian(expand = F, clip = "off") +</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Despesas mensais em diferentes categorias de alimentos"</span>,</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Valor Total Mensal [R$]"</span>,</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="cn">NULL</span>,</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> social_caption</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_richtext</span>(</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>      <span class="at">label =</span> <span class="st">"Espessura da linha indica o  &lt;span style = 'color:tomato;'&gt;gasto da categoria&lt;/span&gt;. &lt;br&gt; O somatório de todas as espessuras &lt;br&gt; indica o &lt;span style = 'color:tomato;'&gt;valor total mensal&lt;/span&gt;."</span>,</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="fl">3.3</span>, <span class="at">y =</span> <span class="dv">840</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    ), <span class="at">size =</span> <span class="fl">4.4</span>,</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">label.color =</span> <span class="cn">NA</span>,</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">"Playfair Display"</span>,</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">label.padding =</span> grid<span class="sc">::</span><span class="fu">unit</span>(<span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">4</span>), <span class="st">"pt"</span>)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Playfair Display"</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="fu">c</span>(.<span class="dv">35</span>, .<span class="dv">9</span>),</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"transparent"</span>),</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>,</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_textbox_simple</span>(<span class="at">size =</span> <span class="dv">12</span>)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ima/cat_ao_tempo.jpeg" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gasto-mensal-e-total-dos-principais-produtos" class="level1">
+<h1><strong>Gasto mensal e total dos principais produtos</strong></h1>
+<p>Na última análise, consideramos as categorias que registraram o maior número de compras. Para isso, utilizamos as seguintes categorias: carboidratos, doces, bebidas, frutas e verduras. Dentro de cada uma dessas categorias, identificamos os produtos mais frequentemente adquiridos e os representamos em um único gráfico.</p>
+<p>É importante mencionar que, embora o tomate seja botanicamente classificado como uma fruta, optamos por incluí-lo na categoria verdura. <em>Colocamos ele na categoria verdura pois comemos na salada e não como sobremesa!</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dft <span class="ot">&lt;-</span> base <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(categoria <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Carboidratos"</span>, <span class="st">"Doces"</span>, <span class="st">"Bebidas"</span>, <span class="st">"Frutas"</span>, <span class="st">"Verduras"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(inicial <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"PAO"</span>, <span class="st">"CHOC"</span>, <span class="st">"REFRIG"</span>, <span class="st">"BANANA"</span>, <span class="st">"TOMATE"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(mes, categoria, inicial) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor_total =</span> <span class="fu">sum</span>(valor_total),</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">numero =</span> <span class="fu">n</span>()</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">inicial =</span> <span class="fu">case_match</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    inicial,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"BANANA"</span> <span class="sc">~</span> <span class="st">"Banana"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"CHOC"</span> <span class="sc">~</span> <span class="st">"Chocolate"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"PAO"</span> <span class="sc">~</span> <span class="st">"Pão"</span>,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">"REFRIG"</span> <span class="sc">~</span> <span class="st">"Refrigerante"</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TOMATE"</span> <span class="sc">~</span> <span class="st">"Tomate"</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>valor_dez <span class="ot">&lt;-</span> dft <span class="sc">|&gt;</span> <span class="fu">filter</span>(mes <span class="sc">==</span> <span class="st">"Dez"</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>tot_maximo <span class="ot">&lt;-</span> dft <span class="sc">|&gt;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(inicial) <span class="sc">|&gt;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">total =</span> <span class="fu">round</span>(<span class="fu">sum</span>(valor_total))) <span class="sc">|&gt;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">texto =</span> <span class="fu">c</span>(</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Sweet Banana"</span>, <span class="st">"Cream Cheese Demo"</span>,</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Bready Alternates Demo"</span>, <span class="st">"Loki Cola"</span>,</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Sweet Banana"</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">cor =</span> <span class="fu">c</span>(</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>      <span class="st">"gold3"</span>, <span class="st">"chocolate4"</span>, <span class="st">"darkgoldenrod3"</span>,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>      <span class="st">"firebrick3"</span>, <span class="st">"tomato2"</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">full_join</span>(valor_dez)</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>github_icon <span class="ot">&lt;-</span> <span class="st">"&amp;#xf09b"</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>git_gf <span class="ot">&lt;-</span> <span class="st">"FGu5tav0"</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>git_dv <span class="ot">&lt;-</span> <span class="st">"DiogoVBol"</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>social_caption <span class="ot">&lt;-</span> glue<span class="sc">::</span><span class="fu">glue</span>(</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&lt;span style='font-family:</span><span class="sc">\"</span><span class="st">Font Awesome 6 Brands</span><span class="sc">\"</span><span class="st">;'&gt;{github_icon};&lt;/span&gt;</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;span style='color: #000000'&gt;{git_gf}&lt;/span&gt; &lt;br&gt; &lt;span style='font-family:</span><span class="sc">\"</span><span class="st">Font Awesome 6 Brands</span><span class="sc">\"</span><span class="st">;'&gt;{github_icon};&lt;/span&gt;</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;span style='color: #000000'&gt;{git_dv}&lt;/span&gt;"</span></span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a><span class="co"># com facet ---------------------------------------------------------------</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>dft <span class="sc">|&gt;</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> mes, <span class="at">y =</span> valor_total, <span class="at">group =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>inicial, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray40"</span>) <span class="sc">+</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">fill =</span> inicial), <span class="at">pch =</span> <span class="dv">21</span>, <span class="at">size =</span> <span class="dv">6</span>, <span class="at">col =</span> <span class="st">"gray90"</span>, <span class="at">stroke =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Valor Total [R$]"</span>,</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Valor mensal pago dos produtos </span><span class="sc">\n</span><span class="st">mais consumidos por categoria"</span>,</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> social_caption</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>  ggfx<span class="sc">::</span><span class="fu">with_shadow</span>(</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text</span>(</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>      <span class="at">data =</span> tot_maximo,</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>      <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>        <span class="at">label =</span> inicial,</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>        <span class="at">family =</span> texto,</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="sc">+</span><span class="cn">Inf</span>,</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> cor,</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>        <span class="at">vjust =</span> <span class="fl">1.4</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>      <span class="at">nudge_x =</span> <span class="fl">1.3</span>,</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">20</span>,</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>      <span class="at">lineheight =</span> <span class="dv">1</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> <span class="st">"gray70"</span>,</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">sigma =</span> <span class="dv">20</span></span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, .<span class="dv">20</span>))) <span class="sc">+</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">clip =</span> <span class="st">"off"</span>) <span class="sc">+</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> tot_maximo,</span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>    <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>      <span class="at">label =</span> <span class="fu">paste</span>(<span class="st">"R$"</span>, total),</span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a>      <span class="at">col =</span> cor,</span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="dv">12</span>, <span class="at">y =</span> valor_total</span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>    <span class="at">family =</span> <span class="st">"Banana"</span>,</span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_x =</span> <span class="fl">1.3</span>,</span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">10</span>,</span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>    <span class="at">lineheight =</span> <span class="dv">1</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_identity</span>() <span class="sc">+</span></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(</span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>    <span class="st">"gold3"</span>, <span class="st">"chocolate4"</span>, <span class="st">"darkgoldenrod3"</span>,</span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>    <span class="st">"firebrick3"</span>, <span class="st">"tomato2"</span></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">+</span></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="dv">28</span>) <span class="sc">+</span></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>    <span class="at">strip.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"gray90"</span>),</span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"Sweet Banana"</span>),</span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_line</span>(),</span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(</span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>      <span class="at">family =</span> <span class="st">"Brain Melt regular"</span>,</span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a>      <span class="at">size =</span> <span class="dv">35</span>, <span class="at">hjust =</span> <span class="dv">0</span></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb6-111"><a href="#cb6-111" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.margin =</span> <span class="fu">margin</span>(<span class="at">t =</span> <span class="dv">10</span>, <span class="at">r =</span> <span class="dv">10</span>, <span class="at">b =</span> <span class="dv">10</span>, <span class="at">l =</span> <span class="dv">10</span>),</span>
+<span id="cb6-112"><a href="#cb6-112" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.caption =</span> <span class="fu">element_textbox_simple</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">hjust =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">halign =</span> <span class="sc">-</span>.<span class="dv">05</span>)</span>
+<span id="cb6-113"><a href="#cb6-113" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ima/plot_teste.jpeg" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusão" class="level1">
+<h1><strong>Conclusão</strong></h1>
+<p>Nesse texto, demonstramos como é possível obter informações sobre seus gastos pessoais por meio de web scraping, manipulação e visualização de dados utilizando R e Python. As descobertas aqui foram de caráter exploratório, e uma nova análise com cunho estatístico será realizada em um post futuro. Surgem perguntas interessantes, como: Tenho um dia da semana preferido para ir ao mercado? Ou, a frequência de vezes que vou ao mercado pode prever o preço que gasto no mês?</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os códigos apresentados foram produzidos sem critérios de qualidade. Melhorias ainda podem ser feitas.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website made with quarto © 2023 by Gustavo Frosi is licensed under CC BY-SA 4.0.</p>
+</div>   
+    <div class="nav-footer-center">
+<p><img src="ima/FS.png" width="25" height="25"></p>
+</div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/FGu5tav0">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:gustavofrosi@hotmail.com">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
