@@ -114,6 +114,35 @@ gtag('js', new Date());
 gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 </script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Gustavo Frosi - BananaBudget">
 <meta property="og:description" content="Análise exploratória de gastos do mercado com o R com foco em visualização.">
@@ -397,8 +426,8 @@ Figura&nbsp;1: base de dados
 </div>
 <p>Tivemos que tomar algumas decisões em relação aos produtos que iríamos incluir na tabela. O primeiro ponto foi determinar que produtos que tivessem apenas uma compra seriam excluídos. Nossa pergunta inicial não visa produtos específicos, mas sim um padrão de consumo geral.</p>
 <p>Uma maneira que encontramos para agrupar produtos foi utilizar apenas a primeira palavra do nome do item. No entanto, observamos dois problemas: o primeiro foi a ocorrência de produtos iguais com nomes iniciais diferentes, enquanto o segundo foi a presença de produtos diferentes com nomes iniciais iguais.</p>
-<p><strong>Exemplo 1:A palavra CHOC e CHO representava o mesmo produto, chocolate.</strong></p>
-<p><strong>Exemplo 2: A palavra MINI era observada no MINI TOMATE e no MINI PANETONE.</strong></p>
+<p>Exemplo 1: A palavra <span class="math inline">\(\textbf{CHOC}\)</span> e <span class="math inline">\(\textbf{CHO}\)</span> representava o mesmo produto, chocolate.</p>
+<p>Exemplo 2: A palavra <span class="math inline">\(\textbf{MINI}\)</span> era observada no <span class="math inline">\(\textbf{MINI TOMATE}\)</span> e no <span class="math inline">\(\textbf{MINI PANETONE}\)</span>.</p>
 <p>Esses casos foram tratados de forma manual e caso a caso.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># realizamos uma organização após uma visualização prêvia das categorias </span></span>

@@ -153,11 +153,12 @@ Tivemos que tomar algumas decisões em relação aos produtos que iríamos inclu
 
 Uma maneira que encontramos para agrupar produtos foi utilizar apenas a primeira palavra do nome do item. No entanto, observamos dois problemas: o primeiro foi a ocorrência de produtos iguais com nomes iniciais diferentes, enquanto o segundo foi a presença de produtos diferentes com nomes iniciais iguais.
 
-**Exemplo 1:A palavra CHOC e CHO representava o mesmo produto, chocolate.**
+Exemplo 1: A palavra  $\textbf{CHOC}$ e $\textbf{CHO}$ representava o mesmo produto, chocolate.
 
-**Exemplo 2: A palavra MINI era observada no MINI TOMATE e no MINI PANETONE.**
+Exemplo 2: A palavra $\textbf{MINI}$ era observada no $\textbf{MINI TOMATE}$ e no $\textbf{MINI PANETONE}$.
 
 Esses casos foram tratados de forma manual e caso a caso.
+
 
 ```{r, eval=FALSE}
 # realizamos uma organização após uma visualização prêvia das categorias 
