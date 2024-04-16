@@ -71,13 +71,13 @@ Com os títulos, temos a nuvem de palavras. Essa visualização mostra as palavr
 Acredito que uma mensagem interessante aqui seja tentar evitar palavras óbvias. Embora seja desafiador, aumentar a diversidade nos títulos é uma prática enriquecedora.
 
 <center>
-<iframe src="ima/total.html" width="750" height="600"></iframe>
+<iframe src="ima/total.html" width="750" height="650"></iframe>
 </center>
 
 
 ### Análise de N, P e K em títulos
 
-"Bem, como estou realizando meu doutorado com potássio, achei interessante verificar a frequência com que ele é mencionado nos títulos dos artigos. Surpreendentemente, ele é pouco mencionado. A Figura 3 mostra uma visualização do número de vezes que N, P e K aparecem nos títulos, tanto em português quanto em inglês. É interessante notar a disparidade significativa entre os elementos. Não sei se isso está relacionado à importância, à dificuldade de pesquisa ou a algum outro fator que possa explicar essa diferença. Acredito que ainda não tenhamos descoberto tudo o que podemos sobre nenhum desses elementos.
+Bem, como estou realizando meu doutorado com potássio, achei interessante verificar a frequência com que ele é mencionado nos títulos dos artigos. Surpreendentemente, ele é pouco mencionado. A Figura 3 mostra uma visualização do número de vezes que N, P e K aparecem nos títulos, tanto em português quanto em inglês. É interessante notar a disparidade significativa entre os elementos. Não sei se isso está relacionado à importância, à dificuldade de pesquisa ou a algum outro fator que possa explicar essa diferença. Acredito que ainda não tenhamos descoberto tudo o que podemos sobre nenhum desses elementos.
 
 ![](ima/npk.jpeg)
 Figura 2: Número de vezes que N, P e K foram encontrados nos títulos dos artigos.
