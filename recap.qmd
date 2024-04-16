@@ -3,6 +3,7 @@ title: "Coisas legais!"
 code-fold: true
 toc: true
 listing:
+  feed: true
   id: recap-listings
   contents: recap
   sort: "date desc"
