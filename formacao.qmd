@@ -1,0 +1,47 @@
+---
+title: "Formação"
+code-fold: false
+toc: true
+lang: pt
+editor_options: 
+  chunk_output_type: console
+---
+
+<hr>
+
+# Educação
+
+<i class="bi bi-mortarboard"></i> Atualmente, doutorando em ciência do solo pela Universidade Federal do Rio Grande do Sul [<i class="bi bi-box-arrow-up-right"></i>](https://www.ufrgs.br/agronomia/joomla/index.php/ensino/pos-graduacao/pg-em-ciencia-do-solo) (2022 - ).
+
+<i class="bi bi-mortarboard"></i> Mestre em ciência do solo pela Universidade Federal do Rio Grande do Sul (UFRGS) (2020 - 2022).
+
+<i class="bi bi-mortarboard"></i> Engenheiro agrônomo pelo Instituto Federal do Paraná [<i class="bi bi-box-arrow-up-right"></i>](https://ifpragronomia.wixsite.com/agro) (2015 - 2019).
+
+<i class="bi bi-mortarboard"></i> Técnico em Agropecuária pelo Instituto Federal Catarinense [<i class="bi bi-box-arrow-up-right"></i>](https://concordia.ifc.edu.br/) (2012 - 2014).
+
+# Interesses
+
+```{r, echo=F}
+data.frame(solo = c("Mineralogia",
+                                       "Química",
+                                       "Fertilidade"),
+                 dados = c("Manipulação",
+                                        "Inferência",
+                                        "Visualização")) |> 
+  kableExtra::kbl(col.names = c("Ciência do Solo", "Análise de dados"), align = "c", booktabs = T) |> 
+  kableExtra::row_spec(1:3, bold = T, color = "black", background = "white")
+  
+```
+
+# Habilidades
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> **R**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Markdown**/**Quarto**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Visualização**/**Manipulação de dados**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Modelos**
+
+<i class="bi bi-star-fill"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> <i class="bi bi-star"></i> **Python**
+

@@ -7,6 +7,7 @@ project:
 lang: pt
 
 website: 
+  back-to-top-navigation: true
   favicon: "ima/FS2.png"
   site-url: ""
   open-graph: true
@@ -28,6 +29,8 @@ website:
   navbar:
     logo: "ima/FS2.png"
     left: 
+      - text: "Formação"
+        href: formacao.qmd
       - text: "CV"
         href: CV/index.qmd
       - text: "Projetos"
