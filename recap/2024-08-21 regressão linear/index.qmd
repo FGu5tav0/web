@@ -1,0 +1,984 @@
+---
+title: "Do caos ao conhecimento: <br> use $y = \\beta_{0} + \\beta_{1}x + \\epsilon$ para explicar seus experimentos"
+author:
+  - name: Gustavo Frosi
+    email: gustavofrosi@hotmail.com
+code-fold: true
+categories: 
+  - R
+  - Regressão Linear
+  - Estatística
+toc: true
+image: ima_fundo.jpeg
+title-block-banner: "#8B8878"
+title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+code-links: 
+  - text: "Download do Código"
+    href: "regressao_linear.r" 
+    icon: file-code
+description: "Aplicando a tecnologia de regressão linear para dados contínuos e/ou discretos"
+image-alt: ""
+number-sections: true
+# date: "2024/08/22"
+date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Example</title>
+  <style>
+    /* O container do popup */
+    .popup {
+      display: none; /* Esconde o popup por padrão */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);
+    }
+    /* O conteúdo do popup */
+    .popup-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    /* O botão de fechar */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- O conteúdo do popup -->
+  <div id="myPopup" class="popup">
+  <div class="popup-content">
+  <span class="close" id="closePopup">&times;</span>
+  <p>Abra no computador para ter um experiência melhor na leitura.</p>
+  </div>
+  </div>
+
+<script>
+  // Obter elementos
+  var popup = document.getElementById("myPopup");
+  var openLink = document.getElementById("openPopupLink");
+  var closeBtn = document.getElementById("closePopup");
+
+  // Quando a página for carregada, exiba o popup
+  window.onload = function() {
+    popup.style.display = "block";
+  }
+
+  // Quando o usuário clicar no botão de fechar, feche o popup
+  closeBtn.onclick = function() {
+    popup.style.display = "none";
+  }
+
+  // Quando o usuário clicar fora do popup, feche-o
+  window.onclick = function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
+
+```{css}
+#| echo: false
+p {
+  text-align: justify
+}
+```
+
+```{r}
+library(tidyverse)
+library(ggtext)
+library(latex2exp)
+library(patchwork)
+library(gganimate)
+
+```
+
+```{r}
+sysfonts::font_add(family = "Font Awesome 6 Brands",
+                   regular = "C:\\Users\\gusta\\AppData\\Local\\Microsoft\\Windows\\Fonts/Font Awesome 6 Brands-Regular-400.otf")
+showtext::showtext_auto()
+
+github_icon <- "&#xf09b"
+git_gf <- "FGu5tav0"
+
+social_caption <- glue::glue(
+  "<span style='font-family:\"Font Awesome 6 Brands\";'>{github_icon};</span>
+  <span style='color: #000000'>{git_gf}</span>"
+)
+```
+
+# Aprendi assim!
+
+[**"Os dados foram analisados por meio da análise de variância e, quando significativo, foram realizadas comparações de médias por Tukey para dados categóricos e regressão para dados quantitativos"**]{style="color: #53868B;"}
+
+Essa é a lógica que eu aprendi durante minha graduação e que se manteve até pelo menos meu mestrado. E não é uma lógica errada, longe disso, mas é muito limitada e responde uma parte dos problemas. 
+
+Essa abordagem me transmitia a ideia, ou a sensação, de que era somente dessa forma que os estudos eram realizados. É claro que essa era uma limitação minha ao perceber dessa maneira, mas tenho conduzido algumas pesquisas que me indicam que há um coletivo de pessoas que também pensam assim (isso fica para outro momento).
+
+Neste texto, mostro como a regressão linear pode ser aplicada a dados de natureza contínua e/ou categórica. Além disso, inclui um [tutorial](regressao_linear.r) para a implementação em R.
+
+# A regressão
+
+Francis Galton foi quem desenvolveu o conceito de regressão por volta de 1885. A regressão é utilizada para verificar a relação entre duas ou mais variáveis, de modo que uma delas pode ser descrita, explicada ou predita pelas demais.
+
+A variável que será explicada ($y$) é chamada de variável dependente, enquanto a variável que a explica ($x$) é denominada variável independente. Isso não significa necessariamente que há uma relação de causa e efeito entre $x$ e $y$, mas para a análise, considera-se essa dependência entre as variáveis.
+
+Para o $y$ em uma regressão linear, é necessário que tenhamos dados do tipo contínuo. No entanto, para o $x$, podemos utilizar tanto dados contínuos quanto categóricos.
+
+Uma regressão linear simples pode ser descrita pela equação: 
+
+$$y=\beta_{0}+\beta_{1}x+\epsilon$$
+Onde, $y$ é a variável dependente; $\beta_{0}$ é o intercepto do modelo (ponto que corta o eixo $y$); $\beta_{1}$ é o coeficiente angular; $x$ é a variável independente e $\epsilon$ é o erro do modelo (@fig-reg).
+
+```{r}
+#| fig-cap: Esquema de representação da regressão linear simples
+#| label: fig-reg
+
+set.seed(123)
+
+n <- 14
+
+x <- seq(1,40, by = 3)
+
+y <- (x + rnorm(n, mean = 0, sd = 7)) + 20
+
+df <- data.frame(x,y)
+
+mod <- lm(y ~x , df)
+# summary(mod)
+
+# predict(object = mod, newdata = data.frame(x = c(20,30,14)))
+
+triangulo <- data.frame(
+  x = c(20, 30, 30),
+  y = c(40.81953, 40.81953, 50.62301)
+)
+
+linhas <- data.frame(
+  x = c(32,1.6,16,15,20),
+  y = c(43.81953,27.48311,13,25,65),
+  label = c(r"($\beta_{1}$)",r"($\beta_{0}$)",
+            r"($y_{i}$)",r"($\epsilon_{i}$)",
+            r"($y_{i}=\beta_{0}+\beta_{1}x_{i}+\epsilon_{i}$)")
+)
+
+pontos <- data.frame(x = c(14,0),
+                     y = c(13,21.21256))
+p1 <- df |> ggplot() +
+  aes(x, y) +
+  geom_point(
+    size = 3, pch = 21, alpha = .9, colour = "gray10",
+    fill = "gray20", stroke = 1
+  ) +
+  scale_y_continuous(
+    limits = c(0, 70), expand = expansion(0, 0.4)
+  ) +
+  scale_x_continuous(limits = c(0, 40), expand = expansion(0, 0)) +
+  coord_cartesian(clip = "off") +
+  geom_polygon(
+    data = triangulo, mapping = aes(x, y), col = "black",
+    fill = alpha("gray90", .4), linetype = "dashed", linewidth = 1
+  ) +
+  geom_abline(
+    slope = 0.98035, intercept = 21.21256, col = "tomato",
+    linewidth = 1.5
+  ) +
+  geom_text(
+    data = linhas,
+    mapping = aes(
+      x = x, y = y,
+      label = TeX(label, output = "character")
+    ),
+    parse = TRUE,
+    size = 15,
+    col = "black",
+  ) +
+  geom_segment(aes(x = 14, xend = 14, y = 34.37208, yend = 13),
+    linewidth = 1,
+    lineend = "butt", linetype = "dashed"
+  ) +
+  geom_point(
+    data = pontos, aes(x, y),
+    size = 5, pch = 21, col = "black", fill = "green",
+    stroke = 1
+  ) +
+  annotate(geom = "text", x = 26, y = 43.81953, label = "+1", col = "black", size = 12) + 
+  labs(
+    caption = social_caption,
+    x = "X",
+    y = "Y"
+  ) +
+  theme_classic(30) +
+  theme(
+    text = element_text(),
+    axis.text = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1, angle = 360),
+    axis.ticks = element_blank(),
+    plot.caption = element_textbox_simple(
+      size = 20, hjust = 0,
+      orientation = "upright",
+      minwidth = unit(1, "in"),
+      maxwidth = unit(2, "in"),
+      padding = margin(4, 4, 2, 4),
+      margin = margin(2, 0, 2, 0)
+    )
+  )
+
+p2 <- tibble(x = rep(1,5), y = rep(1:5)) %>%
+  mutate(z = c(
+    r"($y_{i}=Variável~Resposta$)", 
+    r"($\beta_{0}=Intercepto$)", 
+    r"($\beta_{1}=Coeficiente~angular$)",
+    r"($x_{i}=Variável~Preditora$)",
+    r"($\epsilon_{i}=Erro~Aleatório$)"
+  )) |> 
+ggplot() +
+  geom_text(
+    aes(
+      x = x, y = y, 
+      label = TeX(z, output = "character")
+    ), 
+    parse = TRUE,
+    size = 28/.pt, hjust = 0
+  ) +
+  scale_x_continuous(expand = c(0.25, 0)) +
+  scale_y_reverse(expand = c(0.1, 0)) +
+  theme_void()
+
+p1 + inset_element(p = p2, left = .3, bottom = 0.05, right = 1, top = .4)
+
+```
+
+## Como ela se ajusta?
+
+Para encontrar a curva com o melhor ajuste, é utilizado o método dos mínimos quadrados. Isso significa que o método "encontra" qual das curvas retorna o menor valor para a soma dos quadrados. Essa soma dos quadrados é obtida calculando a diferença entre o valor observado e o valor predito, elevando essa diferença ao quadrado e, somando tudo.
+
+Em outras palavras, esse método encontra "a curva que fica mais próxima dos dados observados". É claro que a quantidade de matemática e estatística por trás de todo esse método é brutal. Aqui apresento apenas uma explicação superficial.
+
+A @fig-reg2 mostra uma curva ($a$) com inclinação zero, que representa o intercepto na média dos valores de $y$. Já em $b$, temos o melhor ajuste possível para uma regressão linear. A primeira curva pode ser considerada um palpite inicial para explicar os dados, ou seja, utilizando o valor da média. A segunda é um avanço, onde $y$ passa a assumir valores dependendo de $x$.
+
+```{r}
+#| fig-cap: Ajsute de curva para média de y (a) e ajsute de menor erro (b)
+#| label: fig-reg2
+
+df_teste <- df |> mutate(xo = 0,
+                         xlinha = seq(-0.01, 0.01, length = 14)) |> 
+  arrange(y)
+
+p2 <- df_teste |> 
+  ggplot(aes(x, y)) +
+  ggpmisc::stat_fit_deviations(colour = "black", linetype = "dashed") +
+  geom_point(size = 4, col = "black", fill = "tomato", pch = 21) +
+  geom_smooth(method = "lm", se = F, col = "black") +
+    labs(
+    x = "X",
+    y = "Y"
+  ) +
+  theme_classic(30) +
+  theme(
+    text = element_text(),
+    axis.text = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1, angle = 360),
+    plot.caption = element_textbox_simple(
+      size = 20, hjust = 0,
+      orientation = "upright",
+      minwidth = unit(1, "in"),
+      maxwidth = unit(2, "in"),
+      padding = margin(4, 4, 2, 4),
+      margin = margin(2, 0, 2, 0)
+    )
+  )
+
+
+p3 <- df_teste |> 
+  ggplot(aes(x, y)) +
+  ggpmisc::stat_fit_deviations(colour = "black", linetype = "dashed", formula = y ~ 1, na.rm = T) +
+  geom_point(size = 4, col = "black", fill = "tomato", pch = 21) +
+  geom_smooth(method = "lm", formula = y ~ 1, se = F, col = "black") +
+    labs(
+    x = "X",
+    y = "Y"
+  ) +
+  theme_classic(30) +
+  theme(
+    text = element_text(),
+    axis.text = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1, angle = 360),
+    plot.caption = element_textbox_simple(
+      size = 20, hjust = 0,
+      orientation = "upright",
+      minwidth = unit(1, "in"),
+      maxwidth = unit(2, "in"),
+      padding = margin(4, 4, 2, 4),
+      margin = margin(2, 0, 2, 0)
+    )
+  )
+
+
+segmentos_tick <- data.frame(
+  x = rep(-0.0025,5), 
+  xend = rep(0,5), 
+  y = c(20,30,40,50,60), 
+  yend = c(20,30,40,50,60)
+)
+
+p1 <- df_teste |> 
+  ggplot(aes(xo, y)) +
+  geom_hline(yintercept = 42.52972, linewidth = 1) + 
+  geom_vline(xintercept = 0, linewidth = 1.5) +
+  geom_segment(aes(x = xlinha, xend = xlinha ,  y = y, yend = 42.52972), linetype = "dashed") +
+  geom_segment(data = segmentos_tick,aes(x = x, xend = xend, y = y, yend = yend), linewidth = 1.5) +
+  geom_point(size = 4, col = "black", fill = "tomato", pch = 21) +
+  scale_x_continuous(limits = c(-0.011,0.05)) +
+      labs(
+    caption = social_caption,
+    x = "X",
+    y = "Y"
+  ) +
+  theme_classic(30) +
+  theme(
+    text = element_text(),
+    axis.text = element_blank(),
+    axis.line.y.left = element_blank(),
+    axis.ticks.y.left = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1, angle = 360),
+    plot.caption = element_textbox_simple(
+      size = 20, hjust = 0,
+      orientation = "upright",
+      minwidth = unit(1, "in"),
+      maxwidth = unit(2, "in"),
+      padding = margin(4, 4, 2, 4),
+      margin = margin(2, 0, 2, 0)
+    )
+  )
+
+
+(p3 | p2) + plot_layout(axis_titles = "collect") +
+  plot_annotation(tag_levels = "a") & theme(axis.title.x = element_text(hjust = 0.5))
+
+```
+
+A animação abaixo mostra a reta de regressão assumindo diversos valores para $\beta_{0}$ e $\beta_{1}$. É importante observar que ela começa com uma reta na média de $y$ e evolui até alcançar retas para além da mais adequada. Os valores da soma dos quadrados indicam que há uma inclinação que minimiza esse valor, enquanto inclinações anteriores ou posteriores fazem com que a soma dos quadrados aumente.
+
+```{r}
+
+modelo_para_melhor <- lm(y ~ x, data = df)
+# summary(modelo_para_melhor)
+
+angulo <- seq(0,2.32, length = 20)
+# ylinha <- rep(-40,14)
+residuo <- data.frame(x = df$x)
+
+for (i in 1:length(angulo)) {
+  ylinha <- ( angulo[i]* df$x - 20 *angulo[i]  + mean(df$y))
+   df[[paste0(i)]] <- ylinha
+  residuo[[paste0(angulo[i])]] <- (df$y - ylinha)^2
+}
+
+
+residuo <- residuo |> pivot_longer(cols = 2:21, names_to = "angulo", values_to = "residuo") |> 
+  mutate(angulo = as.numeric(angulo)) |> 
+  arrange(angulo) |> dplyr::select(-x)
+
+df_desvios <- df %>% dplyr::select(1:22) |> 
+  pivot_longer(cols = 3:22, names_to = "y_angulos",
+                    values_to = "y_novo") |> 
+  mutate(y_angulos = as.numeric(y_angulos)) |> 
+  arrange(y_angulos)
+
+base <- cbind(df_desvios,residuo) |> 
+  group_by(y_angulos) |> 
+  mutate(soma = round(x = sum(residuo), digits = 2)) |> 
+  ungroup()
+
+```
+
+
+```{r}
+# echo: false
+# eval: false
+
+animacao <- base |> 
+
+# df_desvios |> 
+  ggplot() +
+  aes(x, y_novo) +
+  geom_segment(aes(x = x, y = y, xend = x, yend = y_novo), linetype = "dashed") +
+  geom_point(data = df, mapping = aes(x,y), 
+              size = 1.8,
+              pch = 21, col = "black", fill = "gray80") +
+  geom_smooth(method = "lm",linewidth = .8, col = "black", formula = y ~ x) +
+  transition_states(states = y_angulos, wrap = F) +
+  annotate(geom = "point",x = 20, y = mean(df$y), size = 1,
+             pch = 21, fill = "tomato", col = "black",
+             stroke = 1) +
+  geom_text(mapping = aes(x = 20, y = 10, label = paste("Soma de quadrados:", round(soma,2)))) +
+  labs(
+       x = "X",
+       y = "Y",
+       col = NULL) +
+  exit_shrink() +
+  ease_aes('sine-in-out') +
+  theme_minimal(18) +
+  theme(
+    text = element_text(),
+    axis.text = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1, angle = 360)
+  )
+
+animate(animacao, height = 3, width = 3, 
+         units = "in",
+         res = 200,
+         nframes = 1000,
+         fps = 30,
+         rewind = T,
+         end_pause = 2, start_pause = 2, duration = 25)
+
+# anim_save("animation.gif", animation = anim, quality = "high")
+
+```
+
+## Variável categórica na regressão
+
+Essa é a parte que mais me chama atenção.
+
+Para que uma variável categórica entre na análise de regressão, ela passa por uma pequena transformação, tornando-se uma **variável dummy**.
+
+Por definição, uma variável dummy assume apenas os valores $0$ ou $1$, indicando a presença ou ausência de uma categoria. O número de variáveis dummy criadas é sempre igual a $n-1$, onde $n$ é o número de categorias da variável.
+
+Se tivermos $3$ grupos em nossa variável, então teremos $2$ variáveis dummy, como mostrado na @tbl-dummy. Nota-se que um dos grupos sempre terá o valor $0$ em ambas as dummies, pois serve como referência, e os demais grupos serão comparados a ele. Na @tbl-dummy, o grupo "A" é a referência inicial, mas para as demais comparações, é possível alterar o grupo de referência.
+
+```{r}
+#| tbl-cap: Representação das variáveis dummy
+#| label: tbl-dummy
+
+data.frame(Grupo = c("A (ref)","B","C"),
+           Dummy1 = c(0,1,0),
+           Dummy2 = c(0,0,1)) |> 
+knitr::kable(col.names = c("Grupo", "Dummy (D1)", "Dummy (D2)"))
+```
+
+::: {.callout-note collapse="true"}
+## Dummy em programas estatísticos
+
+A criação das variáveis dummy é totalmente automatizada nos programas estatísticos. Logo, você não precisa criá-las manualmente. No entanto, como exercicio, vale a pena rodar uma regressão criando as próprias dummies e ver que o resultado é exatamente o mesmo que o do computador.
+:::
+
+A equação de regressão geral pode ser descrita conforme @eq-dummy. Também podemos fazer uma equação para cada grupo (@eq-dois, @eq-tres e @eq-quatro).
+
+$$y=\beta_{0}+\beta_{1}D1+\beta_{2}D2+\epsilon_{i}$$ {#eq-dummy}
+
+Equação grupo **A**:
+
+$$y=\beta_{0}+\epsilon_{i}$$ {#eq-dois}
+
+Equação grupo **B**:
+
+$$y=\beta_{0}+\beta_{1}D1+\epsilon$$ {#eq-tres}
+
+Equação grupo **C**:
+
+$$y=\beta_{0}+\beta_{2}D2+\epsilon$$ {#eq-quatro}
+
+Agora, repare como a @eq-dois é descrita apenas pelo intercepto, pois a variável de grupo assume o valor $0$ em todas as dummies (@tbl-dummy). Já para os demais grupos aparece na equaçao as dummies em que o valor $1$ é atribuído.
+
+A interpretação de uma regressão com variáveis dummy é, basicamente, a diferença de média entre os grupos (semelhante a um teste de Tukey). Na @fig-dummy, podemos ver as médias dos grupos A, B e C e os respectivos $\beta$s, que indicam a diferença entre elas. Essa diferença pode ser entendida como uma diferença angular, pois, se as médias são diferentes, forma-se um ângulo ($\neq 0$) entre as médias.
+
+```{r}
+#| fig-cap: Representação esquemática da regressão com variável dummy
+#| label: fig-dummy
+
+iris_df <- iris |> mutate(
+  d1 = case_match(Species,
+    "versicolor" ~ 1,
+    .default = 0
+  ),
+  d2 = case_match(Species,
+    "virginica" ~ 1,
+    .default = 0
+  )
+)
+
+linhas_iris <- data.frame(
+  x = c(0.9,2.1,3.1),
+  y = c(1.46200,2,2),
+  label = c(r"($\beta_{0}$)",
+            r"($\beta_{1}$)",
+            r"($\beta_{2}$)")
+)
+
+poligonos <- data.frame(
+  x = c(1, 2, 2,
+        1,3,3),
+  y = c(1.46200, 1.46200, 1.46200 + 2.79800,
+        1.46200,1.46200,1.46200 + 4.09000),
+  grupo = c(rep("a",3),rep("b",3))
+)
+# 
+iris |>
+  ggplot(aes(x = Species, y = Petal.Length)) +
+  coord_cartesian(clip = "off") +
+  stat_summary(geom = "point", col = "red", size = 4) +
+  geom_polygon(
+    data = poligonos, mapping = aes(x, y, group = grupo, fill = grupo),
+    col = "black",
+    alpha = .1,
+    linetype = "dashed", linewidth = 1
+  ) +
+  geom_text(
+    data = linhas_iris,
+    mapping = aes(
+      x = x, y = y,
+      label = TeX(label, output = "character")
+    ),
+    parse = TRUE,
+    size = 13,
+    col = "black",
+  ) +
+   labs(
+    caption = social_caption,
+    x = "X",
+    y = "Y"
+  ) +
+  scale_x_discrete(label = c("A","B","C")) +
+  theme_classic(30) +
+  theme(
+    legend.position = "none",
+    text = element_text(),
+    axis.text.y = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1, angle = 360),
+    plot.caption = element_textbox_simple(
+      size = 20, hjust = 0,
+      orientation = "upright",
+      minwidth = unit(1, "in"),
+      maxwidth = unit(2, "in"),
+      padding = margin(4, 4, 2, 4),
+      margin = margin(2, 0, 2, 0)
+    )
+  )
+
+```
+
+## Requisitos/indicadores de qualidade para a regressão linear
+
+Como um professor disse uma vez: 
+
+>O grande perigo é a pessoa apenas saber fazer uma regressão. 
+
+Essa frase é uma crítica às pessoas que apenas sabem montar um modelo e sair interpretando. Uma interpretação útil surge de uma regressão bem feita, e, para isso, é necessário conhecer a qualidade do modelo gerado. Abaixo estão os principais critérios para avaliar como seu modelo se comporta.
+
+### As observações devem ser independentes
+
+Esse requisito diz que o valor de uma observação não pode ter influência no valor de outra observação.
+
+### As variáveis preditivas não devem possuir alta correlação
+
+Também chamada de multicolinearidade, a alta correlação entre as variáveis independentes é um aspecto importante a ser considerado. Variáveis com alta correlação podem causar diversos problemas, como distorção dos resultados e interpretações espúrias.
+
+### Homocedasticidade e normalidade dos resíduos
+
+A homocedasticidade é semelhante à homogeneidade de variâncias testada na ANOVA. No entanto, a homocedasticidade diz respeito à variância dos erros do modelo ($\epsilon$), que deve ser constante em toda a escala ou nos níveis da variável $x$.
+
+Já a normalidade diz respeito aos erros do modelo, que devem ser aproximadamente normais.
+
+# Exemplo de regressão
+
+Agora, vamos fazer um exemplo de regressão com variáveis contínuas e discretas no mesmo modelo. Depois vamos interpretar cada variável e verificar a qualidade do modelo.
+
+Para o exemplo vamos considerar 2 variáveis dependentes que são 5 doses de algum fertilizante e outra como 3 cultivares de qualquer planta. Já a variável dependete será a produtividade dessa planta (@tbl-media).
+
+Nossa pergunta será: "**As variáveis dose e cultivar são preditores da produtividade da cultura?**".
+
+```{r}
+doses <- c(0, 50, 100, 150, 200)
+cultivares <- factor(c("Cultivar1", "Cultivar2", "Cultivar3"))
+
+media_produtividade <- matrix(c(50, 55, 60, 65, 70, 
+                                45, 50, 55, 60, 65,
+                                40, 45, 50, 55, 60), 
+                              nrow = length(cultivares), byrow = TRUE)
+
+n_reps <- 10
+
+set.seed(123) 
+dados <- data.frame()
+
+for (i in 1:length(cultivares)) {
+  for (j in 1:length(doses)) {
+    produtividade <- rnorm(n_reps, mean = media_produtividade[i, j], sd = 5)
+    temp_df <- data.frame(
+      Cultivar = rep(cultivares[i], n_reps),
+      Dose = rep(doses[j], n_reps),
+      Produtividade = produtividade
+    )
+    dados <- rbind(dados, temp_df)
+  }
+}
+```
+
+```{r}
+#| tbl-cap: Banco de dados inventado para a análise
+#| label: tbl-media
+
+DT::datatable(dados, extensions = 'Buttons', options = list(
+  dom = 'Bfrtip',
+  buttons = list(
+    list(
+      extend = 'copy',
+      title = 'tabela_inventada'
+    ),
+    list(
+      extend = 'csv',
+      title = 'tabela_inventada'
+    ),
+    list(
+      extend = 'excel',
+      title = 'tabela_inventada'
+    )
+  )
+))
+# library(gt)
+# dados |> group_by(Cultivar, Dose) |> 
+#   summarise(media = round(mean(Produtividade),2)) |> 
+#   pivot_wider(names_from = Dose, values_from = media) |> 
+#   ungroup() |> 
+#   gt() |> 
+#   tab_spanner(
+#     label = "Dose",
+#     columns = c(`0`,`50`,`100`,`150`,`200`)
+#   )
+
+```
+
+
+## Especificando o modelo
+
+Nosso modelo teórico e sem interação pode ser representado como:
+
+$$y= \beta_0 + \beta_1*dose + \beta_2*cultivar + \epsilon$$
+
+## Resultado
+
+A @tbl-regressao mostra os resultados da regressão. Na tabela, a primeira coluna representa o intercepto ou a variável $x$. A coluna "Beta" apresenta os coeficientes ajustados, seguida pelo intervalo de confiança para o coeficiente e, por fim, o valor de *p*.
+
+```{r}
+#| tbl-cap: Resultado da regressão linear
+#| label: tbl-regressao
+
+dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar1")
+mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
+# summary(mod)
+
+tbl1 <- mod |> 
+gtsummary::tbl_regression(intercept = T,
+                 estimate_fun = function(x) gtsummary::style_sigfig(x, digits = 3),
+                 pvalue_fun   = function(x) gtsummary::style_pvalue(x, digits = 3)) |> 
+gtsummary::add_glance_table(include = c(nobs, r.squared))
+
+tbl1
+
+dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar2")
+mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
+tbl2 <- 
+  mod |> 
+gtsummary::tbl_regression(intercept = T,
+                 estimate_fun = function(x) gtsummary::style_sigfig(x, digits = 3),
+                 pvalue_fun   = function(x) gtsummary::style_pvalue(x, digits = 3)) 
+
+tbl3 <- gtsummary::tbl_merge(list(tbl1, tbl2), tab_spanner = c("**Refe Cultivar1**", "**Refe Cultivar2**")) 
+
+# report::report(mod)
+
+```
+
+## Interpretação {#sec-interpretacao}
+
+O modelo criado (@tbl-regressaocultivares) tem um $R^2$ de $0,77$, o que é considerado um valor "bom". Todas as variáveis $x$ foram significativas ($p<0,05$). A interpretação de cada variável é:
+
+**Cultivar:** A Cultivar2 tem uma produtividade em média de **4,44** unidades a **menos** que a Cultivar1. Já a Cultivar3 tem produtividade média de **11,4** unidades a **menos** que a Cultivar1. Alterando a referência para a Cultivar2, observa-se que a Cultivar3 tem produtividade média de **7** unidades a **menos** que a Cultivar2
+
+**Dose:** Com relação a dose, a cada aumento de uma unidade temos um **aumento** na produtividade de **0,103** unidades.
+
+```{r}
+#| tbl-cap: Resultado da regressão linear entre Dose e Cultivar para prever produtividade. "Refe Cultivar1" são os resultados utilizando a categória "Cultivar1" como referência, já "Refe Cultivar2" é utilizada a "Cultivar2"
+#| label: tbl-regressaocultivares
+
+tbl3
+
+```
+
+```{r}
+# levels(dados$Cultivar)
+# # df$probsono_semana <-  relevel(df$probsono_semana, ref = "n.o")
+# dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar1")
+# dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar2")
+# dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar3")
+# 
+# cultivares
+
+df_mod <- data.frame()
+for (i in 1:length(cultivares)) {
+    dados$Cultivar <-  relevel(dados$Cultivar, ref = as.character(cultivares[i]))
+    mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
+    
+    parametros <- parameters::parameters(mod) |> 
+      mutate(referencia = as.character(cultivares[i]))
+    # print(parametros)
+    df_mod <- rbind(df_mod, parametros) |> relocate(referencia)
+}
+# dados <- edit(dados)
+# mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
+# # summary(mod)
+# 
+# performance::check_model(mod)
+# 
+# performance::check_autocorrelation(mod)
+# performance::check_collinearity(mod)
+# performance::check_heteroscedasticity(mod)
+# performance::check_residuals(mod)
+# performance::check_normality(mod)
+# 
+# 
+# mod <- aov(Produtividade ~ Cultivar + Dose, data = dados)
+# summary(mod)
+# multcomp::cld(emmeans::emmeans(mod,  ~ Cultivar)) 
+
+```
+
+## Indicadores de qualidade {#sec-qualidade}
+
+### Outliers
+
+Na regressão linear, uma das maneiras de verificar se há dados influentes para o modelo é por meio da distância de Cook. Existem diferentes interpretações em relação aos valores de corte para considerar um valor influente. Aqui, utilizo o valor de $1$ como ponto de corte. Há discussões sobre o uso de valores limite para diagnósticos, mas, de qualquer forma, utilizar o limite de $1$ já é melhor que não fazer uma avaliação de outliers.
+
+Podemos observar na @fig-cook que nenhum ponto se aproxima do valor de $1$, portanto, aparentemente, não temos pontos discrepantes que possam prejudicar o modelo.
+
+```{r}
+#| fig-cap: Distância de cook para o modelo de regressão
+#| label: fig-cook
+
+data.frame(
+                    dist = cooks.distance(mod)) |> 
+  mutate(linha = row_number()) |> 
+  ggplot() +
+  aes(x = linha, y = dist) +
+    # geom_line() +
+    # geom_point() +
+  geom_col(width = .5, fill = "tomato") +
+  labs(x = "Observação",
+       y = "Cook's D") +
+  geom_hline(yintercept = 1) +
+  scale_y_continuous(expand = expansion(mult = c(0,0), add = c(0,0)),
+                     limits = c(0,1.1)) +
+  theme_classic(25) +
+  theme(
+    legend.position = "none",
+    text = element_text(),
+    # axis.text.y = element_blank(),
+    axis.title.x = element_text(hjust = 1),
+    axis.title.y = element_text(hjust = 1)
+  )
+
+```
+
+### Normalidade dos resíduos e homocedasticidade
+
+A @fig-normalidade mostra o QQ-plot dos resíduos. O ideal é que os pontos estejam dispostos perfeitamente em cima da reta, mas isso é praticamente impossível nas análises do dia a dia. Portanto, quanto mais próximos da linha, melhor. Não temos um ponto de corte ou métrica de qualidade específicos para o QQ-plot. Buscamos o melhor ajuste possível, dados os dados que temos.
+
+Verificamos que há alguns desvios em relação à linha, mas, no geral, o resultado é satisfatório. Com isso, podemos concluir que os resíduos são aproximadamente normais. Além disso, tudo indica que não temos problemas com a homocedasticidade.
+
+```{r}
+#| fig-cap: QQ-plot dos resíduos do modelo
+#| label: fig-normalidade
+
+residuos <- data.frame(resi = residuals(mod))
+qqplot_produ <- residuos |>
+ggplot(aes(sample = resi)) +
+  stat_qq_line(col = "darkorange1", lwd = 1) +
+  stat_qq(
+    shape = 21,
+    # fill = "firebrick2",
+    fill = alpha("darkseagreen1", .8),
+    size = 2.7
+  ) +
+  labs(
+    x = "Quantis teóricos ", y = "Quantis da Amostra",
+    title = "Normal Q-Q plot"
+  ) +
+  theme_bw(14) +
+  theme(plot.title = element_text(hjust = .5))
+
+  ggExtra::ggMarginal(qqplot_produ)
+
+```
+
+### Multicolinearidade
+
+A tolerância entre as variáveis foi de $1$ (@tbl-vif) o que significa uma boa tolerância. Em geral, acima de $0,80$ já temos variáveis que se toleram no modelo.
+
+```{r}
+#| tbl-cap: Tolerância entre as variáveis do modelo
+#| label: tbl-vif
+
+performance::check_collinearity(mod) |> 
+  select(Term,VIF,Tolerance)|>
+  knitr::kable(format = "pandoc", digits = 2)
+```
+
+O teste de Durbin-Watson é utilizado para verificar a autocorrelação entre os resíduos da regressão. O valor ideal desse teste é $2$, o que indica a ausência de autocorrelação. Se o valor for maior ou menor que $2$, há indícios de autocorrelação positiva ou negativa, respectivamente.
+
+A análise do Durbin-Watson (@tbl-durbin) mostra um valor de $2,08$, ou seja, é aproximadamente $2$ e indica que não temos autocorrelação.
+
+```{r}
+#| tbl-cap: QQ-plot dos resíduos do modelo
+#| label: tbl-durbin
+
+db <- lmtest::dwtest(formula = Produtividade ~ Cultivar + Dose, data = dados)
+parameters::parameters(db)|> select(-c(1,2)) |> 
+  knitr::kable(format = "pandoc", digits = 5)
+```
+
+## Representação gráfica do modelo
+
+Na @sec-interpretacao vimos quais foram os efeitos significativos do modelo, já na @sec-qualidade observamos que o modelo está adequado e explica bem os dados. Agora, criamos uma visualização gráfica para apresentar melhor os resultados. Poderia ter sido feito um gráfico com as médias dos grupos de cultivares, mostrando o intervalo de confiança e uma regressão com as doses, mas preferi representar dessa forma.
+
+```{r}
+library(patchwork)
+
+dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar1")
+mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
+
+pg <- 
+ggstatsplot::ggcoefstats(mod,
+                         stats.label.args = list(size = 6), ggtheme =  ggstatsplot::theme_ggstatsplot()) +
+ theme(
+    axis.text = element_text(size = 20),  
+    axis.title = element_text(size = 20), 
+    plot.title = element_text(size = 20), 
+    legend.text = element_text(size = 20),
+    plot.caption = element_text(size = 18)
+  )
+
+#
+dados$Cultivar <-  relevel(dados$Cultivar, ref = "Cultivar2")
+mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
+
+pg2 <- 
+ggstatsplot::ggcoefstats(mod,
+                         stats.label.args = list(size = 6), ggtheme =  ggstatsplot::theme_ggstatsplot()) +
+ theme(
+    axis.text = element_text(size = 20),  
+    axis.title = element_text(size = 20), 
+    plot.title = element_text(size = 20), 
+    legend.text = element_text(size = 20),
+    plot.caption = element_text(size = 18)
+  )
+
+pg / pg2
+```
+
+
+# Regressão vs ANOVA
+
+Parece que essa frase gera um conflito dentro da agronomia. Aparenta que usamos as técnicas para coisas totalmente diferentes, mas no final das contas uma ANOVA é um caso particular da regressão linear. Todos os resultados obtidos em um teste de ANOVA serão encontrado em um modelo de regressão linear.
+
+::: {.callout-note collapse="true"}
+## Resultado da ANOVA
+
+Realizando uma ANOVA para comparação
+
+Tabela anova
+
+```{r}
+mod_anova <- aov(Produtividade ~ Cultivar + Dose, data = dados)
+
+summary(mod_anova)
+```
+
+Normalidade
+
+```{r}
+dados |> rstatix::shapiro_test(Produtividade)
+```
+
+Homogeneidade
+
+```{r}
+dados |> rstatix::levene_test(Produtividade ~ Cultivar)
+```
+
+Comparações por tukey
+
+```{r}
+multcomp::cld(emmeans::emmeans(mod_anova, ~ Cultivar), Letters = letters) 
+```
+
+Regressão das doses
+
+```{r}
+
+summary(lm(Produtividade ~ Dose, data = dados))
+
+```
+
+:::
+
+# Referências
+
+[Galton, F.S. Regression Towards Mediocrity in Hereditary Stature. The Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246.]("https://galton.org/essays/1880-1889/galton-1886-jaigi-regression-stature.pdf")
+
+[Miller, S. J. (2006). The method of least squares. Mathematics Department Brown University, 8(1), 5-11.]("https://web.williams.edu/Mathematics/sjmiller/public_html/105Sp10/handouts/MethodLeastSquares.pdf")
+
+[Field, A., Miles, J., & Field, Z. (2012). Discovering statistics using R. SAGE Publications.](')
+
+[Bzovsky, S., Phillips, M.R., Guymer, R.H. et al. The clinician’s guide to interpreting a regression analysis. Eye 36, 1715–1717 (2022).]("https://doi.org/10.1038/s41433-022-01949-z")
+
+[Su, X., Yan, X., & Tsai, C.-L. (2012). Linear regression. Wiley Interdisciplinary Reviews: Computational Statistics, 4(3), 275–294.]("https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wics.1198?casa_token=dBGX5Xe2CBgAAAAA%3A_H6oh6Ib_EjYxUhAAGlOsGOYDLVG8-Mr3_wBLFYWYBtB3Zbr-pltrMPkBKoDTn4GfL_ekrYJixXDag")
+
+[Okoye, K., Hosseini, S. (2024). Regression Analysis in R: Linear Regression and Logistic Regression. In: R Programming. Springer, Singapore.]("https://doi.org/10.1007/978-981-97-3385-9_7)
