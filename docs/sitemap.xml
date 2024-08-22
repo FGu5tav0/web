@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>/index.html</loc>
-    <lastmod>2024-02-06T03:44:36.410Z</lastmod>
+    <lastmod>2024-05-21T21:35:20.000Z</lastmod>
   </url>
   <url>
     <loc>/recap.html</loc>
-    <lastmod>2024-04-13T04:26:55.102Z</lastmod>
+    <lastmod>2024-04-13T04:26:55.000Z</lastmod>
   </url>
   <url>
     <loc>/Projetos/index.html</loc>
@@ -22,7 +22,7 @@
   </url>
   <url>
     <loc>/projetos.html</loc>
-    <lastmod>2024-02-15T20:59:21.853Z</lastmod>
+    <lastmod>2024-05-22T01:44:57.000Z</lastmod>
   </url>
   <url>
     <loc>/projetos/2024-02-05 webscraping python/index.html</loc>
@@ -30,18 +30,26 @@
   </url>
   <url>
     <loc>/projetos/2023-11-01 disciplina de R para ufrgs solos/index.html</loc>
-    <lastmod>2024-02-15T21:18:36.757Z</lastmod>
+    <lastmod>2024-05-22T01:40:23.000Z</lastmod>
   </url>
   <url>
     <loc>/projetos/2023-11-01 bananabudget/index.html</loc>
-    <lastmod>2024-02-15T21:11:04.083Z</lastmod>
+    <lastmod>2024-02-15T21:11:04.000Z</lastmod>
   </url>
   <url>
     <loc>/recap/2024-02-15 BananBudget1/index.html</loc>
-    <lastmod>2024-02-15T23:54:51.571Z</lastmod>
+    <lastmod>2024-02-15T23:54:51.000Z</lastmod>
   </url>
   <url>
     <loc>/recap/2024-04-09 artigos doutorandos/index.html</loc>
-    <lastmod>2024-04-16T02:14:53.694Z</lastmod>
+    <lastmod>2024-04-16T02:14:53.000Z</lastmod>
+  </url>
+  <url>
+    <loc>/formacao.html</loc>
+    <lastmod>2024-05-21T21:42:04.000Z</lastmod>
+  </url>
+  <url>
+    <loc>/recap/2024-08-01 regressão linear/index.html</loc>
+    <lastmod>2024-08-22T02:21:52.640Z</lastmod>
   </url>
 </urlset>
