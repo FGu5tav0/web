@@ -1,0 +1,36 @@
+---
+title: "XXXVII - Congresso Brasileiro de Ciência do Solo"
+subtitle: "Respiração microbiana e dinâmica de nutrientes em solo fertilizado com resíduo industrial salino"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Frosi, G; Fink, J.R; Schwengber, A.A; Eckert, D; Souza, C.P; Lavratti, A"
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+Introdução – O emprego de resíduos industriais na agricultura pode ser uma alternativa para o descarte desses subprodutos. A produção de heparina, por meio das vísceras de suínos, gera um resíduo industrial (RI) com alto teor de Na que está sendo utilizado como fertilizantes por muitos agricultores. O objetivo deste trabalho foi avaliar atributos químicos e microbiológicos de um solo que recebeu o RI da produção de heparina. Material e Métodos – O experimento foi conduzido no Laboratório de Solos do IFPR - Campus Palmas com uma amostra da camada 0-20 de um Latossolo. O solo foi acondicionado em recipientes hermeticamente fechados, onde aplicou-se os tratamentos 0, 10, 20, 40 e 60 m^3^ de RI ha^-1^ e determinou-se a respiração basal do solo. Após o período de incubação das amostras (47 dias), os valores de pH em água, condutividade elétrica, carbono orgânico (Corg) e os teores de P, K e Na foram determinados. Os resultados foram submetidos à análise de variância (p<0,05) e, quando significativa, a análise de regressão foi realizada. Resultados e Discussão – O teor de P não apresentou diferenças significativas, enquanto que o teor de Na, K e a respiração basal do solo aumentaram linearmente com as doses do RI. A grande quantidade de Na e K na composição do RI foi responsável pelo aumento desses elementos no solo e, consequentemente, influenciaram positivamente a condutividade elétrica. O pH e o teor de C~org~ do solo variaram de forma quadrática – as doses intermediárias diminuíram os valores observados. O RI ocasionou aumento da taxa respiratória, por fornecer nutrientes prontamente disponíveis. Isso levou à ativação microbiológica do solo e redução do Corg. O aumento da taxa de decomposição da matéria orgânica tem como resultado a liberação de CO~2~ e íons NO~3~^-^ e H^+^, sendo fonte de acidez no solo. Isso pode ser observado pela redução nos valores de pH. Conclusões – O uso indiscriminado do RI estudado pode ocasionar problemas de salinidade no solo e diminuir os teores de Corg pelo aumento da atividade microbiológica.
+
+# Palavras chave:
+
+Resíduo industrial; Microbiologia
+
+# Pôster
+
+![](poster_gustavo frosi.pdf){width=100% height=700px}

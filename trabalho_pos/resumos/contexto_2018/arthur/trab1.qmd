@@ -1,0 +1,37 @@
+---
+title: "VIII Contextos e Conceitos"
+subtitle: "Teor de clorofila e produtividade de milho fertilizado com resíduo industrial"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Arthur Aloysio Schwengber, Dayana Jéssica Eckert, Gustavo Frosi, Frank Silvano Lagos, Wesley Gelinski, Jessé Rodrigo Fink"
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+A cultura do milho (Zea mays) é muito responsiva a adubação nitrogenada pelo fato de ser uma gramínea e não possuir a capacidade de realizar simbiose com bactérias fixadoras de nitrogênio (N). Este nutriente faz parte da composição da clorofila, influenciando diretamente a capacidade fotossintética das plantas. A adubação nitrogenada é um fator importante na composição da produtividade da cultura e tem um custo elevado. Resíduos industriais que possuem N em sua composição são uma alternativa para substituir ou complementar a adubação mineral. Um exemplo destes resíduos é o líquido de quarta (L4) obtido como no processamento das vísceras de suínos para produção de heparina. A heparina é um medicamento anticoagulante. O L4 contém, em média, teores consideráveis de nitrogênio – N (1,13%), potássio – K (0,08%) e fósforo – P (0,16%), que pode ser utilizado como fonte complementar de N para as culturas. O trabalho teve como objetivo avaliar o teor de clorofila e a produtividade da cultura do milho que recebeu o L4 como única fonte de N durante seu desenvolvimento. O experimento foi conduzido na área experimental do Instituto Federal do Paraná, no Campus Palmas, e consistiu na fertilização da cultura do milho com diferentes doses do L4. Cinco doses de L4 foram aplicadas anteriormente (dois dias) à semeadura da cultura: 0 m3 ha^-1^ ; 10 m3 ha^-1^ ; 20 m3 ha^-1^ ; 40 m3 ha^-1^ e 60 m3 ha^-1^ O delineamento experimental foi de blocos ao acaso com 4 repetições. Na semeadura do milho (Dow 2a620pw), também foi adicionado adubação de base de 160 kg ha-1 do formulado NPK 09-33-12, em todos os tratamentos. Na fase de pendoamento, os valores de Índice de Clorofila Falker (ICF) foram medidos em 15 plantas (15 leituras) por parcela com auxílio de um clorofilômetro clorofiLOG, marca Falker. Os teores de clorofila A (CA=12,8 + 1,9 ICFa), B (CB=0,9 + 0,5 ICFb) e Total (CA=13,8 + 2,4 ICFt) foram estimados pelas equações propostas por Vargas et al. (2012). Após a maturação fisiológica da cultura, o milho foi colhido manualmente, a palha das espigas foram retiradas e as espigas com grãos foram secas em estufa a 60°C por 48 horas. Após a secagem, as espigas foram debulhadas e os grãos pesados com umidade entre 14% e 20%, estimando a produtividade da lavoura sob efeito das doses de L4. Os dados foram submetidos à análise de variância e, quando significativos (p<0,05), análise de regressão com auxílio do programa Estatistix 10.0. Os teores de clorofila A variaram de 58,65 a 87,16 µg g^-1^, clorofila B de 4,08 a 10,67µg g^-1^ e clorofila total de 86,96 a 154,62 µg g^-1^ e foram significativamente influenciados pelas doses de L4 aplicadas. O efeito das doses de L4 no aumento do teor de clorofila nas folhas foi observado até as doses de 42 m3 ha~-1^ para a clorofila A, B e total. O aumento nos teores de clorofila pode ser explicado pela disponibilidade de N ofertada pelo resíduo. Argenta et al. (2000) obteve correlações significativas entre os teores de N absorvido pela planta e o teor de clorofila. A diminuição do teor de clorofila na dose de 60 m3 ha^-1^ pode estar relacionada ao acúmulo de nitrato na planta, o qual não é associado a molécula de clorofila e não é mensurado pelo clorofilômetro (Dwyer et al., 1994). Além disso, o excesso de N faz a planta ter maior crescimento e diminuir a concentração de clorofila por área foliar. Outra implicação é a baixa precisão que o clorofilômetro pode apresentar quando os níveis de N estão elevados (Argenta et al., 2001). A produtividade do milho variou de 3429 kg ha-1 (0 m3 ha^-1^) a 12006 kg ha^-1^ (60 m3 ha^-1^), sendo influenciada pelas doses de L4 aplicadas. A máxima eficiência técnica foi estimada para a dose de 68 m3 ha^-1^. A baixa dose de adubação na base favoreceu a resposta da cultura às doses crescentes de resíduo industrial, visto que o líquido fornece quantidades de N, P, e K. Observou-se uma correlação positiva (p<0,01) entre os teores de clorofila e o rendimento de grãos. O maior acúmulo de N proporcionou aumentou do número e do tamanho das folhas, as quais tiveram uma produção de fotoassimilados maior, que contribuíram para o incremento na produtividade (Soares, 2003). Vargas et al, (2012) observaram que o teor de clorofila mensurado em diferentes estádios de desenvolvimento do milho (12 – 15 folhas expandidas, pendoamento e espigamento) também está ligado a produtividade da cultura. Conclui se que o uso do resíduo industrial como fonte de N pode complementar a adubação mineral, pois houve acréscimo dos teores de clorofila na folha e de produtividade da cultura. Todavia, outros estudos são necessários para verificar se o L4 não causa efeitos negativos na dinâmica química, física e microbiológica do solo.
+
+# Palavras chave:
+
+Fotossíntese; Nitrogênio; Biofertilizantes.
+
+# Pôster
+
+Indisponível
+<!-- ![](banner argila.pdf){width=100% height=1080px} -->

@@ -1,0 +1,36 @@
+---
+title: "XXVIII - Congreso Argentino de la Ciencia del Suelo"
+subtitle: "Fertilização do solo com resíduo industrial orgânico salino: Sódio e dispersão das partículas"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Frosi, G; Inda, A.V; Fink, J.R"
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+A heparina é o medicamento de ação anticoagulante mais utilizado na atualidade. A extração da heparina ocorre ao processar mucosa intestinal de suínos, processo esse que gera uma grande quantidade de resíduo orgânico-salino (RIS). Embora tenha potencial fertilizante, o RIS possui alto teor de sódio (Na=1400 mg L^-1^) e, quando disposto em solos pode levar a problemas na física do solo através da dispersão das partículas. O objetivo deste estudo foi avaliar o efeito de doses do RIS na concentração de Na, na percentagem de Na trocável (PST) e na dispersão da fração argila em um Latossolo. O experimento consistiu na aplicação anual de cinco doses do RIS (0, 10, 20, 40 e 60 m^3^ ha^-1^) como única fonte de nutrientes para as culturas. Amostras de solo foram coletadas em agosto de 2020, três anos após a primeira aplicação e oito meses desde a última aplicação, em seis camadas de solo (0-5, 5-10, 10-20, 20-30, 30-40, 40-60 cm). As análises foram realizadas na fração terra fina seca ao ar ($\theta<2mm$). O teor de Na disponível foi determinado por espectrofotometria de chama. Com o teor de Na e a CTC foi calculada a PST. Para avaliar a dispersão das partículas foi determinada a relação da argila fina / argila total por centrifugação. Todos os parâmetros mostraram interação entre as doses de RIS e a camada avaliada. Foi observado aumento do teor de Na bem como da PST com o aumento da dose para todas as camadas, exceto para 5-10 cm. A alta concentração de Na no RIS foi responsável por aumentar o teor desse elemento no solo, mesmo oito meses depois da última aplicação. Nas doses mais altas (40 e 60 m^3^ ha^-1^) foi observado aumento do Na em profundidade, devido à alta mobilidade desse elemento e sua consequente lixiviação. Embora tenha aumentado, a PST de maior valor foi 1,2%, observada na camada superficial na dose de 60 m^3^ ha^-1^, a qual é inferior aos 6% a partir do qual começam a ocorrer efeitos de toxidade para as plantas. A relação argila fina / argila total aumentou somente nas camadas mais superficiais (0-5, 5-10 e 10-20 cm) onde houve maior contado do RIS. Porém o aumento da relação argila fina / argila total mostra que embora o Na seja facilmente lixiviado, há um processo inicial de dispersão das partículas mais reativas do solo pelo contado com o Na. Embora esteja ocorrendo um processo inicial de dispersão, não foi constatado movimento de partículas no perfil. O uso do RIS como fonte de nutriente em um Latossolo causa mudanças no complexo sortivo do solo, além de desencadear problemas iniciais na física do solo, por meio da dispersão das partículas.
+
+# Palavras chave:
+
+Resíduo salino; Sódio; Dispersão do solo
+
+# Pôster
+
+![](poster_gustavo_frosi.pdf){width=100% height=1080px}

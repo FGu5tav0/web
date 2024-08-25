@@ -1,0 +1,32 @@
+---
+title: "XII - Reunião Sul Brasileira de Ciência do Solo"
+subtitle: "Fósforo e potássio disponível no solo após o cultivo de tomate cereja"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Frosi, G; Schwengber, A.A; Souza, C.P; Eckert, D.J; Fink, J.R"
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+![](resumo_gustavo.pdf){width=100% height=1080px}
+
+# Pôster
+
+![](poster_gustavo frosi.pdf){width=100% height=1080px}

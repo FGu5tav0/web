@@ -1,0 +1,37 @@
+---
+title: "XXIII CLACS | XXXVIII CBCS"
+subtitle: "Ação dos térmitas sobre as frações de solos tropicais e subtropicais brasileiros"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Lima, S.S.F.; Frosi, G; Bizzi, N.H.; Bastiani, K.E.; Backes, J.P.; Inda, A.V."
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+Os térmitas são organismos representantes da macrofauna edáfica e conhecidos pelo processo de bioturbação do solo durante a construção de estruturas que permitem sua locomoção e sobrevivência no ambiente edáfico. A ação dos térmitas em mudar as características dos solos durante a construção de seus termiteiros tem sido estudada, mas ainda necessita ser melhor compreendida, principalmente no continente americano. O estudo pressupôs que os térmitas atuam seletivamente sobre os materiais do solo, durante a construção dos termiteiros, e objetivou avaliar diferenças e/ou similaridades relativas às frações areia e argila do solo e do termiteiro. Para tanto, foram amostrados um termiteiro e o solo adjacente em seis locais de cinco estados brasileiros. Nos materiais, foram realizadas análises sedimentológicas da fração areia e mineralógicas por difratometria de raios X, suscetibilidade magnética e dissoluções seletivas dos óxidos de ferro. A sedimentologia da fração areia indicou que os térmitas foram seletivos por partículas de areia de menor tamanho em solos com textura arenosa. Na maioria dos locais, os térmitas concentraram Fe e Al dos óxidos de ferro pedogênicos e Fe de formas de baixa cristalinidade. A suscetibilidade magnética não indicou uma tendência dominante dos minerais magnéticos entre solo e termiteiro. A difratometria de raios x da fração argila indicou que os térmitas não alteraram a mineralogia de solos altamente intemperizados com dominância de caulinita, gibbsita e óxidos de ferro, além de mostrar que esses organismos foram seletivos para partículas de tamanho argila nos solos arenosos.
+
+# Palavras chave:
+
+Macrofauna; Mineralogia; Difração de raios X; Sedimentologia da areia
+
+# Pôster
+
+Indisponível
+<!-- ![](poster_gustavo frosi.pdf){width=100% height=1080px} -->

@@ -1,0 +1,36 @@
+---
+title: "XXIII CLACS | XXXVIII CBCS"
+subtitle: "Estimativa da área superficial específica por adsorção de água através de parâmetros físicos e químicos"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Frosi, G; Lima, S.S.F.; Bastiani, K.E.; Backes, J.P.; Bizzi, N.H.; Inda, A.V."
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+A área superficial específica (ASE) do solo é uma propriedade relacionada ao comportamento químico e físico do solo, como processos de adsorção e de agregação. O método da adsorção de água (ASE~H2O~) tem sido utilizado com sucesso em estudos da Ciência do Solo. Porém, essa metodologia é demorada e utiliza reagentes químicos como o pentóxido de fósforo. Por ser uma propriedade que emerge da interação dos componentes do solo, o objetivo deste trabalho foi estimar a ASE~H2O~ a partir de parâmetros físicos e químicos do solo. Em amostras do horizonte A de 76 solos do Rio Grande do Sul, foram determinados, além da ASE~H2O~, os teores de carbono orgânico total (COT), argila, silte, areia, e de ferro extraídos por oxalato de amônio (Fe~o~) e por ditionito-citrato-bicarbonato de sódio (Fe~d~). Modelos de regressões múltiplas foram testados. A qualidade dos modelos foi avaliada pelos valores de AIC, R^2^adj, RMSE e MAE. A ASE~H2O~ se correlacionou com todas as variáveis preditoras, na ordem: COT>areia>Fe~o~>argila>Fe~d~>silte. A variável argila foi removida devido a multicolinearidade com a areia. Foram encontrados um total de 13 modelos significativos (p<0,05), porém apenas os 4 melhores são apresentados. O melhor modelo foi com a inclusão de areia, COT, Feo e silte [ASE = (6,2645–0,1626areia + 0,3123COT+1,1365 Fe~o~ – 0,0895silte)^2^; AIC = 202, MAE = 0.64, RMSE = 0.84 e R^2^adj = 0.79]. Na sequência, estão dois modelos com 3 variáveis. O primeiro teve a inclusão da areia, COT e Feo (AIC = 208, MAE = 0.69, RMSE = 0.89 e R^2^adj = 0.77), enquanto o segundo com COT, Fe~o~ e Fe~d~ (AIC = 205, MAE = 0.67, RMSE = 0.87 e R^2^adj = 0.77). Por fim, o 4º modelo que utilizou apenas areia e COT [ASE = (5,5765 – 0,1552areia + 0,4570COT)^2^; AIC = 214, MAE = 0.70, RMSE = 0.94 e R^2^adj = 0.74]. Em suma, parâmetros químicos e físicos podem ser utilizados em modelos para a inferência da ASE~H2O~, o que permite maior rapidez e menor produção de resíduos.
+
+# Palavras chave:
+
+ASE~H2O~; Regressão múltipla; Parâmetros físicos; Parâmetros químicos
+
+# Pôster
+
+![](poster_gustavo frosi.pdf){width=100% height=1080px}

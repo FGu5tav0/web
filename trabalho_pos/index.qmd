@@ -1,0 +1,77 @@
+---
+title: "Resumos e apresentações em eventos"
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Aqui são apenas as apresentações feitas por mim"
+image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+<ul class="linha-do-tempo">
+<div class="marcador"></div>
+<li class="ano"><p>2024</p></li>
+ 
+<li class="ano"><p>2023</p></li>
+	
+<li class='item' href="#">
+<h3> XXIII CLACS | XXXVIII CBCS </h3>
+<p>[Estimativa da área superficial específica por adsorção de água através de parâmetros físicos e químicos](resumos/sbcs_2023/gustavo/trab1.qmd)</p> 
+</li>
+
+<li class='item' href="#">
+<p></p> 
+</li>
+
+	
+<li class="ano"><p>2022</p></li>
+ 
+<li class='item' href="#">
+<h3> XXVIII - Congreso Argentino de la Ciencia del Suelo </h3>
+<p>[Fertilização do solo com resíduo industrial orgânico salino: Sódio e dispersão das partículas](resumos/cacs_2022/gustavo/trab1.qmd)</p> 
+</li>
+
+<li class='item' href="#">
+<p></p> 
+</li> 
+
+<li class="ano"><p>2021</p></li>
+
+<li class="ano"><p>2020</p></li>
+ 
+<li class="ano"><p>2019</p></li>
+ 
+<li class='item' href="#">
+<h3> XXXVII - Congresso Brasileiro de Ciência do Solo </h3>
+<p>[Respiração microbiana e dinâmica de nutrientes em solo fertilizado com resíduo industrial salino](resumos/sbcs_2019/gustavo/trab1.qmd)</p> 
+</li> 
+
+<li class="ano"><p>2018</p></li>
+ 
+<li class='item' href="#">
+<h3> XII - Reunião Sul Brasileira de Ciência do Solo </h3>
+<p>[Fósforo e potássio disponível no solo após o cultivo de tomate cereja](resumos/rsbcs_2018/gustavo/trab1.qmd)</p> 
+</li>
+
+<li class='item' href="#">
+<h3> VIII - Contextos e Conceitos </h3>
+<p>[Dispersão da fração argila em solo com calcário incorporado por formas distintas](resumos/contexto_2018/gustavo/trab1.qmd)</p> 
+</li>
+
+
+</ul>
+
+<!-- Por Amanda Lemos - amandalemos.com -->

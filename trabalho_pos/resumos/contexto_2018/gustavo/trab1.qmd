@@ -1,0 +1,36 @@
+---
+title: "VIII Contextos e Conceitos"
+subtitle: "Dispersão da fração argila em solo com calcário incorporado por formas distintas"
+# author: ""
+toc: true
+# image: ima_fundo.jpeg
+# title-block-banner: "#8B8878"
+# title-block-banner-color: "#FFFFFF"
+# title-block-banner: ima_fundo.jpeg
+# backgroundcolor: "#FFFAFA"
+description: "Gustavo Frosi, Dayana Jéssica Eckert, Arthur Aloysio Schwengber, Felipe Calgaro, Everton Fantinel, Jessé Rodrigo Fink"
+# image-alt: ""
+# date: "2024/08/22"
+# date: last-modified
+lang: pt
+editor_options: 
+  chunk_output_type: console
+# css: styles.css
+execute: 
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+# Resumo
+
+A agregação é umas das características relacionadas com a estrutura física do solo. A estruturação do solo favorece a formação de um ambiente propício para desenvolvimento das raízes das plantas, armazenamento de água e trocas gasosas. O processo de formação de agregados é complexo e depende de vários fatores. O precursor da agregação do solo é a floculação da argila, favorecida pelo alto teor de matéria orgânica do solo, óxidos de ferro e alumínio e cátions polivalentes (KLEIN, 2014). A calagem é uma prática que contribui nesse processo, adicionando íons divalentes como o cálcio e magnésio, que podem formar ligações químicas entre as partículas organo-minerais (Seta & Karathanasis, 1997). No entanto, operações como a aração e gradagem, utilizadas na incorporação de corretivos, desagregam e aumentam a erodibilidade do solo. O objetivo deste trabalho foi verificar o teor de argila dispersa em água e o grau de floculação da argila em um solo que recebeu calcário e foi submetido a diferentes formas de incorporação do corretivo. O experimento foi realizado no município de mangueirinha, onde predomina clima temperado – Cfb, segundo classificação de Köppen. O solo foi classificado como Latossolo Vermelho (EMBRAPA, 2006). Amostras de solo da camada 0-10, 10-20, 20-30 e 30-40 cm foram coletadas anteriormente à instalação do experimento e submetidas à análise química. A recomendação da dosagem de calcário para ajuste do pH a 6, na camada 0-20 cm, foi de 4,8 Mg ha^-1^ (CQFS-RS/SC, 2016). O experimento foi composto por seis tratamentos: aplicação do calcário + escarificação até as profundidades 10cm (E1); 20cm (E2); 30cm (E3) e 40 cm (E4); revolvimento com arado (A); aplicação do calcário em superfície sem incorporação (S) e testemunha sem aplicação de calcário (T). Os tratamentos estavam dispostos em blocos ao acaso, com 4 repetições em parcelas de 12m^2^. Seis meses após a aplicação e incorporação do corretivo, amostras de solo das camadas descritas acima foram coletadas novamente. Todas as amostras de solo (anterior e seis meses após a aplicação do calcário) foram levadas ao laboratório, secadas, moídas e passadas em peneira de malha 2mm, para obtenção da terra fina seca ao ar (TFSA), na qual realizou-se as análises. A determinação de argila total foi realizada pelo método da pipeta após a dispersão da fração com NaOH 1 mol L^-1^; a argila dispersa em água foi realizada pelo método da pipeta sem dispersante (Embrapa, 2017). Com os teores de argila total e dispersa em água, determinou-se o grau de floculação, conforme (Embrapa, 2017). A análise de variância foi realizada e quando significativa (p<0,05) teste de Tukey foi aplicado com auxílio do software Estatistix 10.0. Os teores de argila total foram de 283 g kg^-1^, 382 g kg^-1^, 421 g kg^-1^, 429 g kg^-1^, para as camadas 0 a 10 cm, 10 a 20 cm, 20 a 30 cm, 30 a 40 cm, respectivamente. Para os teores de argila natural e grau de floculação, não houve interação (p>0,05) entre os tratamentos e as profundidades. A argila dispersa em água variou de 28 a 64 g kg^-1^ e foi influenciada somente pelos tratamentos. Esta variação ocasionou a alteração dos valores de floculação da fração argila, os quais variaram de 92 a 83%. Nos tratamentos T e S foram observados os maiores teores de argila dispersa em água e os menores valores de grau de floculação da argila, diferenciando-se dos tratamentos E4 e A. A semelhança entre os valores de T e S ocorreu, pois, o efeito do aumento do teor de Ca e Mg na floculação da argila no tratamento S pode ter ocorrido com mesma intensidade do que o efeito da dispersão da argila pelo aumento do pH do solo, ou seja, os dois efeitos se anularam. Entretanto, quando houve incorporação do calcário em profundidades maiores (E4 e A), diluindo o teor de Ca, Mg e o efeito do pH do solo, fez com que o efeito do aumento do teor de Ca e Mg se sobressaísse ao efeito do aumento do pH. Zanfolin et al. (2015) também observaram efeito positivo para o grau de floculação da argila quando aplicado calcário e incorporado em um Argissolo Vermelho distroférrico. Conclui-se que a aplicação de calcário em superfície sem revolvimento do solo pode aumentar a dispersão da argila e reduzir o grau de floculação da mesma, podendo influenciar negativamente na agregação do solo, infiltração e armazenamento de água.
+
+# Palavras chave:
+
+Floculação de argila; agregação; calagem
+
+# Pôster
+
+![](banner argila.pdf){width=100% height=1080px}
