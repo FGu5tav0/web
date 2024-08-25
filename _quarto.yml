@@ -12,10 +12,10 @@ website:
   site-url: ""
   open-graph: true
   page-navigation: true
-  search: TRUE
+  search: false
   google-analytics: "G-8L8YC0LJJY"
   page-footer: 
-    left: "Website made with quarto © 2023 by Gustavo Frosi is licensed under CC BY-SA 4.0."
+    left: "Website made with quarto © 2024 by Gustavo Frosi is licensed under CC BY-SA 4.0."
     right: 
       - icon: github
         href: https://github.com/FGu5tav0
@@ -35,6 +35,8 @@ website:
         href: CV/index.qmd
       - text: "Projetos"
         href: projetos.qmd
+      - text: "Trabalhos"
+        href: trabalho_pos/index.qmd
       - text: "Posts"
         href: recap.qmd
 
