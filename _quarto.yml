@@ -61,7 +61,7 @@ format:
     toc: true
 
 execute:
-  freeze: false
+  freeze: auto
 
 
 # comments:

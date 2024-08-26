@@ -1,5 +1,5 @@
 
-body {background-color:rgb(247, 233, 255);}
+body {background-color:rgb(255,255,255);}
 body::-webkit-scrollbar-track{background-color: #f9f0d3;}
 body::-webkit-scrollbar{width: 1%;}
 body::-webkit-scrollbar-thumb{background-color: #f9f0d3; border-left: 2px solid #454545;}
