@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gustavo Frosi">
 <meta name="description" content="Automatizando o download de notas para consumidor final e a extração de dados.">
 
-<title>Gustavo Frosi - Web scraping Nota Fiscal Gaúcha</title>
+<title>Web scraping Nota Fiscal Gaúcha – Gustavo Frosi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -61,12 +61,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
 <link href="../../ima/FS2.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -77,18 +73,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "Nenhum resultado",
     "search-matching-documents-text": "documentos correspondentes",
@@ -114,7 +98,7 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 </script>
 
 
-<meta property="og:title" content="Gustavo Frosi - Web scraping Nota Fiscal Gaúcha">
+<meta property="og:title" content="Web scraping Nota Fiscal Gaúcha – Gustavo Frosi">
 <meta property="og:description" content="Automatizando o download de notas para consumidor final e a extração de dados.">
 <meta property="og:image" content="/recap/2024-02-05 webscraping python/logo.jpg">
 <meta property="og:site_name" content="Gustavo Frosi">
@@ -134,30 +118,34 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
     <span class="navbar-title">Gustavo Frosi</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Procurar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../../formacao.html"> 
+<span class="menu-text">Formação</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../CV/index.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projetos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Projetos</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-projetos">    
-    </ul>
-  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../projetos.html"> 
+<span class="menu-text">Projetos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../trabalho_pos/index.html"> 
+<span class="menu-text">Trabalhos</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../recap.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -241,7 +229,7 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 <section id="obtenção-de-dados" class="level1">
 <h1>Obtenção de dados</h1>
 <p>Antes de capturar qualquer nota, preciso saber quais notas tenho interesse. Para isso, fiz uma busca no site da Nota Fiscal Gaúcha, onde filtrei todas as notas do ano de 2023, apenas para o supermercado Carrefour. Assim, uma lista de dados foi apresentada (<a href="#fig-tabela" class="quarto-xref">Figura&nbsp;1</a>), onde informações de datas, estabelecimento e código da nota são expostos. Deve ser realizado o download desse arquivo em formato Excel ou CSV (ou pdf se quiser algo mais hard). Com isso, temos os dados com a chave da NFC para realizar a captura.</p>
-<div id="fig-tabela" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-tabela" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tabela-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="tabela.png" class="img-fluid figure-img">
@@ -304,35 +292,32 @@ Nota
 <p><video src="clicks%20-%201707185627966.mp4" class="img-fluid" controls=""><a href="clicks - 1707185627966.mp4">Video</a></video></p>
 <p>Para encontar os ponto certo basta realizar um teste com o MouseInfo aberto. Abra o <a href="https://www.sefaz.rs.gov.br/ASP/AAE_ROOT/NFE/SAT-WEB-NFE-NFC_1.asp?HML=&amp;chaveNFe=">site</a> onde as notas serão baixadas e identifique os pontos onde será necessário realizar os cliques. O atalho <strong>F6</strong> pode ser utilizado no MouseInfo para marcar as pontos x e y. Siga os passo:</p>
 <p>1º Passo: Clique em avançar e depois em imprimir <a href="#fig-prime" class="quarto-xref">Figura&nbsp;2</a></p>
-<div id="fig-prime" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-prime" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-prime-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="passo a passo/primeira.png" id="fig-prime" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-prime-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;2
 </figcaption>
 </figure>
 </div>
 <p>2º Passo: Clique em imprimir na parte do pdf <a href="#fig-seg" class="quarto-xref">Figura&nbsp;3</a></p>
-<div id="fig-seg" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-seg" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-seg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="passo a passo/segunda.png" id="fig-seg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-seg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;3
 </figcaption>
 </figure>
 </div>
 <p>3º Passo: Clique em salvar <a href="#fig-ter" class="quarto-xref">Figura&nbsp;4</a></p>
-<div id="fig-ter" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ter" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="passo a passo/terceira.png" id="fig-ter" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-ter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;4
 </figcaption>
 </figure>
 </div>
@@ -418,7 +403,7 @@ Nota
 </section>
 </section>
 
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -454,18 +439,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -497,7 +471,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -532,7 +546,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -810,7 +828,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Website em quarto © 2023 by Gustavo Frosi is licensed under CC BY-SA 4.0. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/</p>
+<p>Website made with quarto © 2024 by Gustavo Frosi is licensed under CC BY-SA 4.0.</p>
 </div>   
     <div class="nav-footer-center">
 <p><img src="ima/FS.png" width="25" height="25"></p>
