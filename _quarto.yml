@@ -27,7 +27,7 @@ website:
     
   title: "Gustavo Frosi"
   navbar:
-    logo: "ima/FS2.png"
+    logo: "ima/FS.png"
     left: 
       - text: "Formação"
         href: formacao.qmd
@@ -55,13 +55,13 @@ website:
 format:
   html:
     theme:
-      light: [lux, tema.scss]
-      # dark: [lux, tema_dark.scss]
+      light: [litera, tema.scss]
+      # dark: [litera]
     # css: styles.css
     toc: true
 
 execute:
-  freeze: auto
+  freeze: false
 
 
 # comments:
