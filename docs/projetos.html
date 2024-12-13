@@ -56,7 +56,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-intro-lista .list');
+    const listingTargetEl = window.document.querySelector('#listing-projeto-lista .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-intro-lista'] = new List('listing-intro-lista', options);
+    window['quarto-listings']['listing-projeto-lista'] = new List('listing-projeto-lista', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -207,7 +207,14 @@ window.Quarto = {
 
 <p>Aqui você encontra alguns dos meus projetos.</p>
 <hr>
-<div id="listing-intro-lista" class="quarto-listing quarto-listing-container-default">
+<div id="projetos-lista">
+
+</div>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-projeto-lista">
 <div class="list quarto-listing-default">
 <div class="quarto-post image-right" data-index="0" data-categories="UixNZXJjYWRv" data-listing-date-sort="1698793200000" data-listing-file-modified-sort="1708031464000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354">
 <div class="thumbnail">
@@ -266,12 +273,7 @@ Gustavo Frosi
 <div class="listing-no-matching d-none">
 Nenhum item correspondente
 </div>
-</div>
-
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

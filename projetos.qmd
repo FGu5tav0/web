@@ -19,5 +19,5 @@ Aqui você encontra alguns dos meus projetos.
 <hr>
 
 
-::: {#projeto-lista}
+::: {#projetos-lista}
 :::
