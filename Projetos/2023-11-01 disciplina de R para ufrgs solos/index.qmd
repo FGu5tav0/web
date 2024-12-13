@@ -34,9 +34,9 @@ Lembro-me perfeitamente do dia em que o professor Tales fez a provocação sobre
 
 ::: {#fig-apresentacao layout-ncol=1}
 
-![Eu](ima/apre.jpg){fig-align="center" width="50%" #fig-eu}
+![](ima/apre.jpg){fig-align="center" width="50%" #fig-eu}
 
-![Apresentação](ima/apre1.png){fig-align="center" width="50%" #fig-apre}
+![](ima/apre1.png){fig-align="center" width="50%" #fig-apre}
 
 Primeira aula da disciplina de R para Ciência do Solo da UFRGS
 :::
