@@ -2,12 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gustavo Frosi">
-<meta name="author" content="Gustavo Pesini">
 <meta name="description" content="Disciplina de introdução à linguagem de programação R para estudos em Ciência do Solo - UFRGS">
 
 <title>R para ciência do solo – Gustavo Frosi</title>
@@ -34,10 +33,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-91bc1bf8bace8c943d03296fedb4110f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "Nenhum resultado",
@@ -128,7 +127,12 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
  <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">R para ciência do solo</h1>
-</div>
+  <div class="quarto-categories">
+    <div class="quarto-category">Solos</div>
+    <div class="quarto-category">R</div>
+    <div class="quarto-category">UFRGS</div>
+  </div>
+  </div>
 <div>
   <div class="description">
     Disciplina de introdução à linguagem de programação R para estudos em Ciência do Solo - UFRGS
@@ -136,10 +140,9 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 </div>
 <div class="quarto-title-meta">
     <div>
-    <div class="quarto-title-meta-heading">Autores</div>
+    <div class="quarto-title-meta-heading">Autor</div>
     <div class="quarto-title-meta-contents">
              <p>Gustavo Frosi <a href="mailto:gustavofrosi@hotmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-             <p>Gustavo Pesini <a href="mailto:pesinig37@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
           </div>
   </div>
   </div>
@@ -147,16 +150,558 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 <div style="text-align: justify">
 <section id="disciplina-de-r" class="level1">
 <h1>Disciplina de R</h1>
-<p>No ano de 2023, um importante passo foi dado na Pós-Graduação em Ciência do Solo da UFRGS: a criação da primeira disciplina com foco total no ensino e aprendizado da linguagem de programação R. O mais entusiasmante foi poder contribuir com todo esse processo.</p>
-<p>Por iniciativa do professor Tales Tiecher, eu, Gustavo Frosi, junto com Gustavo Pesini, realizamos a construção de uma série de aulas e exercícios práticos, com foco na manipulação de dados, análise e visualização desses dados, principalmente em estudos na Ciência do Solo. O principal objetivo da disciplina foi capacitar os alunos a desenvolverem suas próprias análises de dados utilizando os recursos da linguagem de programação R.</p>
+<p>No ano de 2023, foi dado um importante passo na Pós-Graduação em Ciência do Solo da UFRGS: a criação da primeira disciplina totalmente voltada ao ensino e aprendizado da linguagem de programação R. O mais entusiasmante foi poder contribuir com todo esse processo.</p>
+<p>Por iniciativa do professor Tales Tiecher, eu, junto com Gustavo Pesini, construímos uma série de aulas e exercícios práticos, com foco na manipulação de dados, análise e visualização desses dados, voltados para o estudo em Ciência do Solo. O principal objetivo da disciplina foi capacitar os alunos a desenvolverem suas próprias análises de dados utilizando os recursos da linguagem de programação R.</p>
+<p>Lembro-me perfeitamente do dia em que o professor Tales fez a provocação sobre a criação de uma disciplina sobre o R. Eu, mais do que ansioso para compartilhar um pouco do que vinha aprendendo ao longo de alguns anos, aceitei na hora. Afinal de contas, trata-se de uma ferramenta muito versátil e extremamente útil na área acadêmica. Aos poucos, fomos dando forma a essa pequena ideia. Busquei a ajuda de alguém que, além de saber muito sobre R, é uma pessoa de confiança e dedicação: Gustavo Pesini. Em pouco tempo, já estávamos com o cronograma e as aulas estruturadas. No dia 19/10/2023, iniciamos a jornada de ensinar (e aprender) a linguagem de programação R com nossos colegas de pós-graduação (<a href="#fig-apresentacao" class="quarto-xref">Figura&nbsp;1</a>).</p>
+<div id="fig-apresentacao" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-apresentacao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-apresentacao" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-eu" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-eu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ima/apre.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-ref-parent="fig-apresentacao">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-eu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Eu
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-apresentacao" style="flex-basis: 100.0%;justify-content: flex-start;">
+<div id="fig-apre" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-apre-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ima/apre1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%" data-ref-parent="fig-apresentacao">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-apre-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Apresentação
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apresentacao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Primeira aula da disciplina de R para Ciência do Solo da UFRGS
+</figcaption>
+</figure>
+</div>
+<!-- ![Primeira aula da disciplina de R para Ciência do Solo da UFRGS](ima/apre.jpg){fig-align="center" width="50%"} -->
+<!-- ![Primeira aula da disciplina de R para Ciência do Solo da UFRGS](ima/apre1.png){fig-align="center" width="100%"} -->
+<section id="cronograma" class="level2">
+<h2 data-anchor-id="cronograma">Cronograma</h2>
+<p>Um total de nove aulas foram produzidas (<a href="#tbl-crono" class="quarto-xref">Tabela&nbsp;1</a>) e ministradas ao longo de pouco mais de um mês. O conteúdo programático começou pelos fundamentos, considerando que alguns alunos nunca haviam tido contato prévio com a ferramenta. Assim, iniciamos com uma introdução ao ambiente, abordando os conceitos mais básicos do funcionamento de uma linguagem de programação. Na segunda etapa, o foco foi direcionado para a análise de dados, incluindo procedimentos de manipulação e visualização de dados, além da aplicação dos principais testes estatísticos. Por fim, a última etapa consistiu em uma breve explanação sobre análise multivariada e na criação de relatórios com o R.</p>
+<div class="cell">
+<div id="tbl-crono" class="cell quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-crono-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;1: Cronograma das aulas do curso
+</figcaption>
+<div aria-describedby="tbl-crono-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="vvbyrzqush" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vvbyrzqush table {
+  font-family: Arial, system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#vvbyrzqush thead, #vvbyrzqush tbody, #vvbyrzqush tfoot, #vvbyrzqush tr, #vvbyrzqush td, #vvbyrzqush th {
+  border-style: none;
+}
+#vvbyrzqush p {
+  margin: 0;
+  padding: 0;
+}
+#vvbyrzqush .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+#vvbyrzqush .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+#vvbyrzqush .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+#vvbyrzqush .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+#vvbyrzqush .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+#vvbyrzqush .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+#vvbyrzqush .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+#vvbyrzqush .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+#vvbyrzqush .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#vvbyrzqush .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+#vvbyrzqush .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+#vvbyrzqush .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+#vvbyrzqush .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+#vvbyrzqush .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+#vvbyrzqush .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+#vvbyrzqush .gt_from_md > :first-child {
+  margin-top: 0;
+}
+#vvbyrzqush .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+#vvbyrzqush .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+#vvbyrzqush .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#vvbyrzqush .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+#vvbyrzqush .gt_row_group_first td {
+  border-top-width: 2px;
+}
+#vvbyrzqush .gt_row_group_first th {
+  border-top-width: 2px;
+}
+#vvbyrzqush .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#vvbyrzqush .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+#vvbyrzqush .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+#vvbyrzqush .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+#vvbyrzqush .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#vvbyrzqush .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+#vvbyrzqush .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+#vvbyrzqush .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+#vvbyrzqush .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+#vvbyrzqush .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+#vvbyrzqush .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#vvbyrzqush .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+#vvbyrzqush .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#vvbyrzqush .gt_left {
+  text-align: left;
+}
+#vvbyrzqush .gt_center {
+  text-align: center;
+}
+#vvbyrzqush .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+#vvbyrzqush .gt_font_normal {
+  font-weight: normal;
+}
+#vvbyrzqush .gt_font_bold {
+  font-weight: bold;
+}
+#vvbyrzqush .gt_font_italic {
+  font-style: italic;
+}
+#vvbyrzqush .gt_super {
+  font-size: 65%;
+}
+#vvbyrzqush .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+#vvbyrzqush .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+#vvbyrzqush .gt_indent_1 {
+  text-indent: 5px;
+}
+#vvbyrzqush .gt_indent_2 {
+  text-indent: 10px;
+}
+#vvbyrzqush .gt_indent_3 {
+  text-indent: 15px;
+}
+#vvbyrzqush .gt_indent_4 {
+  text-indent: 20px;
+}
+#vvbyrzqush .gt_indent_5 {
+  text-indent: 25px;
+}
+#vvbyrzqush .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+#vvbyrzqush div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="Aula" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Aula</th>
+<th id="Tópicos" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Tópicos</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Aula">1</td>
+<td class="gt_row gt_left" headers="Tópicos">Apresentação da disciplina, lógica de programação para não programadores, histórico do R, aplicação à Ciência do Solo, instalação de softwares</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Aula">2</td>
+<td class="gt_row gt_left" headers="Tópicos">Interface do R, sintaxe básica, operadores, objetos e classes de objetos no R</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Aula">3</td>
+<td class="gt_row gt_left" headers="Tópicos">Operações matemáticas, estruturas de repetição e seleção, funções, organização de planilhas</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Aula">4</td>
+<td class="gt_row gt_left" headers="Tópicos">Importação de dados, organização, filtro, seleção, transformação de variáveis, exportação de dados</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Aula">5</td>
+<td class="gt_row gt_left" headers="Tópicos">Gráficos no R com ggplot2, gramática de gráficos, gráficos de pontos, barras, linhas e composição</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Aula">6</td>
+<td class="gt_row gt_left" headers="Tópicos">Estatística descritiva, ANOVA, testes de comparação de médias</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Aula">7</td>
+<td class="gt_row gt_left" headers="Tópicos">Modelos mistos, correlação e regressões</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Aula">8</td>
+<td class="gt_row gt_left" headers="Tópicos">Testes não paramétricos</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Aula">9</td>
+<td class="gt_row gt_left" headers="Tópicos">PCA, análise discriminante, relatórios automáticos</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
 </section>
-<section id="cronograma" class="level1">
-<h1>Cronograma</h1>
-<p>Um total de 10 aulas foram produzidas (Tabela 1) e ministradas ao longo de pouco mais de um mês. O conteúdo programado começou desde a base, considerando que os alunos nunca tiveram contato com a ferramenta. Assim, iniciamos com uma ambientação, ensinando os conceitos mais básicos do funcionamento de uma linguagem de programação. Na segunda etapa, focamos na análise de dados, com procedimentos de manipulação e visualização de dados, além do uso dos principais testes estatísticos. A última etapa consistiu em uma breve explanação sobre análise multivariada e criação de relatórios com o R.</p>
+<section id="a-experiência" class="level2">
+<h2 data-anchor-id="a-experiência">A experiência</h2>
+<p>Para mim, foi uma oportunidade incrível participar desta disciplina. Não apenas pela dinâmica de estruturar, organizar e conduzir as atividades, mas também por ensinar algo que terá um impacto direto no trabalho dos meus colegas e amigos da pós-graduação. É claro que, assim como outras, esta disciplina representa apenas um ponto de partida; muito estudo ainda será necessário no futuro.</p>
+<p>Foi fascinante observar como, ao longo do tempo, os alunos foram capazes de realizar todas as tarefas propostas e de avançar de forma autônoma, mesmo após o término da disciplina. Isso é ainda mais relevante considerando que uma ferramenta como a programação não é algo convencional para a maioria das pessoas, mesmo dentro da academia.</p>
+<p>Quero deixar registrado meu agradecimento ao PPGCS por aceitar a iniciativa, ao professor Tales Tiecher pela provocação, incentivo e apoio ao longo desse processo, e ao Gustavo Pesini por colaborar comigo e compartilhar a responsabilidade para que tudo ocorresse conforme o planejado.</p>
 </section>
-<section id="section" class="level1">
-<h1></h1>
 </section>
+<section id="relatos" class="level1">
+<h1>Relatos</h1>
+<p>Para trazer um pouco das “vozes” e da vivência de quem participou do processo, fiz questão de perguntar a alguns dos envolvidos como foi a experiência e se houve benefícios pessoais.</p>
+<p>Abaixo estão os relatos não apenas das pessoas que viabilizaram e permitiram a realização da disciplina, mas também de quem se dispôs a aprender um pouco sobre a ferramenta.</p>
+<blockquote class="blockquote">
+<p>A disciplina “R Aplicado à Ciência do Solo”, organizada e ministrada com a participação do Doutorando Gustavo Frosi do PPGCS, foi um marco importante na formação e capacitação dos alunos. Ao longo do curso, foram atendidas as expectativas quanto à construção e condução do conteúdo, que proporcionou uma sólida base no uso do software R como ferramenta essencial para análise e visualização de dados na Ciência do Solo. A disciplina destacou a relevância do aprendizado de ferramentas computacionais, independentemente da área, mostrando como elas podem otimizar o trabalho de análise de dados e contribuir para o avanço na interpretação e apresentação de dados. A contribuição dessa disciplina ao PPGCS foi imensa, pois além de enriquecer o currículo, ofereceu aos alunos uma valiosa oportunidade de aprimoramento, capacitando-os para desafios futuros na área científica e profissional. A experiência proporcionada foi um grande diferencial na formação dos alunos do PPGCS da UFGRS. - Tales Tiecher (Professor de Química do Solo do Departamento de Solos da Faculdade de Agronomia da UFRGS)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>São perguntas difíceis. Por que eu topei fazer disciplina aquela vez? Eu acho que foi mais por um desafio. Porque quando você tem que passar informação para alguém, você precisa primeiro saber sobre o que tu estás falando. Não necessariamente você precisa dominar aquele assunto, mas entender do que tu estás querendo dizer. Então, acho que foi mais por isso mesmo, sabe? Mais por um desafio. Porque se eu tenho que falar para as pessoas sobre regressão, eu vou atrás de aprender sobre o que é regressão e isso foi importante porque depois deu para ver como resultado que eu tive de ir atrás e buscar material, de buscar um monte de coisa que foi bem bacana. Então, acho que mais por isso. Eu acho que a importância para o programa é bastante grande, visto que a gente usa muito esse tipo de abordagem para avaliar dados. Nós trabalhamos muito com a experimentação agrícola, que envolve esse tipo de análise, que com essas ferramentas se dá para fazer esse tipo de análise de forma rápida, facilitada, automatizada, e que é importante para nós aqui como estudantes na pós-graduação. Acho que seria isso. E, para mim, obviamente, foi algo bastante importante, porque, claro, quando você desafia a fazer um trabalho, tu tens que saber sobre o que tu tá falando, voltando lá no início do que eu estive falando. Mas, com certeza, eu aprendi bastante coisa com as tuas aulas, como aluno também, já que eu estava matriculado e passando algumas coisas também. Então foi mais ou menos isso. - Gustavo Pesini (Mestrando em Ciência do Solo - UFRGS)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Fazer o curso de R desenvolvido no Programa de Pós-Graduação em Ciência do Solo foi uma experiência transformadora para mim. Eu comecei do zero, sem nenhum conhecimento na área, e com o curso consegui aprender a organizar e analisar dados, além de criar gráficos de forma prática. O que mais gostei foi como os conceitos foram explicados de maneira clara e acessível, o que me ajudou a entender temas que antes pareciam complexos. Esse aprendizado também complementou muito bem os conteúdos da disciplina de estatística que estou estudando. Recomendo o curso do R, principalmente às pessoas que, estão iniciando na análise de dados e querem construir uma base sólida. - Alder Duarte (Doutorando em Ciência do Solo - UFRGS)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Minha experiência no curso de R foi muito desafiadora, pois nunca havia trabalhado com programação, e ainda mais considerando análises estatísticas. Assim, foi muito gratificante aprender e descobrir que, com a programação, eu poderia obter uma análise completa sobre meu mundo de dados – e falo “um mundo” porque há muita coisa. A abordagem por parte da equipe que ofereceu o curso facilitou muito meu trabalho, permitindo otimizar meu tempo. - Anahi Ferreira (Mestranda em Ciência do Solo - UFRGS)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Tive muita satisfação com a disciplina de R. O conteúdo foi relevante e bem estruturado, desde conceitos básicos até aplicações práticas. Isso me permitiu aprender a criar scripts tanto análise dos dados quanto na criação de gráficos para minha pesquisa. Além disso, a introdução de tópicos sobre a visualização dos dados, com o uso do pacote ggplot2, foi uma ótima forma para ver as possibilidades de aplicação do R. Os professores demonstraram grande domínio do R e seus pacotes, sempre disposto a esclarecer dúvidas e oferecer exemplos práticos relacionados a nossa área de pesquisa. No geral, foi uma experiência muito positiva e enriquecedora. Me permitiu ter contato com uma ferramenta muito boa e que será de muita ajuda em meus trabalhos. Hoje, sem necessitar de auxílio do professor, já consigo criar meus próprios scripts para atender as minhas demandas. Agradeço pela oportunidade de participar dessa disciplina. - Kayn Eduardo (Mestrando em Ciência do Solo - UFRGS)</p>
+</blockquote>
+</section>
+<section id="análise-dos-relatos" class="level1">
+<h1>Análise dos relatos!</h1>
+<p>Óbvio que uma parte analítica não poderia faltar!</p>
+<p>Realizei uma pequena análise dos relatos acima. O objetivo foi identificar, no conjunto total de textos, quais emoções foram transmitidas.</p>
+<p>Sem muita enrolação, a <a href="#fig-emocao" class="quarto-xref">Figura&nbsp;2</a> apresenta as contagens totais de cada emoção. Observa-se que a maioria expressou frases com sentimentos positivos, o que reforça a relevância da disciplina.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-emocao" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-emocao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-emocao-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-emocao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Emoções passadas pelos relatos da disciplina
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div class=".footer">
+<p>No final de tudo, tudo só foi feito para ajudar!</p>
 </div>
 
 

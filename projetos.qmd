@@ -1,0 +1,23 @@
+---
+title: "Projetos"
+listing:
+  id: intro-lista
+  image-align: right
+  contents: projetos
+  sort: "title asc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: article
+title-block-banner: false
+---
+
+Aqui você encontra alguns dos meus projetos.
+
+
+<hr>
+
+
+::: {#intro-lista}
+:::

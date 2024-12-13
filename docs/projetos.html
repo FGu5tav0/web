@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Coisas legais! – Gustavo Frosi</title>
+<title>Projetos – Gustavo Frosi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,20 +56,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-recap-listings .list');
+    const listingTargetEl = window.document.querySelector('#listing-intro-lista .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-recap-listings'] = new List('listing-recap-listings', options);
+    window['quarto-listings']['listing-intro-lista'] = new List('listing-intro-lista', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -122,9 +122,12 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Coisas legais! – Gustavo Frosi">
-<meta property="og:image" content="/recap/2024-08-21 regressão linear/ima_fundo.jpeg">
+<meta property="og:title" content="Projetos – Gustavo Frosi">
+<meta property="og:description" content="">
+<meta property="og:image" content="/projetos/2023-11-01 bananabudget/hex.png">
 <meta property="og:site_name" content="Gustavo Frosi">
+<meta property="og:image:height" content="1800">
+<meta property="og:image:width" content="1800">
 </head>
 
 <body class="nav-fixed">
@@ -155,7 +158,7 @@ window.Quarto = {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projetos.html"> 
+    <a class="nav-link active" href="./projetos.html" aria-current="page"> 
 <span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item">
@@ -163,7 +166,7 @@ window.Quarto = {
 <span class="menu-text">Trabalhos</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./recap.html" aria-current="page"> 
+    <a class="nav-link" href="./recap.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
@@ -174,23 +177,23 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(5)</span></div><div class="category" data-category="RGF0YVZpeg==">DataViz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RG91dG9yYWRv">Doutorado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXN0YXTtc3RpY2E=">Estatística <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(5)</span></div><div class="category" data-category="UmVncmVzc+NvIExpbmVhcg==">Regressão Linear <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29sb3M=">Solos <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2ViIHNjcmFwaW5n">Web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Coisas legais!</h1>
+<h1 class="title">Projetos</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -202,187 +205,62 @@ window.Quarto = {
 </header>
 
 
-<div id="listing-recap-listings" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UixSZWdyZXNz428gTGluZWFyLEVzdGF07XN0aWNh" data-listing-date-sort="1724293312000" data-listing-file-modified-sort="1724293312640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="29" data-listing-word-count-sort="5679">
-<a href="./recap/2024-08-21 regressão linear/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./recap/2024-08-21 regressão linear/ima_fundo.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Do caos ao conhecimento: <br> use <span class="math inline">\(y = \beta_{0} + \beta_{1}x + \epsilon\)</span> para explicar seus experimentos
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
+<p>Aqui você encontra alguns dos meus projetos.</p>
+<hr>
+<div id="listing-intro-lista" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="UixNZXJjYWRv" data-listing-date-sort="1698793200000" data-listing-file-modified-sort="1708031464000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354">
+<div class="thumbnail">
+<p><a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external"></a></p><a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external">
+<p><img loading="lazy" src="./projetos/2023-11-01 bananabudget/hex.png" class="thumbnail-image"></p>
+</a><p><a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external"></a></p>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('UmVncmVzc+NvIExpbmVhcg=='); return false;">
-Regressão Linear
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external">BananaBudget</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external"></a>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('RXN0YXTtc3RpY2E='); return false;">
-Estatística
+<div class="listing-description">
+<a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external">Projeto de visualização dos gastos mensais no mercado</a>
 </div>
 </div>
-<div class="card-text listing-description">
-Aplicando a tecnologia de regressão linear para dados contínuos e/ou discretos
+<div class="metadata">
+<a href="./projetos/2023-11-01 bananabudget/index.html" class="no-external">
+<div class="listing-date">
+1 de nov. de 2023
 </div>
-<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Gustavo Frosi, Diogo Vieri
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="U29sb3MsUixVRlJHUw==" data-listing-file-modified-sort="1734092763451" data-listing-reading-time-sort="14" data-listing-word-count-sort="2611">
+<div class="thumbnail">
+<p><a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external"></a></p><a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external">
+<p><img loading="lazy" src="./projetos/2023-11-01 disciplina de R para ufrgs solos/hex_dis.png" class="thumbnail-image"></p>
+</a><p><a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external">R para ciência do solo</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external">Disciplina de introdução à linguagem de programação R para estudos em Ciência do Solo - UFRGS</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external"></a></p><a href="./projetos/2023-11-01 disciplina de R para ufrgs solos/index.html" class="no-external">
 <div class="listing-author">
 Gustavo Frosi
 </div>
-<div class="listing-date">
-22 de ago. de 2024
-</div>
-</div>
-</div>
-</div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="UixEb3V0b3JhZG8sRGF0YVZpeixnZ3Bsb3Qy" data-listing-date-sort="1713132000000" data-listing-file-modified-sort="1713233693000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1303">
-<a href="./recap/2024-04-09 artigos doutorandos/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./recap/2024-04-09 artigos doutorandos/aritogos_ima.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Quantos artigos eu preciso ter no currículo até o fim do doutorado em Ciência do Solo?
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RG91dG9yYWRv'); return false;">
-Doutorado
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YVZpeg=='); return false;">
-DataViz
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2dwbG90Mg=='); return false;">
-ggplot2
-</div>
-</div>
-<div class="card-text listing-description">
-Aproximação da quantidade de artigos que alunos possuem publicados ao final do Doutorado
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Gustavo Frosi
-</div>
-<div class="listing-date">
-15 de abr. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="UixEYXRhVml6LGdncGxvdDI=" data-listing-date-sort="1707951600000" data-listing-file-modified-sort="1708041291000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="14" data-listing-word-count-sort="2731">
-<a href="./recap/2024-02-15 BananBudget1/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./recap/2024-02-15 BananBudget1/pao_choco.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-BananaBudget
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YVZpeg=='); return false;">
-DataViz
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Z2dwbG90Mg=='); return false;">
-ggplot2
-</div>
-</div>
-<div class="card-text listing-description">
-Análise exploratória de gastos do mercado com o R com foco em visualização.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Gustavo Frosi, Diogo Bolzan
-</div>
-<div class="listing-date">
-15 de fev. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="UixweXRob24sV2ViIHNjcmFwaW5n" data-listing-date-sort="1707174000000" data-listing-file-modified-sort="1707272692000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1354">
-<a href="./recap/2024-02-05 webscraping python/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./recap/2024-02-05 webscraping python/logo.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Web scraping Nota Fiscal Gaúcha
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">
-python
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('V2ViIHNjcmFwaW5n'); return false;">
-Web scraping
-</div>
-</div>
-<div class="card-text listing-description">
-Automatizando o download de notas para consumidor final e a extração de dados.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Gustavo Frosi
-</div>
-<div class="listing-date">
-6 de fev. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="UixTb2xvcw==" data-listing-date-sort="1702767600000" data-listing-file-modified-sort="1706278547000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1698">
-<a href="./recap/2023-12-17 CBCS 2023/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./recap/2023-12-17 CBCS 2023/logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Trabalhos - XXIII CLACS | XXXVIII CBCS
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U29sb3M='); return false;">
-Solos
-</div>
-</div>
-<div class="card-text listing-description">
-Explorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Gustavo Frosi, Dayana Eckert
-</div>
-<div class="listing-date">
-17 de dez. de 2023
-</div>
-</div>
-</div>
-</div>
-</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">
