@@ -3,7 +3,7 @@ title: "Do caos ao conhecimento: <br> use $y = \\beta_{0} + \\beta_{1}x + \\epsi
 author:
   - name: Gustavo Frosi
     email: gustavofrosi@hotmail.com
-code-fold: true
+code-fold: false
 categories: 
   - R
   - Regressão Linear
@@ -26,103 +26,13 @@ date: last-modified
 lang: pt
 editor_options: 
   chunk_output_type: console
-css: styles.css
+# css: styles.css
 execute: 
   echo: false
   eval: true
   warning: false
   message: false
 ---
-
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Popup Example</title>
-  <style>
-    /* O container do popup */
-    .popup {
-      display: none; /* Esconde o popup por padrão */
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0,0,0);
-      background-color: rgba(0,0,0,0.4);
-    }
-    /* O conteúdo do popup */
-    .popup-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-    /* O botão de fechar */
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-
-<!-- O conteúdo do popup -->
-  <div id="myPopup" class="popup">
-  <div class="popup-content">
-  <span class="close" id="closePopup">&times;</span>
-  <p>Abra no computador para ter um experiência melhor na leitura.</p>
-  </div>
-  </div>
-
-<script>
-  // Obter elementos
-  var popup = document.getElementById("myPopup");
-  var openLink = document.getElementById("openPopupLink");
-  var closeBtn = document.getElementById("closePopup");
-
-  // Quando a página for carregada, exiba o popup
-  window.onload = function() {
-    popup.style.display = "block";
-  }
-
-  // Quando o usuário clicar no botão de fechar, feche o popup
-  closeBtn.onclick = function() {
-    popup.style.display = "none";
-  }
-
-  // Quando o usuário clicar fora do popup, feche-o
-  window.onclick = function(event) {
-    if (event.target == popup) {
-      popup.style.display = "none";
-    }
-  }
-</script>
-
-</body>
-</html>
-
-
-
-```{css}
-#| echo: false
-p {
-  text-align: justify
-}
-```
 
 ```{r}
 library(tidyverse)
