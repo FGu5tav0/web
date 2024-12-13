@@ -1,7 +1,7 @@
 ---
 title: "Projetos"
 listing:
-  id: intro-lista
+  id: projeto-lista
   image-align: right
   contents: projetos
   sort: "title asc"
@@ -19,5 +19,5 @@ Aqui você encontra alguns dos meus projetos.
 <hr>
 
 
-::: {#intro-lista}
+::: {#projeto-lista}
 :::
