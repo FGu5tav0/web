@@ -13,7 +13,7 @@ image-alt: ""
 lang: pt
 editor_options: 
   chunk_output_type: console
-css: styles.css
+css: /styles_resumos.css
 execute: 
   echo: false
   eval: true

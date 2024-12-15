@@ -14,6 +14,9 @@ website:
   page-navigation: true
   search: false
   google-analytics: "G-8L8YC0LJJY"
+  cookie-consent:
+    type: express
+    prefs-text: "Cookies"
   page-footer: 
     left: "Website made with quarto © 2024 by Gustavo Frosi is licensed under CC BY-SA 4.0."
     right: 
@@ -35,22 +38,29 @@ website:
         href: CV/index.qmd
       - text: "Projetos"
         href: projetos.qmd
-      - text: "Trabalhos"
-        href: trabalho_pos/index.qmd
+      - text: "Trabalhos Científicos"
+        menu:
+          - href: artigos.qmd
+            text: "Artigos"
+          - href: resumos.qmd
+            text: "Resumos"
+          # - artigos.qmd
+          # - trabalhos_pos/resumos.qmd
       - text: "Posts"
         href: recap.qmd
 
   # sidebar:
-  #   - id: Projetos
-  #     title: "Projetos"
-  #     style: "docked"
-  #     background: light
-  #     collapse-level: 2
-  #     contents: 
-  #       - projetos.qmd
-  #       - projetos/um.qmd
-  #       - projetos/dois.qmd
-  #       # navigation items
+  # - id: trabalhos
+  #   title: "Trabalho Científico"
+  #   # style: "docked"
+  #   # background: light
+  #   # collapse-level: 4
+  #   contents:
+  #     - text: "Artigos"
+  #       href: trabalhos_pos/artigos.qmd
+  #     - text: "Resumos e apresentações"
+  #       href: CV/index.qmd
+  #       # href: trabalhos_pos/resumos.qmd
 
 format:
   html:
