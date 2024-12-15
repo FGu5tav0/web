@@ -6,7 +6,7 @@ toc: true
 # title-block-banner-color: "#FFFFFF"
 # title-block-banner: ima_fundo.jpeg
 # backgroundcolor: "#FFFAFA"
-description: "Aqui são apenas as apresentações feitas por mim"
+description: "Artigos"
 image-alt: ""
 # date: "2024/08/22"
 # date: last-modified
