@@ -1,7 +1,7 @@
 ---
 title: "Gustavo Frosi"
 comments: false
-image: "ima/t1.jpeg"
+image: "ima/t1.jpg"
 toc: false
 about: 
   image-shape: round
