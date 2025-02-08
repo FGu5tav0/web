@@ -1,163 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/index.html</loc>
-    <lastmod>2024-05-21T21:35:20.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap.html</loc>
-    <lastmod>2024-04-13T04:26:55.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/Projetos/index.html</loc>
-    <lastmod>2023-12-18T02:11:49.643Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap/2023-12-17 CBCS 2023/index.html</loc>
-    <lastmod>2024-01-26T14:15:47.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap/2024-02-05 webscraping python/index.html</loc>
-    <lastmod>2024-02-07T02:24:52.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/projetos.html</loc>
-    <lastmod>2024-12-13T13:36:23.405Z</lastmod>
-  </url>
-  <url>
-    <loc>/projetos/2024-02-05 webscraping python/index.html</loc>
-    <lastmod>2024-02-07T02:24:52.462Z</lastmod>
-  </url>
-  <url>
-    <loc>/projetos/2023-11-01 disciplina de R para ufrgs solos/index.html</loc>
-    <lastmod>2024-12-13T13:15:54.090Z</lastmod>
-  </url>
-  <url>
-    <loc>/projetos/2023-11-01 bananabudget/index.html</loc>
-    <lastmod>2024-02-15T21:11:04.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap/2024-02-15 BananBudget1/index.html</loc>
-    <lastmod>2024-02-15T23:54:51.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap/2024-04-09 artigos doutorandos/index.html</loc>
-    <lastmod>2024-04-16T02:14:53.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/formacao.html</loc>
-    <lastmod>2024-05-21T21:42:04.000Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap/2024-08-01 regressão linear/index.html</loc>
-    <lastmod>2024-08-22T02:21:52.640Z</lastmod>
-  </url>
-  <url>
-    <loc>/recap/2024-08-21 regressão linear/index.html</loc>
-    <lastmod>2024-12-13T21:53:14.677Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/trabalhos/trab1.html</loc>
-    <lastmod>2024-08-22T12:47:43.198Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/index.html</loc>
-    <lastmod>2024-08-25T19:15:13.614Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/trab1.html</loc>
-    <lastmod>2024-08-22T12:47:43.198Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/cbcs_2023/trab1.html</loc>
-    <lastmod>2024-08-22T17:36:22.613Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/sbcs_2023/trab1.html</loc>
-    <lastmod>2024-08-22T17:36:22.613Z</lastmod>
+    <loc>/trabalho_pos/resumos/sbcs_2023/suane/trab1.html</loc>
+    <lastmod>2024-08-22T19:37:21.467Z</lastmod>
   </url>
   <url>
     <loc>/trabalho_pos/resumos/sbcs_2023/gustavo/trab1.html</loc>
     <lastmod>2024-08-22T17:36:22.613Z</lastmod>
   </url>
   <url>
+    <loc>/trabalho_pos/resumos/rsbcs_2018/gustavo/trab1.html</loc>
+    <lastmod>2024-08-25T19:14:27.868Z</lastmod>
+  </url>
+  <url>
     <loc>/trabalho_pos/resumos/contexto_2018/gustavo/trab1.html</loc>
     <lastmod>2024-08-22T18:57:40.053Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/contexto_2018/wesley/trab1.html</loc>
-    <lastmod>2024-08-22T19:12:13.508Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/contexto_2018/arthur/trab1.html</loc>
-    <lastmod>2024-08-22T19:21:08.729Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/sbcs_2023/suane/trab1.html</loc>
-    <lastmod>2024-08-22T19:37:21.467Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/sbcs_2023/kayn/trab1.html</loc>
-    <lastmod>2024-08-22T19:41:47.517Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos/sbcs_2019/gustavo/trab1.html</loc>
-    <lastmod>2024-08-25T18:45:46.594Z</lastmod>
   </url>
   <url>
     <loc>/trabalho_pos/resumos/cacs_2022/gustavo/trab1.html</loc>
     <lastmod>2024-08-25T19:24:45.264Z</lastmod>
   </url>
   <url>
-    <loc>/trabalho_pos/resumos/rsbcs_2018/gustavo/trab1.html</loc>
-    <lastmod>2024-08-25T19:14:27.868Z</lastmod>
+    <loc>/recap.html</loc>
+    <lastmod>2024-04-13T04:26:55.000Z</lastmod>
   </url>
   <url>
-    <loc>/curiculo/teste_curi.html</loc>
-    <lastmod>2024-03-14T21:57:20.000Z</lastmod>
+    <loc>/recap/2024-04-09 artigos doutorandos/index.html</loc>
+    <lastmod>2024-04-16T02:14:53.000Z</lastmod>
   </url>
   <url>
-    <loc>/curiculo/guga2/guga2.html</loc>
-    <lastmod>2024-12-09T17:49:25.730Z</lastmod>
-  </url>
-  <url>
-    <loc>/curiculo/Guga/Guga.html</loc>
-    <lastmod>2024-12-09T17:49:22.493Z</lastmod>
-  </url>
-  <url>
-    <loc>/curiculo/guga2/template-cover-letter.html</loc>
-    <lastmod>2024-12-13T13:10:17.463Z</lastmod>
+    <loc>/recap/2024-02-05 webscraping python/index.html</loc>
+    <lastmod>2024-02-07T02:24:52.000Z</lastmod>
   </url>
   <url>
     <loc>/projetos/2023-11-01_R_UFRGS/index.html</loc>
     <lastmod>2024-12-13T13:15:54.090Z</lastmod>
   </url>
   <url>
-    <loc>/trabalho_pos/resumos/index.html</loc>
-    <lastmod>2024-12-13T22:13:18.338Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/artigos/index.html</loc>
-    <lastmod>2024-08-25T19:15:13.614Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/trabalhos_pos.html</loc>
-    <lastmod>2024-12-13T22:01:57.593Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/resumos.html</loc>
-    <lastmod>2024-12-13T22:24:02.040Z</lastmod>
-  </url>
-  <url>
-    <loc>/trabalho_pos/artigos.html</loc>
-    <lastmod>2024-12-13T22:45:52.096Z</lastmod>
+    <loc>/formacao.html</loc>
+    <lastmod>2024-05-21T21:42:04.000Z</lastmod>
   </url>
   <url>
     <loc>/artigos.html</loc>
     <lastmod>2024-12-15T22:39:01.129Z</lastmod>
   </url>
   <url>
+    <loc>/index.html</loc>
+    <lastmod>2024-05-21T21:35:20.000Z</lastmod>
+  </url>
+  <url>
+    <loc>/projetos.html</loc>
+    <lastmod>2024-12-13T13:36:23.405Z</lastmod>
+  </url>
+  <url>
+    <loc>/recap/2024-02-15 BananBudget1/index.html</loc>
+    <lastmod>2024-02-15T23:54:51.000Z</lastmod>
+  </url>
+  <url>
+    <loc>/recap/2024-08-21 regressão linear/index.html</loc>
+    <lastmod>2024-12-13T21:53:14.677Z</lastmod>
+  </url>
+  <url>
     <loc>/resumos.html</loc>
     <lastmod>2024-12-15T22:42:26.359Z</lastmod>
+  </url>
+  <url>
+    <loc>/trabalho_pos/resumos/contexto_2018/arthur/trab1.html</loc>
+    <lastmod>2024-08-22T19:21:08.729Z</lastmod>
+  </url>
+  <url>
+    <loc>/trabalho_pos/resumos/contexto_2018/wesley/trab1.html</loc>
+    <lastmod>2024-08-22T19:12:13.508Z</lastmod>
+  </url>
+  <url>
+    <loc>/trabalho_pos/resumos/sbcs_2019/gustavo/trab1.html</loc>
+    <lastmod>2024-08-25T18:45:46.594Z</lastmod>
+  </url>
+  <url>
+    <loc>/trabalho_pos/resumos/sbcs_2023/kayn/trab1.html</loc>
+    <lastmod>2024-08-22T19:41:47.517Z</lastmod>
   </url>
 </urlset>

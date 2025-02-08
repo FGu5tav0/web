@@ -28,6 +28,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="./ima/FS2.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -84,13 +86,31 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8L8YC0LJJY"></script>
 
-<script type="text/javascript">
+<script type="text/plain" cookie-consent="tracking">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 </script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"pt"
+  });
+});
+</script> 
+  
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -159,17 +179,17 @@ window.Quarto = {
 <span class="menu-text">Projetos</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-trabalho-científico" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Trabalho Científico</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-trabalhos-científicos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Trabalhos Científicos</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-trabalho-científico">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-trabalhos-científicos">    
         <li>
-    <a class="dropdown-item" href="./artigos.qmd">
+    <a class="dropdown-item" href="./artigos.html">
  <span class="dropdown-text">Artigos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./resumos.qmd">
- <span class="dropdown-text">Resumos e apresentações</span></a>
+    <a class="dropdown-item" href="./resumos.html">
+ <span class="dropdown-text">Resumos</span></a>
   </li>  
     </ul>
   </li>
@@ -190,7 +210,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(5)</span></div><div class="category" data-category="RGF0YVZpeg==">DataViz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RG91dG9yYWRv">Doutorado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXN0YXTtc3RpY2E=">Estatística <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(5)</span></div><div class="category" data-category="UmVncmVzc+NvIExpbmVhcg==">Regressão Linear <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U29sb3M=">Solos <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2ViIHNjcmFwaW5n">Web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(4)</span></div><div class="category" data-category="RGF0YVZpeg==">DataViz <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RG91dG9yYWRv">Doutorado <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RXN0YXTtc3RpY2E=">Estatística <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="UmVncmVzc+NvIExpbmVhcg==">Regressão Linear <span class="quarto-category-count">(1)</span></div><div class="category" data-category="V2ViIHNjcmFwaW5n">Web scraping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2dwbG90Mg==">ggplot2 <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -356,39 +376,6 @@ Gustavo Frosi
 </div>
 <div class="listing-date">
 6 de fev. de 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="UixTb2xvcw==" data-listing-date-sort="1702767600000" data-listing-file-modified-sort="1706278547000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1698">
-<a href="./recap/2023-12-17 CBCS 2023/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./recap/2023-12-17 CBCS 2023/logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Trabalhos - XXIII CLACS | XXXVIII CBCS
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U29sb3M='); return false;">
-Solos
-</div>
-</div>
-<div class="card-text listing-description">
-Explorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Gustavo Frosi, Dayana Eckert
-</div>
-<div class="listing-date">
-17 de dez. de 2023
 </div>
 </div>
 </div>
@@ -833,7 +820,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
 <p><img src="ima/FS.png" width="25" height="25"></p>
-</div>
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookies</a></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
