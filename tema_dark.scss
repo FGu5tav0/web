@@ -1,12 +1,57 @@
-/*-- scss:defaults --*/
-// Base document colors
-$body-bg: #4F4F4F;
-$body-color: white;
-$link-color: tomato;
+// Definição de variáveis para o tema escuro
+$primary: #bb86fc;
+$secondary: #03dac6;
+$background: #121212;
+$foreground: #1e1e1e;
+$text-color: #e0e0e0;
+$link-color: #bb86fc;
+$link-hover: #3700b3;
+$border-color: #444;
 
-$body-text-align: justify;
+// Aplica o fundo escuro e texto claro
+body {
+  background-color: $background;
+  color: $text-color;
+}
 
+// Ajusta o cabeçalho e rodapé
+.navbar, .footer {
+  background-color: $foreground !important;
+  color: $text-color !important;
+}
 
-// Code blocks
-$code-block-bg-alpha: -.8;
+// Links
+a {
+  color: $link-color;
+  
+  &:hover {
+    color: $link-hover;
+  }
+}
 
+// Blocos de código
+pre, code {
+  background-color: darken($background, 5%);
+  color: lighten($text-color, 10%);
+  border-radius: 5px;
+}
+
+// Tabelas
+table {
+  background-color: $foreground;
+  color: $text-color;
+  
+  th, td {
+    border-color: $border-color;
+  }
+}
+
+// Botões
+.btn {
+  background-color: $primary;
+  color: $background;
+  
+  &:hover {
+    background-color: $secondary;
+  }
+}

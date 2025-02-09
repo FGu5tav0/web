@@ -67,7 +67,7 @@ format:
   html:
     theme:
       light: [litera, tema.scss]
-      # dark: [litera]
+      dark: darkly
     # css: styles.css
     toc: true
 

@@ -806,13 +806,13 @@ mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
 
 pg <- 
 ggstatsplot::ggcoefstats(mod,
-                         stats.label.args = list(size = 6), ggtheme =  ggstatsplot::theme_ggstatsplot()) +
+                         stats.label.args = list(size = 5), ggtheme =  ggstatsplot::theme_ggstatsplot()) +
  theme(
-    axis.text = element_text(size = 20),  
-    axis.title = element_text(size = 20), 
-    plot.title = element_text(size = 20), 
-    legend.text = element_text(size = 20),
-    plot.caption = element_text(size = 18)
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 14),
+    plot.title = element_text(size = 14),
+    legend.text = element_text(size = 14),
+    plot.caption = element_text(size = 12)
   )
 
 #
@@ -821,13 +821,13 @@ mod <- lm(Produtividade ~ Cultivar + Dose, data = dados)
 
 pg2 <- 
 ggstatsplot::ggcoefstats(mod,
-                         stats.label.args = list(size = 6), ggtheme =  ggstatsplot::theme_ggstatsplot()) +
+                         stats.label.args = list(size = 5), ggtheme =  ggstatsplot::theme_ggstatsplot()) +
  theme(
-    axis.text = element_text(size = 20),  
-    axis.title = element_text(size = 20), 
-    plot.title = element_text(size = 20), 
-    legend.text = element_text(size = 20),
-    plot.caption = element_text(size = 18)
+    axis.text = element_text(size = 14),
+    axis.title = element_text(size = 14),
+    plot.title = element_text(size = 14),
+    legend.text = element_text(size = 14),
+    plot.caption = element_text(size = 12)
   )
 
 pg / pg2
