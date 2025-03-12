@@ -1,0 +1,146 @@
+---
+title: "OxSR: Soil Iron Oxides via Diffuse Reflectance"
+author:
+  - name: Gustavo Frosi
+    email: gustavofrosi@hotmail.com
+code-fold: false
+categories: ["Solos", "R", "Pacote"]
+  # - R
+  # - UFRGS
+  # - Solos
+  # - Disciplina
+toc: true
+description: "OxSR: Óxidos de ferro do solo via refletância difusa"
+image: hex_dis.png
+image-alt: ""
+# date: "2023/11/01"
+lang: pt
+bibliography: biblio.bib
+
+editor_options: 
+  chunk_output_type: console
+---
+
+::: columns
+::: {.column width="70%"}
+<br>
+<br>
+<br>
+*[{OxSR}]("https://cran.r-project.org/web//packages//OxSR/index.html") meu primeiro pacote em R aplicado à Ciência do Solo!*
+
+:::
+::: {.column width="30%"}
+![](hex_dis.png){fig-align="center"}
+:::
+:::
+
+
+# O que o {OxSR} faz?
+
+O objetivo deste pacote é implementar uma forma automatizada de determinar a relação entre os óxidos de ferro hematita e goethita no solo, bem como obter parâmetros de cor por meio da técnica de espectroscopia de refletância difusa.
+
+O pacote utiliza dados de refletância de amostras de solo submetidas à emissão de luz do espectro visível (380 - 780 nm).
+
+# Relação entre hematita e goethita
+
+Com os valores de refletância (%), os dados são submetidos a cálculos utilizando a equação de Kubelka-Munk: $$\frac{K_\lambda}{S_\lambda} = \frac{(1-R_\lambda)^2}{2R_\lambda}$$
+
+
+Depois é realizada a suavização da curva por meio da cubic spline:
+
+$$S_i(x) = a_i (x - x_i)^3 + b_i (x - x_i)^2 + c_i (x - x_i) + d$$
+Depois realiza-se a 2ª derivada dessa função obtendo:
+
+$$S''_i(x) = 6a_i (x - x_i) + 2b_i$$
+
+E, por fim utiliza-se a equação de regressão @eq-regre proposta por @Scheinost_1998.
+
+$$\frac{Hm}{(Hm+Gt)} = -0.068 + 1.325 * \frac{y_2}{(y_2 + y_1)}$$ {#eq-regre}
+
+A grande vantagem de utilizar o pacote é a possibilidade de automatizar esse processo, permitindo obter resultados para centenas de amostras em poucos minutos.
+
+# Cor do solo
+
+Para a determinação da cor do solo, o {OxSR} realiza a conversão de refletância para triestímulos x,y e z por meio das equações de @wyszecki2000color. Com isso é possível calcular e converter a cor entre os diferentes espaços de cores (@VISCARRAROSSEL2006320). O {OxSR} retorna cores em: Munsell (HVC), RGB e o código hexadecimal da cor para facilitar o uso no próprio R.
+
+::: {.callout-important collapse="true"}
+# Versão 1.0.0
+
+Como é a primeira versão ainda há muito a se avançar. Atualmente, o pacote conta com três funções e dois bancos de dados. No entanto, atualizações futuras já estão em andamento, para novas funcionalidades e possibilidades.
+
+:::
+
+
+# Uso do {OxSR}
+
+## Instalando e carregando o pacote
+
+```{r}
+# install.packages("OxSR")
+library(OxSR)
+```
+
+## Função: `relation_hm_gt()`
+
+```{r  fig.width=6, fig.height=4}
+
+# dados de refletância
+data("soil_refle")
+
+# com 1 amostra
+dados_relacao <- relation_hm_gt(data = soil_refle[,c(1,2)], 
+               plot = T,
+               name_wave = "wave",
+               points_smoothing = 0.3, 
+               pv_tolerance = c(1,1,1,1),
+               hm_gt_limits = list(hm = c(535, 585),
+                                   gt = c(430, 470)))
+
+# com diversas amostras
+soil_refle |> 
+relation_hm_gt() |> 
+  dplyr::mutate(dplyr::across(2:7, ~ format(., scientific = TRUE, digits = 3))) |>
+  gt::gt()
+
+```
+
+## Função: `soil_color()`
+
+```{r}
+
+dados_cor <- soil_refle |> 
+soil_color(plot = T)
+
+dados_cor |> 
+  gt::gt()
+
+```
+
+## Função: `clean_sheet_cary()`
+
+::: {.callout-important collapse="false"}
+# Organização de planilha!
+
+Essa função é destinada apenas para quem realiza a aquisição dos dados por meio do equipamento Cary 5000 UV-Vis-IR spectrophotometer. É uma função para organizar os dados e deixar adequado para as etapas anteriores.
+
+:::
+
+```{r}
+
+# Banco de dados do Cary 5000
+data_cary |> 
+  dplyr::slice_head(n = 5) |> 
+  gt::gt()
+
+```
+
+```{r}
+
+# Banco de dados organizado
+data_cary |> 
+  clean_sheet_cary(prefix = "x") |> 
+  dplyr::slice_head(n = 10) |> 
+  gt::gt()
+
+```
+
