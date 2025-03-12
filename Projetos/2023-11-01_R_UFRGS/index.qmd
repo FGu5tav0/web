@@ -17,7 +17,9 @@ image: hex_dis.png
 image-alt: ""
 # date: "2023/11/01"
 lang: pt
-about: jolla
+about: 
+  image-shape: rectangle
+  template: jolla
 editor_options: 
   chunk_output_type: console
 ---
