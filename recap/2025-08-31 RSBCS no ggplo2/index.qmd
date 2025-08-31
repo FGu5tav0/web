@@ -1,0 +1,354 @@
+---
+title: "Gráficos para Revista Brasileira de Ciência do Solo"
+author: 
+  - name: Gustavo Frosi
+    email: gustavofrosi@hotmail.com
+code-fold: false
+categories: 
+  - R
+  - Solos
+  - RBSC
+  - ggplot2
+toc: true
+image: th.png
+description: "Criando um snippet para o padrão gráfico da Revista Brasileira de Ciência do Solo"
+image-alt: ""
+date: "2025/08/31"
+lang: pt
+editor_options: 
+  chunk_output_type: console
+---
+
+# Alguns padrões
+
+A *Revista Brasileira de Ciência do Solo* preza por um padrão gráfico nos artigos publicados. Para isso, há um guia com todas as exigências que os autores devem atender para manter a identidade visual. Este texto é um guia de como realizar essas alterações utilizando gráficos e figuras desenvolvidos com a linguagem R.
+
+## A fonte
+
+**DejaVu** é a família da fonte **DejaVu Sans Condensed**, a qual deve ser utilizada na criação das figuras. A família de fontes **DejaVu** está em domínio público, podendo ser baixada e até modificada por qualquer pessoa. Isso é uma vantagem, pois seu download pode ser feito de forma rápida e simples. Uma das alternativas é obtê-la no site [fonts2u](https://pt.fonts2u.com/dejavu-sans-condensed.fonte).
+
+A @tbl-comp mostra o mesmo texto escrito com as fontes Arial e DejaVu, permitindo observar as principais diferenças entre elas.
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+#| tbl-cap: "Comparação das fontes Arial e DejaVu"
+#| label: "tbl-comp"
+#| 
+
+library(gt)
+
+texto <- data.frame(Arial = "A ciência do solo é o estudo do solo da Terra e de outros planetas, usando teorias e conhecimentos em evolução para entender seu papel na sustentação do funcionamento do ecossistema, enfrentando desafios ambientais e apoiando a humanidade.",
+                    DejaVu = "A ciência do solo é o estudo do solo da Terra e de outros planetas, usando teorias e conhecimentos em evolução para entender seu papel na sustentação do funcionamento do ecossistema, enfrentando desafios ambientais e apoiando a humanidade.")
+
+texto |> 
+  gt() |> 
+  # tab_header(
+  #   # title = md("**Diferenças entre Arial e DejaVu**")
+  # ) |> 
+  tab_source_note(
+    source_note = md("Fonte: https://doi.org/10.1016/j.soisec.2025.100176")
+  ) |> 
+   tab_style(
+    style = cell_text(font = "Arial"),
+    locations = cells_body(columns = Arial)
+  ) |>
+  tab_style(
+    style = cell_text(font = "DejaVu Sans"),
+    locations = cells_body(columns = DejaVu)
+  )
+```
+
+## As cores 
+
+A *RBCS* possui uma paleta própria com 9 cores disponíveis para os gráficos. Na @fig-paleta são apresentadas as cores e seus respectivos códigos hexadecimais.
+
+
+```{r}
+#| message: false
+#| warning: false
+#| code-fold: true
+#| fig-height: 2
+#| fig-cap: "Paleta de cores da RBCS"
+#| label: fig-paleta
+
+
+library(ggplot2)
+
+# vetor de cores
+cores <- c(
+  "#9e2943",
+  "#0a6c69",
+  "#75a741",
+  "#d18525",
+  "#d86c67",
+  "#5ab5b2",
+  "#b1d369",
+  "#711011",
+  "#033a39"
+)
+
+# cria um data frame com posição e cores
+df <- data.frame(
+  x = seq_along(cores),
+  y = 1,
+  cor = cores
+)
+
+# plota quadrados
+ggplot(df, aes(x = x, y = y, fill = cor)) +
+  geom_tile(color = "white", width = 0.9, height = 0.9) +
+  geom_text(aes(label = cores), col = "white", size = 3, fontface = "bold") +
+  scale_fill_identity() +
+  coord_fixed() +
+  theme_void()
+```
+
+
+# Reproduzindo o padrão RBCS no R 
+
+Para implementar essas configurações, serão utilizados os seguintes pacotes do R:
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse) 
+library(systemfonts)
+library(extrafont)
+library(patchwork)
+
+```
+
+## Verificando a fonte
+
+Após baixar e instalar a fonte, é necessário torná-la disponível para uso no R. Isso é feito carregando as fontes do sistema com a função abaixo:
+
+```{r}
+# importar fontes
+font_import()
+```
+
+::: {.callout-note}
+
+A função `font_import()` é utilizada apenas um vez, após a instalação da fonte no computador.
+
+:::
+
+Após o carregamento, pode ser realizado o registro de fontes que ainda não foram registradas.
+
+```{r}
+#| message: false
+#| warning: false
+
+
+# registrar fontes
+loadfonts(device = "win")
+
+```
+
+Agora, as fontes podem ser carregadas, e uma estrutura condicional pode ser feita para verificar se entre as fontes disponíveis está a **DejaVu**.
+
+```{r}
+#| message: false
+#| warning: false
+
+# Fontes detectadas no sistema
+fonts <- system_fonts()
+
+# estrutura lógica de seleção
+if (any(fonts == "DejaVuSansCondensed")) {
+  print("Fonte instalada!!")
+}else{
+  print("Fonte não encontrada!!")
+}
+```
+
+
+## Cores
+
+Para utilizar as cores, basta criar um vetor com os códigos hexadecimais (@fig-paleta).
+
+```{r}
+cores <- c(
+  "#9e2943",
+  "#0a6c69",
+  "#75a741",
+  "#d18525",
+  "#d86c67",
+  "#5ab5b2",
+  "#b1d369",
+  "#711011",
+  "#033a39"
+)
+
+
+```
+
+## Exemplo de uso
+
+A seguir, apresento um exemplo de como tudo isso pode ser adicionado de forma simples aos gráficos.
+
+Para ilustrar, criei dados fictícios de um experimento comum de dose e resposta. Neste exemplo, considero 9 tratamentos, com 10 repetições, 5 doses e uma variável chamada resposta. Os valores não possuem significado real, servindo apenas como exemplo.
+
+```{r}
+#| echo: false
+#| eval: true
+#| message: false
+#| warning: false
+#| code-fold: true
+
+df <- data.frame(
+  tratamento = as.factor(paste0("trat", 1:9)),
+  repeticao = 1:10,
+  dose = c(0, 50, 100, 150, 200),
+  resposta = sample(
+    x = rnorm(n = 100, mean = 50, sd = 3),
+    size = 450, replace = T
+  )
+)
+```
+
+## Visualização
+
+Para aplicar a fonte a todo o texto do gráfico, basta definir o nome da fonte na configuração de temas do {ggplot2}.
+
+```{r}
+#| eval: false
+
+theme_minimal(base_family = "Dejavu Sans")
+
+```
+
+Caso, o tema utilizado seja o "base", utilize:
+
+```{r}
+#| eval: false
+
+theme(text = element_text(family = "Dejavu Sans"))
+
+```
+
+Já as cores podem ser adicionadas por meio de uma escala manual, passando o vetor como parâmetro de `values` na função `scale_color_manual()`.
+
+```{r}
+#| eval: false
+#| code-line-numbers: true
+
+ggplot(df) + 
+  aes(x = tratamento, y = resposta, col = as.factor(dose)) +
+  stat_summary(
+    geom = "errorbar",
+    position = position_dodge(.5)
+  ) +
+  stat_summary(
+    geom = "point",
+    position = position_dodge(.5),
+    size = 2
+  ) +
+  scale_color_manual(values = cores)
+
+```
+
+Além disso, a RBCS solicita que os gráficos sejam enviados em formato vetorial, como SVG. Para salvar um gráfico do {ggplot2} nesse formato, basta utilizar a função `ggsave()`.
+
+
+```{r}
+#| eval: false
+#| code-line-numbers: true
+
+ggsave(filename = "fig_ex.svg", 
+       width = 10, 
+       height = 8, 
+       units = "cm", 
+       dpi = 950)
+
+```
+
+
+Abaixo, reúno os dados apresentados em três gráficos distintos, já utilizando as configurações da *RBCS*.
+
+```{r}
+#| echo: true
+#| eval: true
+#| message: false
+#| warning: false
+#| code-fold: true
+
+# ponto com barra de erro
+p1 <- ggplot(df) +
+  aes(x = tratamento, y = resposta, col = as.factor(dose)) +
+  stat_summary(
+    geom = "errorbar",
+    position = position_dodge(.5)
+  ) +
+  stat_summary(
+    geom = "point",
+    position = position_dodge(.5),
+    size = 2
+  ) +
+  scale_color_manual(values = cores) +
+  labs(
+    x = "Tratamento",
+    y = "Resposta",
+    col = "Dose",
+    title = "Gráfico de pontos de exemplo"
+  ) +
+  theme_bw(base_size = 10, base_family = "Dejavu Sans")
+
+# colunas
+p2 <- ggplot(df) +
+  aes(x = dose, y = resposta, fill = as.factor(tratamento)) +
+  stat_summary(
+    geom = "col",
+    position = position_dodge()
+  ) +
+  scale_fill_manual(values = cores) +
+  labs(
+    x = "Dose",
+    y = "Resposta",
+    fill = "Tratamento",
+    title = "Gráfico de barras de exemplo"
+  ) +
+  theme_bw(base_size = 10, base_family = "Dejavu Sans")
+
+# linhas
+p3 <- ggplot(df) +
+  aes(x = dose, y = resposta, col = as.factor(tratamento)) +
+  stat_summary(geom = "line", linewidth = 1) +
+  scale_color_manual(values = cores) +
+  labs(
+    x = "Dose",
+    y = "Resposta",
+    col = "Tratamento",
+    title = "Gráfico de linhas de exemplo"
+  ) +
+  theme_bw(base_size = 10, base_family = "Dejavu Sans")
+
+pt1 <- (p1 | p2) + plot_layout(widths = c(.55, .45))
+
+ptt <- pt1 / p3
+
+# ggsave(filename = "exemplo_gra.png",
+#        width = 10,
+#        height = 8,
+#        dpi = 1200)
+
+```
+
+![](ima/exemplo_gra.png)
+
+# Criando um snippet
+
+Os snippets são blocos de código que podem ser chamados rapidamente no corpo do script, utilizando palavras-chave. Exemplos são `if`, `for` e `fun`. Ao digitar essas palavras no RStudio, o autocomplete sugere o snippet que insere automaticamente a estrutura completa da função, otimizando o tempo.
+
+![Exemplo de uso de snippet](ima/2025-08-09 16-56-27.mkv)
+
+## Snippet rbcs
+
+O vídeo abaixo mostra o processo de criação de um snippet baseado no código acima, como chamá-lo no script e, assim, automatizar as configurações de gráficos para a *RBCS*.
+
+![Exemplo de snippet RBCS](ima/snippet_rbcs.mkv)
+
+Agora, sempre que for necessário formatar gráficos de acordo com o padrão da *RBCS*, basta escrever `rbcs` e pressionar enter no RStudio: as configurações básicas já serão inseridas no código.

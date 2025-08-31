@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -23,8 +23,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -35,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,17 +86,20 @@ div.csl-indent {
 <script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-7afefefe63c73b383124e735acb971e8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-ae2d0dcda2edce4ab590422bb373b64f.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-edf8bdc82c78e754c8c5da7383211c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-08799928d293638fe9563d5c5a2794e5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-edf8bdc82c78e754c8c5da7383211c75.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "Nenhum resultado",
@@ -177,7 +181,169 @@ window.Quarto = {
 <meta property="og:image:width" content="1037">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -260,6 +426,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">OxSR: Soil Iron Oxides via Diffuse Reflectance</h1>
@@ -297,7 +464,7 @@ window.Quarto = {
 
 <div class="columns">
 <div class="column" style="width:70%;">
-<p><br> <br> <br> <em><a href="&quot;https://cran.r-project.org/web//packages//OxSR/index.html&quot;">{OxSR}</a> meu primeiro pacote em R aplicado à Ciência do Solo!</em></p>
+<p><br> <br> <br> <em><a href="https://cran.r-project.org/web//packages//OxSR/index.html">{OxSR}</a> meu primeiro pacote em R aplicado à Ciência do Solo!</em></p>
 </div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -377,23 +544,23 @@ Versão 1.0.0
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(dplyr<span class="sc">::</span><span class="fu">across</span>(<span class="dv">2</span><span class="sc">:</span><span class="dv">7</span>, <span class="sc">~</span> <span class="fu">format</span>(., <span class="at">scientific =</span> <span class="cn">TRUE</span>, <span class="at">digits =</span> <span class="dv">3</span>))) <span class="sc">|&gt;</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="ddlwkmkcoq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ddlwkmkcoq table {
+<div id="rmigmnvizl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rmigmnvizl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ddlwkmkcoq thead, #ddlwkmkcoq tbody, #ddlwkmkcoq tfoot, #ddlwkmkcoq tr, #ddlwkmkcoq td, #ddlwkmkcoq th {
+#rmigmnvizl thead, #rmigmnvizl tbody, #rmigmnvizl tfoot, #rmigmnvizl tr, #rmigmnvizl td, #rmigmnvizl th {
   border-style: none;
 }
 
-#ddlwkmkcoq p {
+#rmigmnvizl p {
   margin: 0;
   padding: 0;
 }
 
-#ddlwkmkcoq .gt_table {
+#rmigmnvizl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -419,12 +586,12 @@ Versão 1.0.0
   border-left-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_caption {
+#rmigmnvizl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ddlwkmkcoq .gt_title {
+#rmigmnvizl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -436,7 +603,7 @@ Versão 1.0.0
   border-bottom-width: 0;
 }
 
-#ddlwkmkcoq .gt_subtitle {
+#rmigmnvizl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -448,7 +615,7 @@ Versão 1.0.0
   border-top-width: 0;
 }
 
-#ddlwkmkcoq .gt_heading {
+#rmigmnvizl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -460,13 +627,13 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_bottom_border {
+#rmigmnvizl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_col_headings {
+#rmigmnvizl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -481,7 +648,7 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_col_heading {
+#rmigmnvizl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -501,7 +668,7 @@ Versão 1.0.0
   overflow-x: hidden;
 }
 
-#ddlwkmkcoq .gt_column_spanner_outer {
+#rmigmnvizl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -513,15 +680,15 @@ Versão 1.0.0
   padding-right: 4px;
 }
 
-#ddlwkmkcoq .gt_column_spanner_outer:first-child {
+#rmigmnvizl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ddlwkmkcoq .gt_column_spanner_outer:last-child {
+#rmigmnvizl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ddlwkmkcoq .gt_column_spanner {
+#rmigmnvizl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -533,11 +700,11 @@ Versão 1.0.0
   width: 100%;
 }
 
-#ddlwkmkcoq .gt_spanner_row {
+#rmigmnvizl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ddlwkmkcoq .gt_group_heading {
+#rmigmnvizl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -563,7 +730,7 @@ Versão 1.0.0
   text-align: left;
 }
 
-#ddlwkmkcoq .gt_empty_group_heading {
+#rmigmnvizl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -578,15 +745,15 @@ Versão 1.0.0
   vertical-align: middle;
 }
 
-#ddlwkmkcoq .gt_from_md > :first-child {
+#rmigmnvizl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ddlwkmkcoq .gt_from_md > :last-child {
+#rmigmnvizl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ddlwkmkcoq .gt_row {
+#rmigmnvizl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -605,7 +772,7 @@ Versão 1.0.0
   overflow-x: hidden;
 }
 
-#ddlwkmkcoq .gt_stub {
+#rmigmnvizl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -618,7 +785,7 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ddlwkmkcoq .gt_stub_row_group {
+#rmigmnvizl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -632,15 +799,15 @@ Versão 1.0.0
   vertical-align: top;
 }
 
-#ddlwkmkcoq .gt_row_group_first td {
+#rmigmnvizl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ddlwkmkcoq .gt_row_group_first th {
+#rmigmnvizl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ddlwkmkcoq .gt_summary_row {
+#rmigmnvizl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -650,16 +817,16 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ddlwkmkcoq .gt_first_summary_row {
+#rmigmnvizl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_first_summary_row.thick {
+#rmigmnvizl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ddlwkmkcoq .gt_last_summary_row {
+#rmigmnvizl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -669,7 +836,7 @@ Versão 1.0.0
   border-bottom-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_grand_summary_row {
+#rmigmnvizl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -679,7 +846,7 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ddlwkmkcoq .gt_first_grand_summary_row {
+#rmigmnvizl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -689,7 +856,7 @@ Versão 1.0.0
   border-top-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_last_grand_summary_row_top {
+#rmigmnvizl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -699,11 +866,11 @@ Versão 1.0.0
   border-bottom-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_striped {
+#rmigmnvizl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ddlwkmkcoq .gt_table_body {
+#rmigmnvizl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -712,7 +879,7 @@ Versão 1.0.0
   border-bottom-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_footnotes {
+#rmigmnvizl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -726,7 +893,7 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_footnote {
+#rmigmnvizl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -735,7 +902,7 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ddlwkmkcoq .gt_sourcenotes {
+#rmigmnvizl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -749,7 +916,7 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ddlwkmkcoq .gt_sourcenote {
+#rmigmnvizl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -757,72 +924,72 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ddlwkmkcoq .gt_left {
+#rmigmnvizl .gt_left {
   text-align: left;
 }
 
-#ddlwkmkcoq .gt_center {
+#rmigmnvizl .gt_center {
   text-align: center;
 }
 
-#ddlwkmkcoq .gt_right {
+#rmigmnvizl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ddlwkmkcoq .gt_font_normal {
+#rmigmnvizl .gt_font_normal {
   font-weight: normal;
 }
 
-#ddlwkmkcoq .gt_font_bold {
+#rmigmnvizl .gt_font_bold {
   font-weight: bold;
 }
 
-#ddlwkmkcoq .gt_font_italic {
+#rmigmnvizl .gt_font_italic {
   font-style: italic;
 }
 
-#ddlwkmkcoq .gt_super {
+#rmigmnvizl .gt_super {
   font-size: 65%;
 }
 
-#ddlwkmkcoq .gt_footnote_marks {
+#rmigmnvizl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ddlwkmkcoq .gt_asterisk {
+#rmigmnvizl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ddlwkmkcoq .gt_indent_1 {
+#rmigmnvizl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ddlwkmkcoq .gt_indent_2 {
+#rmigmnvizl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ddlwkmkcoq .gt_indent_3 {
+#rmigmnvizl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ddlwkmkcoq .gt_indent_4 {
+#rmigmnvizl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ddlwkmkcoq .gt_indent_5 {
+#rmigmnvizl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ddlwkmkcoq .katex-display {
+#rmigmnvizl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ddlwkmkcoq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rmigmnvizl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -849,17 +1016,17 @@ Versão 1.0.0
 <td class="gt_row gt_left" headers="max_hm">1.53e-04</td>
 <td class="gt_row gt_left" headers="range_gt">6.92e-04</td>
 <td class="gt_row gt_left" headers="range_hm">2.28e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.2607</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.2600</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a2</td>
 <td class="gt_row gt_left" headers="min_gt">-2.67e-04</td>
 <td class="gt_row gt_left" headers="max_gt">7.13e-04</td>
-<td class="gt_row gt_left" headers="min_hm">-1.00e-05</td>
+<td class="gt_row gt_left" headers="min_hm">-8.03e-06</td>
 <td class="gt_row gt_left" headers="max_hm">1.54e-04</td>
 <td class="gt_row gt_left" headers="range_gt">9.81e-04</td>
-<td class="gt_row gt_left" headers="range_hm">1.64e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.1216</td>
+<td class="gt_row gt_left" headers="range_hm">1.62e-04</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.1196</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a3</td>
@@ -873,13 +1040,13 @@ Versão 1.0.0
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a4</td>
-<td class="gt_row gt_left" headers="min_gt">6.21e-06</td>
-<td class="gt_row gt_left" headers="max_gt">3.48e-05</td>
-<td class="gt_row gt_left" headers="min_hm">-8.37e-06</td>
+<td class="gt_row gt_left" headers="min_gt">6.72e-06</td>
+<td class="gt_row gt_left" headers="max_gt">3.46e-05</td>
+<td class="gt_row gt_left" headers="min_hm">-7.47e-06</td>
 <td class="gt_row gt_left" headers="max_hm">2.41e-05</td>
-<td class="gt_row gt_left" headers="range_gt">2.85e-05</td>
-<td class="gt_row gt_left" headers="range_hm">3.24e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.6366</td>
+<td class="gt_row gt_left" headers="range_gt">2.79e-05</td>
+<td class="gt_row gt_left" headers="range_hm">3.15e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.6354</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a5</td>
@@ -894,32 +1061,32 @@ Versão 1.0.0
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a6</td>
 <td class="gt_row gt_left" headers="min_gt">-1.88e-04</td>
-<td class="gt_row gt_left" headers="max_gt">2.31e-04</td>
+<td class="gt_row gt_left" headers="max_gt">2.20e-04</td>
 <td class="gt_row gt_left" headers="min_hm">-4.05e-04</td>
 <td class="gt_row gt_left" headers="max_hm">4.60e-04</td>
-<td class="gt_row gt_left" headers="range_gt">4.19e-04</td>
+<td class="gt_row gt_left" headers="range_gt">4.09e-04</td>
 <td class="gt_row gt_left" headers="range_hm">8.65e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.8245</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.8318</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a7</td>
 <td class="gt_row gt_left" headers="min_gt">-2.69e-04</td>
 <td class="gt_row gt_left" headers="max_gt">5.34e-04</td>
-<td class="gt_row gt_left" headers="min_hm">-1.01e-04</td>
+<td class="gt_row gt_left" headers="min_hm">-1.00e-04</td>
 <td class="gt_row gt_left" headers="max_hm">1.87e-04</td>
 <td class="gt_row gt_left" headers="range_gt">8.03e-04</td>
-<td class="gt_row gt_left" headers="range_hm">2.88e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.2819</td>
+<td class="gt_row gt_left" headers="range_hm">2.87e-04</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.2808</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a8</td>
-<td class="gt_row gt_left" headers="min_gt">-1.59e-04</td>
-<td class="gt_row gt_left" headers="max_gt">1.94e-04</td>
+<td class="gt_row gt_left" headers="min_gt">-1.57e-04</td>
+<td class="gt_row gt_left" headers="max_gt">1.83e-04</td>
 <td class="gt_row gt_left" headers="min_hm">-4.73e-04</td>
 <td class="gt_row gt_left" headers="max_hm">5.11e-04</td>
-<td class="gt_row gt_left" headers="range_gt">3.54e-04</td>
+<td class="gt_row gt_left" headers="range_gt">3.40e-04</td>
 <td class="gt_row gt_left" headers="range_hm">9.84e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.9066</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.9167</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a9</td>
@@ -933,23 +1100,23 @@ Versão 1.0.0
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a10</td>
-<td class="gt_row gt_left" headers="min_gt">2.61e-05</td>
+<td class="gt_row gt_left" headers="min_gt">2.77e-05</td>
 <td class="gt_row gt_left" headers="max_gt">3.41e-05</td>
-<td class="gt_row gt_left" headers="min_hm">1.19e-06</td>
+<td class="gt_row gt_left" headers="min_hm">1.79e-06</td>
 <td class="gt_row gt_left" headers="max_hm">2.32e-05</td>
-<td class="gt_row gt_left" headers="range_gt">7.93e-06</td>
-<td class="gt_row gt_left" headers="range_hm">2.20e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.9063</td>
+<td class="gt_row gt_left" headers="range_gt">6.41e-06</td>
+<td class="gt_row gt_left" headers="range_hm">2.14e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.9521</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a11</td>
 <td class="gt_row gt_left" headers="min_gt">-2.66e-05</td>
 <td class="gt_row gt_left" headers="max_gt">2.42e-04</td>
-<td class="gt_row gt_left" headers="min_hm">1.95e-05</td>
+<td class="gt_row gt_left" headers="min_hm">2.16e-05</td>
 <td class="gt_row gt_left" headers="max_hm">5.12e-05</td>
 <td class="gt_row gt_left" headers="range_gt">2.69e-04</td>
-<td class="gt_row gt_left" headers="range_hm">3.17e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.0715</td>
+<td class="gt_row gt_left" headers="range_hm">2.96e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.0633</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a12</td>
@@ -965,11 +1132,11 @@ Versão 1.0.0
 <td class="gt_row gt_left" headers="samples">a13</td>
 <td class="gt_row gt_left" headers="min_gt">-2.77e-04</td>
 <td class="gt_row gt_left" headers="max_gt">7.08e-04</td>
-<td class="gt_row gt_left" headers="min_hm">-2.06e-05</td>
-<td class="gt_row gt_left" headers="max_hm">1.05e-04</td>
+<td class="gt_row gt_left" headers="min_hm">-1.77e-05</td>
+<td class="gt_row gt_left" headers="max_hm">1.01e-04</td>
 <td class="gt_row gt_left" headers="range_gt">9.85e-04</td>
-<td class="gt_row gt_left" headers="range_hm">1.25e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.0814</td>
+<td class="gt_row gt_left" headers="range_hm">1.18e-04</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.0741</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a14</td>
@@ -984,92 +1151,92 @@ Versão 1.0.0
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a15</td>
 <td class="gt_row gt_left" headers="min_gt">-2.15e-04</td>
-<td class="gt_row gt_left" headers="max_gt">3.04e-04</td>
+<td class="gt_row gt_left" headers="max_gt">2.96e-04</td>
 <td class="gt_row gt_left" headers="min_hm">-3.56e-04</td>
 <td class="gt_row gt_left" headers="max_hm">4.37e-04</td>
-<td class="gt_row gt_left" headers="range_gt">5.20e-04</td>
+<td class="gt_row gt_left" headers="range_gt">5.12e-04</td>
 <td class="gt_row gt_left" headers="range_hm">7.93e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.7323</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.7373</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a16</td>
-<td class="gt_row gt_left" headers="min_gt">2.43e-05</td>
-<td class="gt_row gt_left" headers="max_gt">7.85e-05</td>
-<td class="gt_row gt_left" headers="min_hm">6.55e-06</td>
-<td class="gt_row gt_left" headers="max_hm">3.74e-05</td>
-<td class="gt_row gt_left" headers="range_gt">5.42e-05</td>
-<td class="gt_row gt_left" headers="range_hm">3.09e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.4129</td>
+<td class="gt_row gt_left" headers="min_gt">2.48e-05</td>
+<td class="gt_row gt_left" headers="max_gt">7.78e-05</td>
+<td class="gt_row gt_left" headers="min_hm">7.79e-06</td>
+<td class="gt_row gt_left" headers="max_hm">3.64e-05</td>
+<td class="gt_row gt_left" headers="range_gt">5.30e-05</td>
+<td class="gt_row gt_left" headers="range_hm">2.87e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.3972</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a17</td>
 <td class="gt_row gt_left" headers="min_gt">-5.66e-05</td>
-<td class="gt_row gt_left" headers="max_gt">1.30e-04</td>
-<td class="gt_row gt_left" headers="min_hm">1.55e-05</td>
-<td class="gt_row gt_left" headers="max_hm">5.43e-05</td>
-<td class="gt_row gt_left" headers="range_gt">1.87e-04</td>
-<td class="gt_row gt_left" headers="range_hm">3.88e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.1596</td>
+<td class="gt_row gt_left" headers="max_gt">1.29e-04</td>
+<td class="gt_row gt_left" headers="min_hm">1.68e-05</td>
+<td class="gt_row gt_left" headers="max_hm">5.22e-05</td>
+<td class="gt_row gt_left" headers="range_gt">1.86e-04</td>
+<td class="gt_row gt_left" headers="range_hm">3.53e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.1435</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a18</td>
 <td class="gt_row gt_left" headers="min_gt">-1.62e-05</td>
 <td class="gt_row gt_left" headers="max_gt">1.29e-04</td>
-<td class="gt_row gt_left" headers="min_hm">1.02e-05</td>
-<td class="gt_row gt_left" headers="max_hm">4.49e-05</td>
+<td class="gt_row gt_left" headers="min_hm">1.14e-05</td>
+<td class="gt_row gt_left" headers="max_hm">4.33e-05</td>
 <td class="gt_row gt_left" headers="range_gt">1.45e-04</td>
-<td class="gt_row gt_left" headers="range_hm">3.46e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.1869</td>
+<td class="gt_row gt_left" headers="range_hm">3.18e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.1701</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a19</td>
 <td class="gt_row gt_left" headers="min_gt">-1.72e-04</td>
-<td class="gt_row gt_left" headers="max_gt">1.66e-04</td>
+<td class="gt_row gt_left" headers="max_gt">1.58e-04</td>
 <td class="gt_row gt_left" headers="min_hm">-3.32e-04</td>
 <td class="gt_row gt_left" headers="max_hm">3.43e-04</td>
-<td class="gt_row gt_left" headers="range_gt">3.38e-04</td>
+<td class="gt_row gt_left" headers="range_gt">3.30e-04</td>
 <td class="gt_row gt_left" headers="range_hm">6.75e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.8146</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.8219</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a20</td>
 <td class="gt_row gt_left" headers="min_gt">-1.71e-04</td>
-<td class="gt_row gt_left" headers="max_gt">2.06e-04</td>
+<td class="gt_row gt_left" headers="max_gt">1.86e-04</td>
 <td class="gt_row gt_left" headers="min_hm">-2.82e-04</td>
 <td class="gt_row gt_left" headers="max_hm">3.23e-04</td>
-<td class="gt_row gt_left" headers="range_gt">3.77e-04</td>
+<td class="gt_row gt_left" headers="range_gt">3.57e-04</td>
 <td class="gt_row gt_left" headers="range_hm">6.05e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.7480</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.7650</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a22</td>
 <td class="gt_row gt_left" headers="min_gt">-3.69e-04</td>
 <td class="gt_row gt_left" headers="max_gt">7.84e-04</td>
-<td class="gt_row gt_left" headers="min_hm">-4.16e-05</td>
+<td class="gt_row gt_left" headers="min_hm">-4.00e-05</td>
 <td class="gt_row gt_left" headers="max_hm">2.37e-04</td>
 <td class="gt_row gt_left" headers="range_gt">1.15e-03</td>
-<td class="gt_row gt_left" headers="range_hm">2.79e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.1898</td>
+<td class="gt_row gt_left" headers="range_hm">2.77e-04</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.1886</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="samples">a24</td>
-<td class="gt_row gt_left" headers="min_gt">-1.30e-05</td>
-<td class="gt_row gt_left" headers="max_gt">1.71e-04</td>
-<td class="gt_row gt_left" headers="min_hm">-2.48e-05</td>
+<td class="gt_row gt_left" headers="min_gt">-1.26e-05</td>
+<td class="gt_row gt_left" headers="max_gt">1.68e-04</td>
+<td class="gt_row gt_left" headers="min_hm">-2.29e-05</td>
 <td class="gt_row gt_left" headers="max_hm">1.09e-04</td>
-<td class="gt_row gt_left" headers="range_gt">1.84e-04</td>
-<td class="gt_row gt_left" headers="range_hm">1.34e-04</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.4901</td>
+<td class="gt_row gt_left" headers="range_gt">1.81e-04</td>
+<td class="gt_row gt_left" headers="range_hm">1.32e-04</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.4912</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="samples">a26</td>
 <td class="gt_row gt_left" headers="min_gt">-7.90e-05</td>
-<td class="gt_row gt_left" headers="max_gt">1.69e-04</td>
-<td class="gt_row gt_left" headers="min_hm">-7.86e-06</td>
+<td class="gt_row gt_left" headers="max_gt">1.68e-04</td>
+<td class="gt_row gt_left" headers="min_hm">-6.28e-06</td>
 <td class="gt_row gt_left" headers="max_hm">8.71e-05</td>
-<td class="gt_row gt_left" headers="range_gt">2.48e-04</td>
-<td class="gt_row gt_left" headers="range_hm">9.49e-05</td>
-<td class="gt_row gt_right" headers="relation_hm_gt">0.2991</td>
+<td class="gt_row gt_left" headers="range_gt">2.47e-04</td>
+<td class="gt_row gt_left" headers="range_hm">9.33e-05</td>
+<td class="gt_row gt_right" headers="relation_hm_gt">0.2956</td>
 </tr>
 </tbody>
 </table>
@@ -1093,23 +1260,23 @@ Versão 1.0.0
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dados_cor <span class="sc">|&gt;</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="ayzfyxfysl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ayzfyxfysl table {
+<div id="lbstgcvxvd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lbstgcvxvd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ayzfyxfysl thead, #ayzfyxfysl tbody, #ayzfyxfysl tfoot, #ayzfyxfysl tr, #ayzfyxfysl td, #ayzfyxfysl th {
+#lbstgcvxvd thead, #lbstgcvxvd tbody, #lbstgcvxvd tfoot, #lbstgcvxvd tr, #lbstgcvxvd td, #lbstgcvxvd th {
   border-style: none;
 }
 
-#ayzfyxfysl p {
+#lbstgcvxvd p {
   margin: 0;
   padding: 0;
 }
 
-#ayzfyxfysl .gt_table {
+#lbstgcvxvd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1135,12 +1302,12 @@ Versão 1.0.0
   border-left-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_caption {
+#lbstgcvxvd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ayzfyxfysl .gt_title {
+#lbstgcvxvd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1152,7 +1319,7 @@ Versão 1.0.0
   border-bottom-width: 0;
 }
 
-#ayzfyxfysl .gt_subtitle {
+#lbstgcvxvd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1164,7 +1331,7 @@ Versão 1.0.0
   border-top-width: 0;
 }
 
-#ayzfyxfysl .gt_heading {
+#lbstgcvxvd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1176,13 +1343,13 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_bottom_border {
+#lbstgcvxvd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_col_headings {
+#lbstgcvxvd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1197,7 +1364,7 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_col_heading {
+#lbstgcvxvd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1217,7 +1384,7 @@ Versão 1.0.0
   overflow-x: hidden;
 }
 
-#ayzfyxfysl .gt_column_spanner_outer {
+#lbstgcvxvd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1229,15 +1396,15 @@ Versão 1.0.0
   padding-right: 4px;
 }
 
-#ayzfyxfysl .gt_column_spanner_outer:first-child {
+#lbstgcvxvd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ayzfyxfysl .gt_column_spanner_outer:last-child {
+#lbstgcvxvd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ayzfyxfysl .gt_column_spanner {
+#lbstgcvxvd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1249,11 +1416,11 @@ Versão 1.0.0
   width: 100%;
 }
 
-#ayzfyxfysl .gt_spanner_row {
+#lbstgcvxvd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ayzfyxfysl .gt_group_heading {
+#lbstgcvxvd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1279,7 +1446,7 @@ Versão 1.0.0
   text-align: left;
 }
 
-#ayzfyxfysl .gt_empty_group_heading {
+#lbstgcvxvd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1294,15 +1461,15 @@ Versão 1.0.0
   vertical-align: middle;
 }
 
-#ayzfyxfysl .gt_from_md > :first-child {
+#lbstgcvxvd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ayzfyxfysl .gt_from_md > :last-child {
+#lbstgcvxvd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ayzfyxfysl .gt_row {
+#lbstgcvxvd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1321,7 +1488,7 @@ Versão 1.0.0
   overflow-x: hidden;
 }
 
-#ayzfyxfysl .gt_stub {
+#lbstgcvxvd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1334,7 +1501,7 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ayzfyxfysl .gt_stub_row_group {
+#lbstgcvxvd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1348,15 +1515,15 @@ Versão 1.0.0
   vertical-align: top;
 }
 
-#ayzfyxfysl .gt_row_group_first td {
+#lbstgcvxvd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ayzfyxfysl .gt_row_group_first th {
+#lbstgcvxvd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ayzfyxfysl .gt_summary_row {
+#lbstgcvxvd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1366,16 +1533,16 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ayzfyxfysl .gt_first_summary_row {
+#lbstgcvxvd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_first_summary_row.thick {
+#lbstgcvxvd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ayzfyxfysl .gt_last_summary_row {
+#lbstgcvxvd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1385,7 +1552,7 @@ Versão 1.0.0
   border-bottom-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_grand_summary_row {
+#lbstgcvxvd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1395,7 +1562,7 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ayzfyxfysl .gt_first_grand_summary_row {
+#lbstgcvxvd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1405,7 +1572,7 @@ Versão 1.0.0
   border-top-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_last_grand_summary_row_top {
+#lbstgcvxvd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1415,11 +1582,11 @@ Versão 1.0.0
   border-bottom-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_striped {
+#lbstgcvxvd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ayzfyxfysl .gt_table_body {
+#lbstgcvxvd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1428,7 +1595,7 @@ Versão 1.0.0
   border-bottom-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_footnotes {
+#lbstgcvxvd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1442,7 +1609,7 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_footnote {
+#lbstgcvxvd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1451,7 +1618,7 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ayzfyxfysl .gt_sourcenotes {
+#lbstgcvxvd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1465,7 +1632,7 @@ Versão 1.0.0
   border-right-color: #D3D3D3;
 }
 
-#ayzfyxfysl .gt_sourcenote {
+#lbstgcvxvd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1473,72 +1640,72 @@ Versão 1.0.0
   padding-right: 5px;
 }
 
-#ayzfyxfysl .gt_left {
+#lbstgcvxvd .gt_left {
   text-align: left;
 }
 
-#ayzfyxfysl .gt_center {
+#lbstgcvxvd .gt_center {
   text-align: center;
 }
 
-#ayzfyxfysl .gt_right {
+#lbstgcvxvd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ayzfyxfysl .gt_font_normal {
+#lbstgcvxvd .gt_font_normal {
   font-weight: normal;
 }
 
-#ayzfyxfysl .gt_font_bold {
+#lbstgcvxvd .gt_font_bold {
   font-weight: bold;
 }
 
-#ayzfyxfysl .gt_font_italic {
+#lbstgcvxvd .gt_font_italic {
   font-style: italic;
 }
 
-#ayzfyxfysl .gt_super {
+#lbstgcvxvd .gt_super {
   font-size: 65%;
 }
 
-#ayzfyxfysl .gt_footnote_marks {
+#lbstgcvxvd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ayzfyxfysl .gt_asterisk {
+#lbstgcvxvd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ayzfyxfysl .gt_indent_1 {
+#lbstgcvxvd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ayzfyxfysl .gt_indent_2 {
+#lbstgcvxvd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ayzfyxfysl .gt_indent_3 {
+#lbstgcvxvd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ayzfyxfysl .gt_indent_4 {
+#lbstgcvxvd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ayzfyxfysl .gt_indent_5 {
+#lbstgcvxvd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ayzfyxfysl .katex-display {
+#lbstgcvxvd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ayzfyxfysl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lbstgcvxvd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1842,23 +2009,23 @@ Organização de planilha!
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">5</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="rqwbvzzeqe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rqwbvzzeqe table {
+<div id="giksnejwzb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#giksnejwzb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rqwbvzzeqe thead, #rqwbvzzeqe tbody, #rqwbvzzeqe tfoot, #rqwbvzzeqe tr, #rqwbvzzeqe td, #rqwbvzzeqe th {
+#giksnejwzb thead, #giksnejwzb tbody, #giksnejwzb tfoot, #giksnejwzb tr, #giksnejwzb td, #giksnejwzb th {
   border-style: none;
 }
 
-#rqwbvzzeqe p {
+#giksnejwzb p {
   margin: 0;
   padding: 0;
 }
 
-#rqwbvzzeqe .gt_table {
+#giksnejwzb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1884,12 +2051,12 @@ Organização de planilha!
   border-left-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_caption {
+#giksnejwzb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rqwbvzzeqe .gt_title {
+#giksnejwzb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1901,7 +2068,7 @@ Organização de planilha!
   border-bottom-width: 0;
 }
 
-#rqwbvzzeqe .gt_subtitle {
+#giksnejwzb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1913,7 +2080,7 @@ Organização de planilha!
   border-top-width: 0;
 }
 
-#rqwbvzzeqe .gt_heading {
+#giksnejwzb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1925,13 +2092,13 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_bottom_border {
+#giksnejwzb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_col_headings {
+#giksnejwzb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1946,7 +2113,7 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_col_heading {
+#giksnejwzb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1966,7 +2133,7 @@ Organização de planilha!
   overflow-x: hidden;
 }
 
-#rqwbvzzeqe .gt_column_spanner_outer {
+#giksnejwzb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1978,15 +2145,15 @@ Organização de planilha!
   padding-right: 4px;
 }
 
-#rqwbvzzeqe .gt_column_spanner_outer:first-child {
+#giksnejwzb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rqwbvzzeqe .gt_column_spanner_outer:last-child {
+#giksnejwzb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rqwbvzzeqe .gt_column_spanner {
+#giksnejwzb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1998,11 +2165,11 @@ Organização de planilha!
   width: 100%;
 }
 
-#rqwbvzzeqe .gt_spanner_row {
+#giksnejwzb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rqwbvzzeqe .gt_group_heading {
+#giksnejwzb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2028,7 +2195,7 @@ Organização de planilha!
   text-align: left;
 }
 
-#rqwbvzzeqe .gt_empty_group_heading {
+#giksnejwzb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2043,15 +2210,15 @@ Organização de planilha!
   vertical-align: middle;
 }
 
-#rqwbvzzeqe .gt_from_md > :first-child {
+#giksnejwzb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rqwbvzzeqe .gt_from_md > :last-child {
+#giksnejwzb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rqwbvzzeqe .gt_row {
+#giksnejwzb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2070,7 +2237,7 @@ Organização de planilha!
   overflow-x: hidden;
 }
 
-#rqwbvzzeqe .gt_stub {
+#giksnejwzb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2083,7 +2250,7 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#rqwbvzzeqe .gt_stub_row_group {
+#giksnejwzb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2097,15 +2264,15 @@ Organização de planilha!
   vertical-align: top;
 }
 
-#rqwbvzzeqe .gt_row_group_first td {
+#giksnejwzb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rqwbvzzeqe .gt_row_group_first th {
+#giksnejwzb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rqwbvzzeqe .gt_summary_row {
+#giksnejwzb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2115,16 +2282,16 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#rqwbvzzeqe .gt_first_summary_row {
+#giksnejwzb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_first_summary_row.thick {
+#giksnejwzb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rqwbvzzeqe .gt_last_summary_row {
+#giksnejwzb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2134,7 +2301,7 @@ Organização de planilha!
   border-bottom-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_grand_summary_row {
+#giksnejwzb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2144,7 +2311,7 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#rqwbvzzeqe .gt_first_grand_summary_row {
+#giksnejwzb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2154,7 +2321,7 @@ Organização de planilha!
   border-top-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_last_grand_summary_row_top {
+#giksnejwzb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2164,11 +2331,11 @@ Organização de planilha!
   border-bottom-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_striped {
+#giksnejwzb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rqwbvzzeqe .gt_table_body {
+#giksnejwzb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2177,7 +2344,7 @@ Organização de planilha!
   border-bottom-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_footnotes {
+#giksnejwzb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2191,7 +2358,7 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_footnote {
+#giksnejwzb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2200,7 +2367,7 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#rqwbvzzeqe .gt_sourcenotes {
+#giksnejwzb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2214,7 +2381,7 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#rqwbvzzeqe .gt_sourcenote {
+#giksnejwzb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2222,72 +2389,72 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#rqwbvzzeqe .gt_left {
+#giksnejwzb .gt_left {
   text-align: left;
 }
 
-#rqwbvzzeqe .gt_center {
+#giksnejwzb .gt_center {
   text-align: center;
 }
 
-#rqwbvzzeqe .gt_right {
+#giksnejwzb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rqwbvzzeqe .gt_font_normal {
+#giksnejwzb .gt_font_normal {
   font-weight: normal;
 }
 
-#rqwbvzzeqe .gt_font_bold {
+#giksnejwzb .gt_font_bold {
   font-weight: bold;
 }
 
-#rqwbvzzeqe .gt_font_italic {
+#giksnejwzb .gt_font_italic {
   font-style: italic;
 }
 
-#rqwbvzzeqe .gt_super {
+#giksnejwzb .gt_super {
   font-size: 65%;
 }
 
-#rqwbvzzeqe .gt_footnote_marks {
+#giksnejwzb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rqwbvzzeqe .gt_asterisk {
+#giksnejwzb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rqwbvzzeqe .gt_indent_1 {
+#giksnejwzb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rqwbvzzeqe .gt_indent_2 {
+#giksnejwzb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rqwbvzzeqe .gt_indent_3 {
+#giksnejwzb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rqwbvzzeqe .gt_indent_4 {
+#giksnejwzb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rqwbvzzeqe .gt_indent_5 {
+#giksnejwzb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rqwbvzzeqe .katex-display {
+#giksnejwzb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rqwbvzzeqe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#giksnejwzb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2621,23 +2788,23 @@ Organização de planilha!
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="biezewcvuc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#biezewcvuc table {
+<div id="bvfjymaemp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bvfjymaemp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#biezewcvuc thead, #biezewcvuc tbody, #biezewcvuc tfoot, #biezewcvuc tr, #biezewcvuc td, #biezewcvuc th {
+#bvfjymaemp thead, #bvfjymaemp tbody, #bvfjymaemp tfoot, #bvfjymaemp tr, #bvfjymaemp td, #bvfjymaemp th {
   border-style: none;
 }
 
-#biezewcvuc p {
+#bvfjymaemp p {
   margin: 0;
   padding: 0;
 }
 
-#biezewcvuc .gt_table {
+#bvfjymaemp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2663,12 +2830,12 @@ Organização de planilha!
   border-left-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_caption {
+#bvfjymaemp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#biezewcvuc .gt_title {
+#bvfjymaemp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2680,7 +2847,7 @@ Organização de planilha!
   border-bottom-width: 0;
 }
 
-#biezewcvuc .gt_subtitle {
+#bvfjymaemp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2692,7 +2859,7 @@ Organização de planilha!
   border-top-width: 0;
 }
 
-#biezewcvuc .gt_heading {
+#bvfjymaemp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2704,13 +2871,13 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_bottom_border {
+#bvfjymaemp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_col_headings {
+#bvfjymaemp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2725,7 +2892,7 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_col_heading {
+#bvfjymaemp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2745,7 +2912,7 @@ Organização de planilha!
   overflow-x: hidden;
 }
 
-#biezewcvuc .gt_column_spanner_outer {
+#bvfjymaemp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2757,15 +2924,15 @@ Organização de planilha!
   padding-right: 4px;
 }
 
-#biezewcvuc .gt_column_spanner_outer:first-child {
+#bvfjymaemp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#biezewcvuc .gt_column_spanner_outer:last-child {
+#bvfjymaemp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#biezewcvuc .gt_column_spanner {
+#bvfjymaemp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2777,11 +2944,11 @@ Organização de planilha!
   width: 100%;
 }
 
-#biezewcvuc .gt_spanner_row {
+#bvfjymaemp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#biezewcvuc .gt_group_heading {
+#bvfjymaemp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2807,7 +2974,7 @@ Organização de planilha!
   text-align: left;
 }
 
-#biezewcvuc .gt_empty_group_heading {
+#bvfjymaemp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2822,15 +2989,15 @@ Organização de planilha!
   vertical-align: middle;
 }
 
-#biezewcvuc .gt_from_md > :first-child {
+#bvfjymaemp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#biezewcvuc .gt_from_md > :last-child {
+#bvfjymaemp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#biezewcvuc .gt_row {
+#bvfjymaemp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2849,7 +3016,7 @@ Organização de planilha!
   overflow-x: hidden;
 }
 
-#biezewcvuc .gt_stub {
+#bvfjymaemp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2862,7 +3029,7 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#biezewcvuc .gt_stub_row_group {
+#bvfjymaemp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2876,15 +3043,15 @@ Organização de planilha!
   vertical-align: top;
 }
 
-#biezewcvuc .gt_row_group_first td {
+#bvfjymaemp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#biezewcvuc .gt_row_group_first th {
+#bvfjymaemp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#biezewcvuc .gt_summary_row {
+#bvfjymaemp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2894,16 +3061,16 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#biezewcvuc .gt_first_summary_row {
+#bvfjymaemp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_first_summary_row.thick {
+#bvfjymaemp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#biezewcvuc .gt_last_summary_row {
+#bvfjymaemp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2913,7 +3080,7 @@ Organização de planilha!
   border-bottom-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_grand_summary_row {
+#bvfjymaemp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2923,7 +3090,7 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#biezewcvuc .gt_first_grand_summary_row {
+#bvfjymaemp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2933,7 +3100,7 @@ Organização de planilha!
   border-top-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_last_grand_summary_row_top {
+#bvfjymaemp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2943,11 +3110,11 @@ Organização de planilha!
   border-bottom-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_striped {
+#bvfjymaemp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#biezewcvuc .gt_table_body {
+#bvfjymaemp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2956,7 +3123,7 @@ Organização de planilha!
   border-bottom-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_footnotes {
+#bvfjymaemp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2970,7 +3137,7 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_footnote {
+#bvfjymaemp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2979,7 +3146,7 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#biezewcvuc .gt_sourcenotes {
+#bvfjymaemp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2993,7 +3160,7 @@ Organização de planilha!
   border-right-color: #D3D3D3;
 }
 
-#biezewcvuc .gt_sourcenote {
+#bvfjymaemp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3001,72 +3168,72 @@ Organização de planilha!
   padding-right: 5px;
 }
 
-#biezewcvuc .gt_left {
+#bvfjymaemp .gt_left {
   text-align: left;
 }
 
-#biezewcvuc .gt_center {
+#bvfjymaemp .gt_center {
   text-align: center;
 }
 
-#biezewcvuc .gt_right {
+#bvfjymaemp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#biezewcvuc .gt_font_normal {
+#bvfjymaemp .gt_font_normal {
   font-weight: normal;
 }
 
-#biezewcvuc .gt_font_bold {
+#bvfjymaemp .gt_font_bold {
   font-weight: bold;
 }
 
-#biezewcvuc .gt_font_italic {
+#bvfjymaemp .gt_font_italic {
   font-style: italic;
 }
 
-#biezewcvuc .gt_super {
+#bvfjymaemp .gt_super {
   font-size: 65%;
 }
 
-#biezewcvuc .gt_footnote_marks {
+#bvfjymaemp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#biezewcvuc .gt_asterisk {
+#bvfjymaemp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#biezewcvuc .gt_indent_1 {
+#bvfjymaemp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#biezewcvuc .gt_indent_2 {
+#bvfjymaemp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#biezewcvuc .gt_indent_3 {
+#bvfjymaemp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#biezewcvuc .gt_indent_4 {
+#bvfjymaemp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#biezewcvuc .gt_indent_5 {
+#bvfjymaemp .gt_indent_5 {
   text-indent: 25px;
 }
 
-#biezewcvuc .katex-display {
+#bvfjymaemp .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#biezewcvuc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bvfjymaemp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3407,380 +3574,255 @@ Wyszecki, Günther, e Walter Stanley Stiles. 2000. <em>Color science: concepts a
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
     }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiada");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiada");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
       });
     }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiada");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiada");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
         }
-        return container.innerHTML
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -3788,190 +3830,166 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Website made with quarto © 2024 by Gustavo Frosi is licensed under CC BY-SA 4.0.</p>
+<p>Website made with quarto © 2025 by Gustavo Frosi is licensed under CC BY-SA 4.0.</p>
 </div>   
     <div class="nav-footer-center">
 <p><img src="ima/FS.png" width="25" height="25"></p>
