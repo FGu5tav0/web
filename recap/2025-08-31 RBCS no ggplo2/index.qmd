@@ -4,6 +4,7 @@ author:
   - name: Gustavo Frosi
     email: gustavofrosi@hotmail.com
 code-fold: false
+freeze: true
 categories: 
   - R
   - Solos
