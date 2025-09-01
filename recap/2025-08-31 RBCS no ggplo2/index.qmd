@@ -7,7 +7,7 @@ code-fold: false
 categories: 
   - R
   - Solos
-  - RBSC
+  - RBCS
   - ggplot2
 toc: true
 image: th.png
