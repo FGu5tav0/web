@@ -1,42 +1,103 @@
 ---
 title: "Artigos"
 toc: true
-# image: ima_fundo.jpeg
-# title-block-banner: "#8B8878"
-# title-block-banner-color: "#FFFFFF"
-# title-block-banner: ima_fundo.jpeg
-# backgroundcolor: "#FFFAFA"
-description: "Artigos"
-image-alt: ""
-# date: "2024/08/22"
-# date: last-modified
-lang: pt
-editor_options: 
-  chunk_output_type: console
-css: styles.css
-execute: 
-  echo: false
-  eval: true
-  warning: false
-  message: false
 ---
 
-# Em breve!
+<!-- ## Books -->
 
-<header id="title-block-header" style="position: relative">
-  <!-- This is the div in which the particles will be included -->
-  <div id="particles-js"></div>
+<!-- ::: {.pub-item} -->
+<!-- **The Art of Data Visualization with ggplot2: The TidyTuesday Cookbook.**   -->
+<!-- **N. Rennie.** *CRC Press.* Upcoming.   -->
+<!-- Link: [nrennie.rbind.io/art-of-viz/](https://nrennie.rbind.io/art-of-viz/)   -->
 
-  <!-- Actual content on top of the particles-->
-  <div class="title-block-content">
-    ...content goes here...
-  </div>
+<!-- `Book` -->
+<!-- ::: -->
 
-  <!-- Particle.js script loaded from a CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<!-- --- -->
 
-  <!-- use the particle js library with our own config (json file). -->
-  <script>
-    particlesJS.load("particles-js", "./particles.json");
-  </script>
-</header>
+## Papers and articles
+
+### Published journal articles
+
+
+::: {.pub-item}
+**The impact of continuous application of industrial saline wastewater from heparin production in a Brazilian subtropical Oxisol.**  
+**G. Frosi**, J.R. Fink, K. Bastiani, J.A. Bonetti, A.R. Sánchez-Rodríguez, T. Tiecher, A.V. Inda.  
+*Revista Brasileira de Ciência do Solo* - 2025.  
+DOI: [10.36783/18069657rbcs20240237](https://doi.org/10.36783/18069657rbcs20240237)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Effect of potassium rates and application methods in no-till on soil K availability and crop yield.**  
+G. Pesini, D.J. Eckert, M.F. Menegat, **G. Frosi**, J.P.M. Flores, L.A. Alves, D. Filippi, T.L. Tiecher, D.R. dos Santos, T. Tiecher.  
+*Revista Brasileira de Ciência do Solo* - 2024.  
+DOI: [10.36783/18069657rbcs20240067](https://doi.org/10.36783/18069657rbcs20240067)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Proximal sensors for modeling clay mineralogy and characterization of soil textural fractions developed from contrasting parent materials.**  
+F.M. Silva, S.H.G. Silva, R. Andrade, J.A. Coblinski, A.V. Inda, **G. Frosi**, S.S.F. Lima, M.D. de Menezes, T.R. Tavares, L.R.G. Guilherme, D.C. Weindorf, N. Curi.  
+*Catena* - 2024.  
+DOI: [10.1016/j.catena.2024.108053](https://doi.org/10.1016/j.catena.2024.108053)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Paleosol marked by contrasting formation processes: A pilot study using digital morphometrics in Southeastern Brazil.**  
+F.A. Bócoli, S.H.G. Silva, J.C. Avanzi, B.M. Silva, V.L. de Faria, M.C.V. Totti, A.V. Inda, **G. Frosi**, S.S.F. Lima, A. Uezu, M.A.C. Carneiro, M.V. Ottoni, N. Curi.  
+*Catena* - 2024.  
+DOI: [10.1016/j.catena.2023.107550](https://doi.org/10.1016/j.catena.2023.107550)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Phosphorus and Potassium Cycling, Biological Nitrogen Fixation in Soybean, and Soil Microbial Activity in an Oxisol Fertilized with Wastewater from Heparin Production.**  
+J. Fink, A.R. Sánchez-Rodríguez, A. Lavratti, K. Bastiani, D. Stanck, K. Henkemaier, C.P. Junior, **G. Frosi**, A. Zanquetti, A.V. Inda.  
+*Journal of Soil Science and Plant Nutrition* - 2023.  
+DOI: [10.1007/s42729-023-01361-w](https://doi.org/10.1007/s42729-023-01361-w)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Produção de mudas e desenvolvimento do lúpulo em solo com diferentes valores de pH e doses de potássio.**  
+J. Fink, **G. Frosi**, K. Bastiani, D. Eckert, F. Lagos, R.A. Pereira, M. Martignoni.  
+*Revista científica de la Asociación Argentina de la Ciencia del Suelo* - 2022.  
+ISSN: [1850-2067](https://www.scielo.org.ar/scielo.php?script=sci_arttext&pid=S1850-20672022000100013)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Industrial saline wastewater in a corn-soybean rotation to enhance crop yield without compromising soil health in a subtropical soil.**  
+J. Fink, A.R. Sánchez-Rodríguez,  **G. Frosi**, D. Eckert, J.A. Bonnetti, K. Bastiani, A. Lavratti, A. V. Inda, A. Zanquetti.  
+*Journal of Environmental Management* - 2021.  
+doi: [10.1016/j.jenvman.2021.113341](https://doi.org/10.1016/j.jenvman.2021.113341) 
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Adjusting P-K Fertilization and Liming Strategies to Enhance Yield of Cherry Tomato Plants Grown on an Oxisol.**  
+J. Fink, A.R. Sánchez-Rodríguez, C.P. Souza, C.P. Junior, F.S. Lagos, **G. Frosi**, D. Eckert, A. Schwengber.  
+*Communications in Soil Science and Plant Analysis* - 2020.  
+doi: [10.1080/00103624.2020.1798992](https://doi.org/10.1080/00103624.2020.1798992)  
+
+`Journal article`
+:::
+
+
+::: {.pub-item}
+**Enhancing Wheat and Soybean Yields in s Subtropical Oxisol Through Effective P Fertilization Strategies.**  
+J. Fink, G. Borga, **G. Frosi**, C.P. Junior, C.S.R Pitta, A.R. Sánchez-Rodríguez.  
+*Journal of Soil Science and Plant Nutrition* - 2020.  
+doi: [10.1007/s42729-020-00232-y](https://doi.org/10.1007/s42729-020-00232-y)  
+
+`Journal article`
+:::

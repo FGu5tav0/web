@@ -1,0 +1,98 @@
+/*-- scss:uses --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&family=JetBrains+Mono&display=swap');
+
+
+/*-- scss:defaults --*/
+
+/* Paleta */
+$bg: #F6F7F2;
+$bg-soft: #EDEFE6;
+$bg-elev: #FFFFFF;
+
+$primary: #556B2F;
+$primary-soft: #6B8E23;
+
+$text: #2B352B;
+$text-muted: #6B756B;
+
+$border: #D6DACB;
+
+/* Tipografia */
+$font-family-sans-serif: 'Inter', system-ui, sans-serif;
+$font-family-serif: 'Playfair Display', serif;
+$font-family-monospace: 'JetBrains Mono', monospace;
+
+/* Bootstrap */
+$body-bg: $bg;
+$body-color: $text;
+
+$link-color: $primary;
+$link-hover-color: $primary-soft;
+
+$card-bg: $bg-elev;
+$card-border-color: $border;
+
+$navbar-bg: $bg-elev;
+$navbar-fg: $text;
+$navbar-hl: $primary;
+
+$border-color: $border;
+
+
+/*-- scss:rules --*/
+
+/* Corpo */
+body {
+  font-family: $font-family-sans-serif;
+  line-height: 1.7;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-family: $font-family-serif;
+  color: $primary;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  border: 1px solid $border;
+}
+
+/* Código */
+pre, code {
+  background-color: $bg-soft;
+  color: $text;
+  border-radius: 6px;
+}
+
+/* TOC */
+#TOC {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  border-left: 1px solid $border;
+}
+
+/* Navbar */
+.navbar {
+  border-bottom: 1px solid $border;
+}
+
+/* Callouts */
+.callout {
+  background-color: $bg-soft;
+  border-left: 4px solid $primary;
+}
+
+/* Tabelas */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: $bg-soft;
+}

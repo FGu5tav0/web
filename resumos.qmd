@@ -1,77 +1,64 @@
 ---
 title: "Resumos e apresentações em eventos"
 toc: true
-# image: ima_fundo.jpeg
-# title-block-banner: "#8B8878"
-# title-block-banner-color: "#FFFFFF"
-# title-block-banner: ima_fundo.jpeg
-# backgroundcolor: "#FFFAFA"
 description: "Aqui são apenas as apresentações feitas por mim"
-image-alt: ""
-# date: "2024/08/22"
-# date: last-modified
 lang: pt
-editor_options: 
-  chunk_output_type: console
-css: /styles_resumos.css
-execute: 
-  echo: false
-  eval: true
-  warning: false
-  message: false
+css: estilo_resumo.css
 ---
 
-<ul class="linha-do-tempo">
-<div class="marcador"></div>
-<li class="ano"><p>2024</p></li>
- 
-<li class="ano"><p>2023</p></li>
-	
-<li class='item' href="#">
-<h3> XXIII CLACS | XXXVIII CBCS </h3>
-<p>[Estimativa da área superficial específica por adsorção de água através de parâmetros físicos e químicos](trabalho_pos/resumos/sbcs_2023/gustavo/trab1.qmd)</p> 
-</li>
+## 2025
 
-<li class='item' href="#">
-<p></p> 
-</li>
+::: {.timeline-year}
+Sem registros
+:::
 
-	
-<li class="ano"><p>2022</p></li>
- 
-<li class='item' href="#">
-<h3> XXVIII - Congreso Argentino de la Ciencia del Suelo </h3>
-<p>[Fertilização do solo com resíduo industrial orgânico salino: Sódio e dispersão das partículas](trabalho_pos/resumos/cacs_2022/gustavo/trab1.qmd)</p> 
-</li>
+## 2024
 
-<li class='item' href="#">
-<p></p> 
-</li> 
+::: {.timeline-year}
+Sem registros
+:::
 
-<li class="ano"><p>2021</p></li>
+## 2023
 
-<li class="ano"><p>2020</p></li>
- 
-<li class="ano"><p>2019</p></li>
- 
-<li class='item' href="#">
-<h3> XXXVII - Congresso Brasileiro de Ciência do Solo </h3>
-<p>[Respiração microbiana e dinâmica de nutrientes em solo fertilizado com resíduo industrial salino](trabalho_pos/resumos/sbcs_2019/gustavo/trab1.qmd)</p> 
-</li> 
+::: {.timeline-item}
+**XXIII CLACS | XXXVIII CBCS**  
+[Estimativa da área superficial específica por adsorção de água através de parâmetros físicos e químicos](trabalho_pos/resumos/sbcs_2023/gustavo/trab1.qmd)
+:::
 
-<li class="ano"><p>2018</p></li>
- 
-<li class='item' href="#">
-<h3> XII - Reunião Sul Brasileira de Ciência do Solo </h3>
-<p>[Fósforo e potássio disponível no solo após o cultivo de tomate cereja](trabalho_pos/resumos/rsbcs_2018/gustavo/trab1.qmd)</p> 
-</li>
+## 2022
 
-<li class='item' href="#">
-<h3> VIII - Contextos e Conceitos </h3>
-<p>[Dispersão da fração argila em solo com calcário incorporado por formas distintas](trabalho_pos/resumos/contexto_2018/gustavo/trab1.qmd)</p> 
-</li>
+::: {.timeline-item}
+**XXVIII - Congreso Argentino de la Ciencia del Suelo**  
+[Fertilização do solo com resíduo industrial orgânico salino: Sódio e dispersão das partículas](trabalho_pos/resumos/cacs_2022/gustavo/trab1.qmd)
+:::
 
+## 2021
 
-</ul>
+::: {.timeline-year}
+Sem registros
+:::
 
-<!-- Por Amanda Lemos - amandalemos.com -->
+## 2020
+
+::: {.timeline-year}
+Sem registros
+:::
+
+## 2019
+
+::: {.timeline-item}
+**XXXVII - Congresso Brasileiro de Ciência do Solo**  
+[Respiração microbiana e dinâmica de nutrientes em solo fertilizado com resíduo industrial salino](trabalho_pos/resumos/sbcs_2019/gustavo/trab1.qmd)
+:::
+
+## 2018
+
+::: {.timeline-item}
+**XII - Reunião Sul Brasileira de Ciência do Solo**  
+[Fósforo e potássio disponível no solo após o cultivo de tomate cereja](trabalho_pos/resumos/rsbcs_2018/gustavo/trab1.qmd)
+:::
+
+::: {.timeline-item}
+**VIII - Contextos e Conceitos**  
+[Dispersão da fração argila em solo com calcário incorporado por formas distintas](trabalho_pos/resumos/contexto_2018/gustavo/trab1.qmd)
+:::

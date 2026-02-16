@@ -16,7 +16,6 @@ image-alt: ""
 # date: "2023/11/01"
 lang: pt
 bibliography: biblio.bib
-
 editor_options: 
   chunk_output_type: console
 ---
@@ -35,7 +34,7 @@ editor_options:
 :::
 
 
-# O que o {OxSR} faz?
+## O que o {OxSR} faz?
 
 O objetivo deste pacote é implementar uma forma automatizada de determinar a relação entre os óxidos de ferro hematita e goethita no solo, bem como obter parâmetros de cor por meio da técnica de espectroscopia de refletância difusa.
 

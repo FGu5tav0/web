@@ -19,7 +19,7 @@ website:
     type: express
     prefs-text: "Cookies"
   page-footer: 
-    left: "Website made with quarto © 2025 by Gustavo Frosi is licensed under CC BY-SA 4.0."
+    left: "Website made with quarto © 2026 by Gustavo Frosi is licensed under CC BY-SA 4.0."
     right: 
       - icon: github
         href: https://github.com/FGu5tav0
@@ -31,7 +31,7 @@ website:
     
   title: "Gustavo Frosi"
   navbar:
-    logo: "ima/FS.png"
+    # logo: "ima/FS.png"
     left: 
       - text: "Formação"
         href: formacao.qmd
@@ -65,11 +65,16 @@ website:
 
 format:
   html:
+    # backgroundcolor: "#1F2A1F"
+    # fontcolor: "#F4F4F0"
+    # linkcolor: "black"
     theme:
-      light: [litera, tema.scss]
-      dark: darkly
+      light: [litera, tema-light.scss]
+      dark: [litera, tema.scss]
     # css: styles.css
     toc: true
+    toc-location: right
+    page-layout: full
 
 execute:
   freeze: false
