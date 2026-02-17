@@ -45,7 +45,7 @@ library(gganimate)
 
 ```{r}
 sysfonts::font_add(family = "Font Awesome 6 Brands",
-                   regular = "C:\\Users\\gusta\\AppData\\Local\\Microsoft\\Windows\\Fonts/Font Awesome 6 Brands-Regular-400.otf")
+                   regular = "C:\\Users\\gusta\\AppData\\Local\\Microsoft\\Windows\\Fonts/Font Awesome 6 Brands Regular.otf")
 showtext::showtext_auto()
 
 github_icon <- "&#xf09b"
