@@ -15,9 +15,9 @@ website:
   page-navigation: true
   search: false
   google-analytics: "G-8L8YC0LJJY"
-  cookie-consent:
-    type: express
-    prefs-text: "Cookies"
+  # cookie-consent:
+  #   type: express
+  #   prefs-text: "Cookies"
   page-footer: 
     left: "Website made with quarto © 2026 by Gustavo Frosi is licensed under CC BY-SA 4.0."
     right: 
@@ -49,6 +49,8 @@ website:
           # - trabalhos_pos/resumos.qmd
       - text: "Posts"
         href: recap.qmd
+      - text: "Gallery"
+        href: gallery.qmd
 
   # sidebar:
   # - id: trabalhos
@@ -80,7 +82,7 @@ execute:
   freeze: false
 
 
-    
+
 # comments:
 #   giscus:
 #     repo: FGu5tav0

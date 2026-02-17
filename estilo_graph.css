@@ -1,0 +1,30 @@
+/* =========================
+   RESET
+========================= */
+
+
+
+.grid-item {
+    width: 45%;
+    float: left;
+    background: transparent;
+
+    border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+
+    border-radius: 10px;
+}
+
+figcaption {
+    display: none;
+}
+.quarto-figure {
+    margin-bottom: 0px;
+    }

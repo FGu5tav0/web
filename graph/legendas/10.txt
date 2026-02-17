@@ -1,0 +1,1 @@
+Gasto mensal e acumulado por produto mais representativos em categorias de consumo do supermercado.

@@ -1,0 +1,1 @@
+Distribuição do gasto em produtos do supermercado e o rank que o produto ocupa. A distribuição segue uma lei de potências com corte exponencial.

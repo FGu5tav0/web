@@ -369,5 +369,54 @@
     "title": "XXIII CLACS | XXXVIII CBCS",
     "section": "",
     "text": "Resumo\nAs atuais técnicas de fertilização fosfatada promovem o aumento da concentração de P nos primeiros centímetros de solo, limitando a distribuição vertical do nutriente no perfil de solo. As estratégias de aplicação da adubação de correção e manutenção de P podem alterar a sua distribuição e a disponibilidade. O objetivo deste estudo foi avaliar diferentes estratégias de aplicação de P e seu efeito na distribuição e disponibilidade vertical do nutriente. O experimento foi realizado em Palmas, Paraná, Brasil, sobre um Latossolo Bruno sob campo nativo. Cinco forma de aplicação de P foram testadas: controle (C), correção e manutenção em superfície (S), correção e manutenção em linha (L), correção incorporada e manutenção em superfície (IS) e correção incorporada e manutenção em linha (IL). A adubação de P foi realizada com a aplicação de superfosfato simples (160 kg P2O5 ha-1 em correção; 72 kg P2O5 ha-1 em manutenção). Seis meses após a aplicação dos tratamentos, amostras de solo foram coletadas nas camadas 0-5, 5-10, 10-15, 15-20, 20-25, 25-30 e 30-40 cm de profundidade. O P extraído do solo por solução Mehlich-I foi determinado por espectrofotometria de absorção molecular. O teor de P disponível, até os 10 cm, foi influenciado pela interação da profundidade e da forma de aplicação do P. Os tratamentos S e IS apresentaram os maiores teores de P nos primeiros 5 cm de solo em relação a IL e C, mas os valores reduziram na segunda camada avaliada (5-10cm). A aplicação de P em L melhorou a disponibilidade do nutriente na profundidade 0-5 e 5-10 cm em comparação à C. Ainda, no L o teor de P foi similar nas duas primeiras camadas, demonstrando maior homogeneidade na distribuição vertical do P. A estratégia de aplicação da adubação de correção e manutenção afeta a disponibilidade e a distribuição vertical do P. Apesar do aumento da disponibilidade de P em 0-5 cm, S e IS não melhoram distribuição vertical. L apresenta melhor disponibilidade e distribuição de P em relação a C.\n\n\nPalavras chave:\nFertilização; Disponibilidade de P; P em profundidade\n\n\nPôster\nIndisponível \n\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Graph Gallery",
+    "section": "",
+    "text": "Visualizações e explorações de dados com R e ggplot2.\n\n\n\n\n\nDistribuição do gasto em produtos do supermercado e o rank que o produto ocupa. A distribuição segue uma lei de potências com corte exponencial.\n\n\n\n\n\n\n\nGasto mensal e acumulado por produto mais representativos em categorias de consumo do supermercado.\n\n\n\n\n\n\n\nGasto mensal de gasto em produtos do mercado por categoria.\n\n\n\n\n\n\n\nDistribuição da proporção de pessoas com o nome “Gustavo” no Brasil.\n\n\n\n\n\n\n\nDescrição do Intervalo de Confiança\n\n\n\n\n\n\n\nMapa de altitude do município de Ouro Verde - Santa Catarina.\n\n\n\n\n\n\n\nFrequência de palavras em títulos da XV Reunião Sul-Brasileira de Ciência do Solo em 2024.\n\n\n\n\n\n\n\nQuantidade de resumos apresentados na XV - RSBCS por área de conhecimento.\n\n\n\n\n\n\n\nDistribuição de frequências da hora de almoço durante a pós-graduação na Universidade Federal do Rio Grande do Sul.\n\n\n\n\n\n\n\nQuantidade em reais gasto com compras no mercado por categoria em uma análise pessoal em 2023.\n\n\n\n\n\n\n\nNúmero de artigos por egresso em cursos de doutorado da UFRGS e da UFSM."
+  },
+  {
+    "objectID": "gallery.html#generative-art",
+    "href": "gallery.html#generative-art",
+    "title": "Generative Art",
+    "section": "",
+    "text": "Visualizações criadas com R, ggplot2 e D3.js."
+  },
+  {
+    "objectID": "gallery.html#gallery",
+    "href": "gallery.html#gallery",
+    "title": "Generative Art",
+    "section": "",
+    "text": "sdtges"
+  },
+  {
+    "objectID": "gallery.html#data-portfolio",
+    "href": "gallery.html#data-portfolio",
+    "title": "Data Portfolio",
+    "section": "",
+    "text": "Visualizações e explorações com R, ggplot2 e D3.js.\n\n\n\n\n\nexample-caption-01\n\n\n\n\n\n\n\nexample-caption-02\n\n\n\n\n\n\n\nexample-caption-03\n\n\n\n\n\n\n\nexample-caption-04\n\n\n\n\n\n\n\nexample-caption-05"
+  },
+  {
+    "objectID": "index.html#using-the-extension",
+    "href": "index.html#using-the-extension",
+    "title": "Masonry.js",
+    "section": "",
+    "text": "This extension provides support for Masonry.js.\n\n\n\nClick to see the Markdown code!\n:::: {.grid}\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--width2 .grid-item--height2}\n:::\n::: {.grid-item .grid-item--height3}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item .grid-item--width3}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item .grid-item--width2 .grid-item--height3}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--width2 .grid-item--height2}\n:::\n::: {.grid-item .grid-item--width2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height3}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClick to see the Markdown code!\n:::: {.grid data-masonry='{ \"itemSelector\": \".grid-item\", \"gutter\": 0 }'}\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--width2 .grid-item--height2}\n:::\n::: {.grid-item .grid-item--height3}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item .grid-item--width3}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item .grid-item--width2 .grid-item--height3}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--width2 .grid-item--height2}\n:::\n::: {.grid-item .grid-item--width2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height3}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item}\n:::\n::: {.grid-item .grid-item--height2}\n:::\n::::"
+  },
+  {
+    "objectID": "gallery.html#visualizações",
+    "href": "gallery.html#visualizações",
+    "title": "Graph Gallery",
+    "section": "",
+    "text": "Visualizações e explorações de dados com R e ggplot2.\n\n\n\n\n\nDistribuição do gasto em produtos do supermercado e o rank que o produto ocupa. A distribuição segue uma lei de potências com corte exponencial.\n\n\n\n\n\n\n\nGasto mensal e acumulado por produto mais representativos em categorias de consumo do supermercado.\n\n\n\n\n\n\n\nGasto mensal de gasto em produtos do mercado por categoria.\n\n\n\n\n\n\n\nDistribuição da proporção de pessoas com o nome “Gustavo” no Brasil.\n\n\n\n\n\n\n\nDescrição do Intervalo de Confiança\n\n\n\n\n\n\n\nMapa de altitude do município de Ouro Verde - Santa Catarina.\n\n\n\n\n\n\n\nFrequência de palavras em títulos da XV Reunião Sul-Brasileira de Ciência do Solo em 2024.\n\n\n\n\n\n\n\nQuantidade de resumos apresentados na XV - RSBCS por área de conhecimento.\n\n\n\n\n\n\n\nDistribuição de frequências da hora de almoço durante a pós-graduação na Universidade Federal do Rio Grande do Sul.\n\n\n\n\n\n\n\nQuantidade em reais gasto com compras no mercado por categoria em uma análise pessoal em 2023.\n\n\n\n\n\n\n\nNúmero de artigos por egresso em cursos de doutorado da UFRGS e da UFSM."
+  },
+  {
+    "objectID": "gallery.html#tidytuesday",
+    "href": "gallery.html#tidytuesday",
+    "title": "Graph Gallery",
+    "section": "Tidytuesday",
+    "text": "Tidytuesday"
   }
 ]

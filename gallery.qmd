@@ -1,0 +1,51 @@
+---
+title: "Graph Gallery"
+css: estilo_graph.css
+lightbox: true
+filters:
+  - masonry
+---
+
+## Visualizações 
+
+Visualizações e explorações de dados com R e ggplot2.
+
+
+:::: {.grid data-masonry='{ "itemSelector": ".grid-item", "gutter": 0 }'}
+
+```{r}
+#| output: asis
+#| echo: false
+
+
+img_files <- fs::dir_ls("graph/graficos/")
+
+legendas <- list.files(path = "graph/legendas/", full.names = T)
+
+
+
+# cat(":::: {.grid data-masonry='{ 'itemSelector': '.grid-item', 'gutter': 0 }'}\n")
+for (i in 1:length(img_files)) {
+  
+img_caption <- readr::read_file(legendas[i])
+
+cat(glue::glue("
+  :::{{.grid-item}}
+  ![{img_caption}]({img_files[i]}){{group='sketches'}}
+  :::"),
+  sep = "\n"
+)
+}
+# cat("::::")
+
+```
+
+::::
+
+
+<!-- ## Tidytuesday -->
+
+
+
+
+
