@@ -21,8 +21,8 @@ code-links:
 description: "Aplicando a tecnologia de regressão linear para dados contínuos e/ou discretos"
 image-alt: ""
 number-sections: true
-# date: "2024/08/22"
-date: last-modified
+date: "2024/08/22"
+# date: last-modified
 lang: pt
 editor_options: 
   chunk_output_type: console
