@@ -6,6 +6,7 @@ filters:
   - masonry
 ---
 
+
 ## Visualizações 
 
 Visualizações e explorações de dados com R e ggplot2.
@@ -43,9 +44,39 @@ cat(glue::glue("
 ::::
 
 
-<!-- ## Tidytuesday -->
 
 
 
+## Tidytuesday
+
+
+:::: {.grid data-masonry='{ "itemSelector": ".grid-item", "gutter": 0 }'}
+
+```{r}
+#| output: asis
+#| echo: false
+
+img_files <- fs::dir_ls("graph/tidytuesday/")
+
+for (i in seq_along(img_files)) {
+
+  sub_name <- sub(".*/([^/]+)\\.png$", "\\1", img_files[i])
+
+  link <- paste0("https://github.com/FGu5tav0/tidytuesday/tree/main/2026/", sub_name)
+
+  cat(glue::glue("
+:::{{.grid-item}}
+![]({img_files[i]}){{group='sketches'}}
+
+[🔗 Ver no GitHub]({link})
+:::
+"),
+  sep = "\n")
+}
+# cat("::::")
+
+```
+
+::::
 
 
