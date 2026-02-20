@@ -79,7 +79,7 @@ format:
     page-layout: full
 
 execute:
-  freeze: false
+  freeze: auto
 
 
 

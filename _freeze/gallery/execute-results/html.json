@@ -1,0 +1,15 @@
+{
+  "hash": "613cf7c30da954a120b952cead85c4a9",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Graph Gallery\"\ncss: estilo_graph.css\nlightbox: true\nfilters:\n  - masonry\n---\n\n\n## Visualizações \n\nVisualizações e explorações de dados com R e ggplot2.\n\n\n:::: {.grid data-masonry='{ \"itemSelector\": \".grid-item\", \"gutter\": 0 }'}\n\n:::{.grid-item}\n![Distribuição do gasto em produtos do supermercado e o rank que o produto ocupa. A distribuição segue uma lei de potências com corte exponencial.](graph/graficos/1.jpg){group='sketches'}\n:::\n:::{.grid-item}\n![Gasto mensal e acumulado por produto mais representativos em categorias de consumo do supermercado.](graph/graficos/10.jpeg){group='sketches'}\n:::\n:::{.grid-item}\n![Gasto mensal de gasto em produtos do mercado por categoria.](graph/graficos/11.jpeg){group='sketches'}\n:::\n:::{.grid-item}\n![Distribuição da proporção de pessoas com o nome \"Gustavo\" no Brasil.](graph/graficos/2.png){group='sketches'}\n:::\n:::{.grid-item}\n![Descrição do Intervalo de Confiança](graph/graficos/3.jpg){group='sketches'}\n:::\n:::{.grid-item}\n![Mapa de altitude do município de Ouro Verde - Santa Catarina.](graph/graficos/4.jpg){group='sketches'}\n:::\n:::{.grid-item}\n![Frequência de palavras em títulos da XV Reunião Sul-Brasileira de Ciência do Solo em 2024.](graph/graficos/5.jpeg){group='sketches'}\n:::\n:::{.grid-item}\n![Quantidade de resumos apresentados na XV - RSBCS por área de conhecimento.](graph/graficos/6.jpeg){group='sketches'}\n:::\n:::{.grid-item}\n![Distribuição de frequências da hora de almoço durante a pós-graduação na Universidade Federal do Rio Grande do Sul.](graph/graficos/7.jpeg){group='sketches'}\n:::\n:::{.grid-item}\n![Quantidade em reais gasto com compras no mercado por categoria em uma análise pessoal em 2023.](graph/graficos/8.jpeg){group='sketches'}\n:::\n:::{.grid-item}\n![Número de artigos por egresso em cursos de doutorado da UFRGS e da UFSM.](graph/graficos/9.jpeg){group='sketches'}\n:::\n\n::::\n\n\n\n\n\n## Tidytuesday\n\n\n:::: {.grid data-masonry='{ \"itemSelector\": \".grid-item\", \"gutter\": 0 }'}\n\n:::{.grid-item}\n![](graph/tidytuesday/20260217.png){group='sketches'}\n\n[🔗 Ver no GitHub](https://github.com/FGu5tav0/tidytuesday/tree/main/2026/20260217)\n:::\n\n::::\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
