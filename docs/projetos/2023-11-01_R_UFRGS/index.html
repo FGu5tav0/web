@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,6 +11,9 @@
 
 <title>R para ciência do solo – Gustavo Frosi</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,18 +34,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-c27fcf49d1f223a5e9e0478296a4f52c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-58e7cb164a30d0964bc3a4cf0cb5a652.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d192a1900f7094c40a97df524aaaf925.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-49c9dac6fae8e09f4ca8bec003b153f0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-26af71c5a344b4a83c41ac8a7a162f8b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-1edc034dcbd1a427905d15a7e1387434.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-26af71c5a344b4a83c41ac8a7a162f8b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-5c083f410bf45b7b280f85a8f58eb4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-4c7b4c9c45ffc6b0ca0e2b6032e018e7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-5c083f410bf45b7b280f85a8f58eb4c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "Nenhum resultado",
@@ -380,9 +382,6 @@ Figura&nbsp;1: Primeira aula da disciplina de R para Ciência do Solo da UFRGS
 <h2 data-anchor-id="cronograma">Cronograma</h2>
 <p>Um total de nove aulas foram produzidas (<a href="#tbl-crono" class="quarto-xref">Tabela&nbsp;1</a>) e ministradas ao longo de pouco mais de um mês. O conteúdo programático começou pelos fundamentos, considerando que alguns alunos nunca haviam tido contato prévio com a ferramenta. Assim, iniciamos com uma introdução ao ambiente, abordando os conceitos mais básicos do funcionamento de uma linguagem de programação. Na segunda etapa, o foco foi direcionado para a análise de dados, incluindo procedimentos de manipulação e visualização de dados, além da aplicação dos principais testes estatísticos. Por fim, a última etapa consistiu em uma breve explanação sobre análise multivariada e na criação de relatórios com o R.</p>
 <div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'gt' was built under R version 4.5.2</code></pre>
-</div>
 <div id="tbl-crono" class="cell quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-crono-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -390,20 +389,20 @@ Tabela&nbsp;1: Cronograma das aulas do curso
 </figcaption>
 <div aria-describedby="tbl-crono-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="hgylgdmwcw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hgylgdmwcw table {
+<div id="bxyzatbqeq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bxyzatbqeq table {
   font-family: Arial, system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#hgylgdmwcw thead, #hgylgdmwcw tbody, #hgylgdmwcw tfoot, #hgylgdmwcw tr, #hgylgdmwcw td, #hgylgdmwcw th {
+#bxyzatbqeq thead, #bxyzatbqeq tbody, #bxyzatbqeq tfoot, #bxyzatbqeq tr, #bxyzatbqeq td, #bxyzatbqeq th {
   border-style: none;
 }
-#hgylgdmwcw p {
+#bxyzatbqeq p {
   margin: 0;
   padding: 0;
 }
-#hgylgdmwcw .gt_table {
+#bxyzatbqeq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -428,11 +427,11 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_caption {
+#bxyzatbqeq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-#hgylgdmwcw .gt_title {
+#bxyzatbqeq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -443,7 +442,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-#hgylgdmwcw .gt_subtitle {
+#bxyzatbqeq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -454,7 +453,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-#hgylgdmwcw .gt_heading {
+#bxyzatbqeq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -465,12 +464,12 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_bottom_border {
+#bxyzatbqeq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_col_headings {
+#bxyzatbqeq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -484,7 +483,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_col_heading {
+#bxyzatbqeq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -503,7 +502,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-right: 5px;
   overflow-x: hidden;
 }
-#hgylgdmwcw .gt_column_spanner_outer {
+#bxyzatbqeq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -514,13 +513,13 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-left: 4px;
   padding-right: 4px;
 }
-#hgylgdmwcw .gt_column_spanner_outer:first-child {
+#bxyzatbqeq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-#hgylgdmwcw .gt_column_spanner_outer:last-child {
+#bxyzatbqeq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-#hgylgdmwcw .gt_column_spanner {
+#bxyzatbqeq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -531,10 +530,10 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   display: inline-block;
   width: 100%;
 }
-#hgylgdmwcw .gt_spanner_row {
+#bxyzatbqeq .gt_spanner_row {
   border-bottom-style: hidden;
 }
-#hgylgdmwcw .gt_group_heading {
+#bxyzatbqeq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -559,7 +558,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   vertical-align: middle;
   text-align: left;
 }
-#hgylgdmwcw .gt_empty_group_heading {
+#bxyzatbqeq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -573,13 +572,13 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-#hgylgdmwcw .gt_from_md > :first-child {
+#bxyzatbqeq .gt_from_md > :first-child {
   margin-top: 0;
 }
-#hgylgdmwcw .gt_from_md > :last-child {
+#bxyzatbqeq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-#hgylgdmwcw .gt_row {
+#bxyzatbqeq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -597,7 +596,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   vertical-align: middle;
   overflow-x: hidden;
 }
-#hgylgdmwcw .gt_stub {
+#bxyzatbqeq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -609,7 +608,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-left: 5px;
   padding-right: 5px;
 }
-#hgylgdmwcw .gt_stub_row_group {
+#bxyzatbqeq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -622,13 +621,13 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-right: 5px;
   vertical-align: top;
 }
-#hgylgdmwcw .gt_row_group_first td {
+#bxyzatbqeq .gt_row_group_first td {
   border-top-width: 2px;
 }
-#hgylgdmwcw .gt_row_group_first th {
+#bxyzatbqeq .gt_row_group_first th {
   border-top-width: 2px;
 }
-#hgylgdmwcw .gt_summary_row {
+#bxyzatbqeq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -637,14 +636,14 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-left: 5px;
   padding-right: 5px;
 }
-#hgylgdmwcw .gt_first_summary_row {
+#bxyzatbqeq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_first_summary_row.thick {
+#bxyzatbqeq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-#hgylgdmwcw .gt_last_summary_row {
+#bxyzatbqeq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -653,7 +652,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_grand_summary_row {
+#bxyzatbqeq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -662,7 +661,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-left: 5px;
   padding-right: 5px;
 }
-#hgylgdmwcw .gt_first_grand_summary_row {
+#bxyzatbqeq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -671,7 +670,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_last_grand_summary_row_top {
+#bxyzatbqeq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -680,10 +679,10 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_striped {
+#bxyzatbqeq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-#hgylgdmwcw .gt_table_body {
+#bxyzatbqeq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -691,7 +690,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_footnotes {
+#bxyzatbqeq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -704,7 +703,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_footnote {
+#bxyzatbqeq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -712,7 +711,7 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   padding-left: 5px;
   padding-right: 5px;
 }
-#hgylgdmwcw .gt_sourcenotes {
+#bxyzatbqeq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -725,68 +724,68 @@ Tabela&nbsp;1: Cronograma das aulas do curso
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-#hgylgdmwcw .gt_sourcenote {
+#bxyzatbqeq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-#hgylgdmwcw .gt_left {
+#bxyzatbqeq .gt_left {
   text-align: left;
 }
-#hgylgdmwcw .gt_center {
+#bxyzatbqeq .gt_center {
   text-align: center;
 }
-#hgylgdmwcw .gt_right {
+#bxyzatbqeq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-#hgylgdmwcw .gt_font_normal {
+#bxyzatbqeq .gt_font_normal {
   font-weight: normal;
 }
-#hgylgdmwcw .gt_font_bold {
+#bxyzatbqeq .gt_font_bold {
   font-weight: bold;
 }
-#hgylgdmwcw .gt_font_italic {
+#bxyzatbqeq .gt_font_italic {
   font-style: italic;
 }
-#hgylgdmwcw .gt_super {
+#bxyzatbqeq .gt_super {
   font-size: 65%;
 }
-#hgylgdmwcw .gt_footnote_marks {
+#bxyzatbqeq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-#hgylgdmwcw .gt_asterisk {
+#bxyzatbqeq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-#hgylgdmwcw .gt_indent_1 {
+#bxyzatbqeq .gt_indent_1 {
   text-indent: 5px;
 }
-#hgylgdmwcw .gt_indent_2 {
+#bxyzatbqeq .gt_indent_2 {
   text-indent: 10px;
 }
-#hgylgdmwcw .gt_indent_3 {
+#bxyzatbqeq .gt_indent_3 {
   text-indent: 15px;
 }
-#hgylgdmwcw .gt_indent_4 {
+#bxyzatbqeq .gt_indent_4 {
   text-indent: 20px;
 }
-#hgylgdmwcw .gt_indent_5 {
+#bxyzatbqeq .gt_indent_5 {
   text-indent: 25px;
 }
-#hgylgdmwcw .katex-display {
+#bxyzatbqeq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
-#hgylgdmwcw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bxyzatbqeq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
-<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<table class="gt_table cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead>
 <tr class="gt_col_headings header">
 <th id="Aula" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Aula</th>

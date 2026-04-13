@@ -19,6 +19,23 @@ toc: true
 
 ### Published journal articles
 
+::: {.pub-item}
+**Phosphorus recommendations in Brazil and Paraguay: A systematic review.**  
+**Alder Delosantos Duarte-Monzón**, Jimmy Walter Rasche-Alvarez, Luciano Colpo Gatiboni, Gustavo Frosi, Amanda Posselt Martins, Alberto Vasconcellos Inda, Danilo Rheinheimer dos Santo, Tales Tiecher.  
+*Soil Science Society of America Journal* - 2026.  
+DOI: [10.1002/saj2.70232](https://doi.org/10.1002/saj2.70232)  
+
+`Journal article`
+:::
+
+::: {.pub-item}
+**Comparison of potassium fertilizer recommendations for grain crops in Brazil and Paraguay.**  
+**Gustavo Frosi**, Alder Delosantos Duarte-Monzón, Luke Gatiboni, Alberto Vasconcellos Inda, Leandro Souza da Silva, Jessé Rodrigo Fink, Danilo Rheinheimer dos Santo, Tales Tiecher.  
+*Soil Science Society of America Journal* - 2026.  
+DOI: [10.1002/saj2.70227](https://doi.org/10.1002/saj2.70227)  
+
+`Journal article`
+:::
 
 ::: {.pub-item}
 **The impact of continuous application of industrial saline wastewater from heparin production in a Brazilian subtropical Oxisol.**  
