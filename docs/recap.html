@@ -130,8 +130,8 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Coisas legais! – Gustavo Frosi">
-<meta property="og:image" content="/recap/2025-08-31 RBCS no ggplo2/th.png">
+<link rel="alternate" type="application/rss+xml" title="Gustavo Frosi" href="recap.xml" data-external="1"><meta property="og:title" content="Coisas legais! – Gustavo Frosi">
+<meta property="og:image" content="https://gustavofrosi.com.br/recap/2025-08-31 RBCS no ggplo2/th.png">
 <meta property="og:site_name" content="Gustavo Frosi">
 <meta property="og:image:height" content="151">
 <meta property="og:image:width" content="278">
@@ -350,6 +350,11 @@ window.Quarto = {
     <a class="nav-link" href="./gallery.html"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -456,7 +461,7 @@ Gustavo Frosi
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="UiUyQ1JlZ3Jlc3MlQzMlQTNvJTIwTGluZWFyJTJDRXN0YXQlQzMlQURzdGljYQ==" data-listing-date-sort="1724295600000" data-listing-file-modified-sort="1771593423642" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5283">
+<div class="g-col-1" data-index="2" data-categories="UiUyQ1JlZ3Jlc3MlQzMlQTNvJTIwTGluZWFyJTJDRXN0YXQlQzMlQURzdGljYQ==" data-listing-date-sort="1724295600000" data-listing-file-modified-sort="1776525586565" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="27" data-listing-word-count-sort="5283">
 <a href="./recap/2024-08-21 regressão linear/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -715,7 +720,7 @@ Gustavo Frosi, Dayana Eckert
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gustavofrosi\.com\.br");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

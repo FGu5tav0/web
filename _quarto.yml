@@ -4,13 +4,12 @@ project:
   preview:
       port: 4444
 
-
 lang: pt
 
 website: 
   back-to-top-navigation: true
   favicon: "ima/FS2.png"
-  site-url: ""
+  site-url: https://gustavofrosi.com.br
   open-graph: true
   page-navigation: true
   search: false
@@ -51,6 +50,8 @@ website:
         href: recap.qmd
       - text: "Gallery"
         href: gallery.qmd
+      - icon: rss
+        href: index.xml
 
   # sidebar:
   # - id: trabalhos

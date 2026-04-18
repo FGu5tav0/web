@@ -8,6 +8,8 @@ categories:
   - R
   - Regressão Linear
   - Estatística
+doi: 10.59350/a3r8n-ee175
+citation: true
 toc: true
 image: ima_fundo.jpeg
 title-block-banner: "#8B8878"
@@ -22,7 +24,6 @@ description: "Aplicando a tecnologia de regressão linear para dados contínuos 
 image-alt: ""
 number-sections: true
 date: "2024/08/22"
-# date: last-modified
 lang: pt
 editor_options: 
   chunk_output_type: console

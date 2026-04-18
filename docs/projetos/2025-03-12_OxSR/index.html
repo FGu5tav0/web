@@ -157,7 +157,7 @@ window.Quarto = {
 
 <meta property="og:title" content="OxSR: Soil Iron Oxides via Diffuse Reflectance – Gustavo Frosi">
 <meta property="og:description" content="OxSR: Óxidos de ferro do solo via refletância difusa">
-<meta property="og:image" content="/projetos/2025-03-12_OxSR/hex_dis.png">
+<meta property="og:image" content="https://gustavofrosi.com.br/projetos/2025-03-12_OxSR/hex_dis.png">
 <meta property="og:site_name" content="Gustavo Frosi">
 <meta property="og:image:height" content="1200">
 <meta property="og:image:width" content="1037">
@@ -375,6 +375,11 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../../gallery.html"> 
 <span class="menu-text">Gallery</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -3642,7 +3647,7 @@ Wyszecki, Günther, e Walter Stanley Stiles. 2000. <em>Color science: concepts a
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gustavofrosi\.com\.br");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

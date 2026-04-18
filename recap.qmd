@@ -7,7 +7,7 @@ listing:
   id: recap-listings
   contents: recap
   sort: "date desc"
-  categories:  true
+  categories: true
   type: grid
   sort-ui: false
   filter-ui: false

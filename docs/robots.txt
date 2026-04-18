@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://gustavofrosi.com.br/sitemap.xml

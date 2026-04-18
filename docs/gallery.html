@@ -77,7 +77,7 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 <link rel="stylesheet" href="estilo_graph.css">
 <meta property="og:title" content="Graph Gallery – Gustavo Frosi">
 <meta property="og:description" content="">
-<meta property="og:image" content="/graph/graficos/1.jpg">
+<meta property="og:image" content="https://gustavofrosi.com.br/graph/graficos/1.jpg">
 <meta property="og:site_name" content="Gustavo Frosi">
 <meta property="og:image:alt" content="Distribuição do gasto em produtos do supermercado e o rank que o produto ocupa. A distribuição segue uma lei de potências com corte exponencial.">
 </head>
@@ -295,6 +295,11 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
     <a class="nav-link active" href="./gallery.html" aria-current="page"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -365,6 +370,14 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
 <figure class="figure">
 <p><a href="graph/graficos/11.jpeg" class="lightbox" data-gallery="sketches" title="Gasto mensal de gasto em produtos do mercado por categoria."><img src="graph/graficos/11.jpeg" class="img-fluid figure-img" alt="Gasto mensal de gasto em produtos do mercado por categoria."></a></p>
 <figcaption>Gasto mensal de gasto em produtos do mercado por categoria.</figcaption>
+</figure>
+</div>
+</div>
+<div class="grid-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="graph/graficos/12.jpeg" class="lightbox" data-gallery="sketches" title="Nível crítico de K entre os distintos sistemas de recomendação de adubação."><img src="graph/graficos/12.jpeg" class="img-fluid figure-img" alt="Nível crítico de K entre os distintos sistemas de recomendação de adubação."></a></p>
+<figcaption>Nível crítico de K entre os distintos sistemas de recomendação de adubação.</figcaption>
 </figure>
 </div>
 </div>
@@ -537,7 +550,7 @@ gtag('config', 'G-8L8YC0LJJY', { 'anonymize_ip': true});
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gustavofrosi\.com\.br");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
