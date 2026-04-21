@@ -130,23 +130,23 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
 </figcaption>
 <div aria-describedby="tbl-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="oiibzfpqzl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#oiibzfpqzl table {
+<div id="xkllscindb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xkllscindb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#oiibzfpqzl thead, #oiibzfpqzl tbody, #oiibzfpqzl tfoot, #oiibzfpqzl tr, #oiibzfpqzl td, #oiibzfpqzl th {
+#xkllscindb thead, #xkllscindb tbody, #xkllscindb tfoot, #xkllscindb tr, #xkllscindb td, #xkllscindb th {
   border-style: none;
 }
 
-#oiibzfpqzl p {
+#xkllscindb p {
   margin: 0;
   padding: 0;
 }
 
-#oiibzfpqzl .gt_table {
+#xkllscindb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -172,12 +172,12 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-left-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_caption {
+#xkllscindb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#oiibzfpqzl .gt_title {
+#xkllscindb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -189,7 +189,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-width: 0;
 }
 
-#oiibzfpqzl .gt_subtitle {
+#xkllscindb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -201,7 +201,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-width: 0;
 }
 
-#oiibzfpqzl .gt_heading {
+#xkllscindb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -213,13 +213,13 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_bottom_border {
+#xkllscindb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_col_headings {
+#xkllscindb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -234,7 +234,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_col_heading {
+#xkllscindb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -254,7 +254,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#oiibzfpqzl .gt_column_spanner_outer {
+#xkllscindb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -266,15 +266,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 4px;
 }
 
-#oiibzfpqzl .gt_column_spanner_outer:first-child {
+#xkllscindb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#oiibzfpqzl .gt_column_spanner_outer:last-child {
+#xkllscindb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#oiibzfpqzl .gt_column_spanner {
+#xkllscindb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -286,11 +286,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   width: 100%;
 }
 
-#oiibzfpqzl .gt_spanner_row {
+#xkllscindb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#oiibzfpqzl .gt_group_heading {
+#xkllscindb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -316,7 +316,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   text-align: left;
 }
 
-#oiibzfpqzl .gt_empty_group_heading {
+#xkllscindb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -331,15 +331,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: middle;
 }
 
-#oiibzfpqzl .gt_from_md > :first-child {
+#xkllscindb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#oiibzfpqzl .gt_from_md > :last-child {
+#xkllscindb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#oiibzfpqzl .gt_row {
+#xkllscindb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -358,7 +358,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#oiibzfpqzl .gt_stub {
+#xkllscindb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -371,7 +371,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#oiibzfpqzl .gt_stub_row_group {
+#xkllscindb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -385,15 +385,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: top;
 }
 
-#oiibzfpqzl .gt_row_group_first td {
+#xkllscindb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#oiibzfpqzl .gt_row_group_first th {
+#xkllscindb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#oiibzfpqzl .gt_summary_row {
+#xkllscindb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -403,16 +403,16 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#oiibzfpqzl .gt_first_summary_row {
+#xkllscindb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_first_summary_row.thick {
+#xkllscindb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#oiibzfpqzl .gt_last_summary_row {
+#xkllscindb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -422,7 +422,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_grand_summary_row {
+#xkllscindb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -432,7 +432,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#oiibzfpqzl .gt_first_grand_summary_row {
+#xkllscindb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,7 +442,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_last_grand_summary_row_top {
+#xkllscindb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -452,11 +452,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_striped {
+#xkllscindb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#oiibzfpqzl .gt_table_body {
+#xkllscindb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -465,7 +465,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_footnotes {
+#xkllscindb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -479,7 +479,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_footnote {
+#xkllscindb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -488,7 +488,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#oiibzfpqzl .gt_sourcenotes {
+#xkllscindb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -502,7 +502,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#oiibzfpqzl .gt_sourcenote {
+#xkllscindb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -510,72 +510,72 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#oiibzfpqzl .gt_left {
+#xkllscindb .gt_left {
   text-align: left;
 }
 
-#oiibzfpqzl .gt_center {
+#xkllscindb .gt_center {
   text-align: center;
 }
 
-#oiibzfpqzl .gt_right {
+#xkllscindb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#oiibzfpqzl .gt_font_normal {
+#xkllscindb .gt_font_normal {
   font-weight: normal;
 }
 
-#oiibzfpqzl .gt_font_bold {
+#xkllscindb .gt_font_bold {
   font-weight: bold;
 }
 
-#oiibzfpqzl .gt_font_italic {
+#xkllscindb .gt_font_italic {
   font-style: italic;
 }
 
-#oiibzfpqzl .gt_super {
+#xkllscindb .gt_super {
   font-size: 65%;
 }
 
-#oiibzfpqzl .gt_footnote_marks {
+#xkllscindb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#oiibzfpqzl .gt_asterisk {
+#xkllscindb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#oiibzfpqzl .gt_indent_1 {
+#xkllscindb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#oiibzfpqzl .gt_indent_2 {
+#xkllscindb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#oiibzfpqzl .gt_indent_3 {
+#xkllscindb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#oiibzfpqzl .gt_indent_4 {
+#xkllscindb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#oiibzfpqzl .gt_indent_5 {
+#xkllscindb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#oiibzfpqzl .katex-display {
+#xkllscindb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#oiibzfpqzl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xkllscindb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

@@ -50,7 +50,7 @@ website:
       - text: "Gallery"
         href: gallery.qmd
       - icon: rss
-        href: index.xml
+        href: rss.xml
 
 format:
   html:
