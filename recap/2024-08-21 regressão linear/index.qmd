@@ -8,7 +8,7 @@ categories:
   - R
   - Regressão Linear
   - Estatística
-doi: 10.59350/a3r8n-ee175
+doi: 10.59350/ettr2-9w559
 citation: true
 toc: true
 image: ima_fundo.jpeg

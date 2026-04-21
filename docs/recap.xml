@@ -130,23 +130,23 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
 </figcaption>
 <div aria-describedby="tbl-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ijmdetzrte" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ijmdetzrte table {
+<div id="hzkcimpvjk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hzkcimpvjk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ijmdetzrte thead, #ijmdetzrte tbody, #ijmdetzrte tfoot, #ijmdetzrte tr, #ijmdetzrte td, #ijmdetzrte th {
+#hzkcimpvjk thead, #hzkcimpvjk tbody, #hzkcimpvjk tfoot, #hzkcimpvjk tr, #hzkcimpvjk td, #hzkcimpvjk th {
   border-style: none;
 }
 
-#ijmdetzrte p {
+#hzkcimpvjk p {
   margin: 0;
   padding: 0;
 }
 
-#ijmdetzrte .gt_table {
+#hzkcimpvjk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -172,12 +172,12 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-left-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_caption {
+#hzkcimpvjk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ijmdetzrte .gt_title {
+#hzkcimpvjk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -189,7 +189,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-width: 0;
 }
 
-#ijmdetzrte .gt_subtitle {
+#hzkcimpvjk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -201,7 +201,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-width: 0;
 }
 
-#ijmdetzrte .gt_heading {
+#hzkcimpvjk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -213,13 +213,13 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_bottom_border {
+#hzkcimpvjk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_col_headings {
+#hzkcimpvjk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -234,7 +234,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_col_heading {
+#hzkcimpvjk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -254,7 +254,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#ijmdetzrte .gt_column_spanner_outer {
+#hzkcimpvjk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -266,15 +266,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 4px;
 }
 
-#ijmdetzrte .gt_column_spanner_outer:first-child {
+#hzkcimpvjk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ijmdetzrte .gt_column_spanner_outer:last-child {
+#hzkcimpvjk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ijmdetzrte .gt_column_spanner {
+#hzkcimpvjk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -286,11 +286,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   width: 100%;
 }
 
-#ijmdetzrte .gt_spanner_row {
+#hzkcimpvjk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ijmdetzrte .gt_group_heading {
+#hzkcimpvjk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -316,7 +316,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   text-align: left;
 }
 
-#ijmdetzrte .gt_empty_group_heading {
+#hzkcimpvjk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -331,15 +331,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: middle;
 }
 
-#ijmdetzrte .gt_from_md > :first-child {
+#hzkcimpvjk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ijmdetzrte .gt_from_md > :last-child {
+#hzkcimpvjk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ijmdetzrte .gt_row {
+#hzkcimpvjk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -358,7 +358,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#ijmdetzrte .gt_stub {
+#hzkcimpvjk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -371,7 +371,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ijmdetzrte .gt_stub_row_group {
+#hzkcimpvjk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -385,15 +385,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: top;
 }
 
-#ijmdetzrte .gt_row_group_first td {
+#hzkcimpvjk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ijmdetzrte .gt_row_group_first th {
+#hzkcimpvjk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ijmdetzrte .gt_summary_row {
+#hzkcimpvjk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -403,16 +403,16 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ijmdetzrte .gt_first_summary_row {
+#hzkcimpvjk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_first_summary_row.thick {
+#hzkcimpvjk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ijmdetzrte .gt_last_summary_row {
+#hzkcimpvjk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -422,7 +422,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_grand_summary_row {
+#hzkcimpvjk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -432,7 +432,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ijmdetzrte .gt_first_grand_summary_row {
+#hzkcimpvjk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -442,7 +442,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_last_grand_summary_row_top {
+#hzkcimpvjk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -452,11 +452,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_striped {
+#hzkcimpvjk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ijmdetzrte .gt_table_body {
+#hzkcimpvjk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -465,7 +465,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_footnotes {
+#hzkcimpvjk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -479,7 +479,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_footnote {
+#hzkcimpvjk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -488,7 +488,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ijmdetzrte .gt_sourcenotes {
+#hzkcimpvjk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -502,7 +502,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ijmdetzrte .gt_sourcenote {
+#hzkcimpvjk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -510,72 +510,72 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ijmdetzrte .gt_left {
+#hzkcimpvjk .gt_left {
   text-align: left;
 }
 
-#ijmdetzrte .gt_center {
+#hzkcimpvjk .gt_center {
   text-align: center;
 }
 
-#ijmdetzrte .gt_right {
+#hzkcimpvjk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ijmdetzrte .gt_font_normal {
+#hzkcimpvjk .gt_font_normal {
   font-weight: normal;
 }
 
-#ijmdetzrte .gt_font_bold {
+#hzkcimpvjk .gt_font_bold {
   font-weight: bold;
 }
 
-#ijmdetzrte .gt_font_italic {
+#hzkcimpvjk .gt_font_italic {
   font-style: italic;
 }
 
-#ijmdetzrte .gt_super {
+#hzkcimpvjk .gt_super {
   font-size: 65%;
 }
 
-#ijmdetzrte .gt_footnote_marks {
+#hzkcimpvjk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ijmdetzrte .gt_asterisk {
+#hzkcimpvjk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ijmdetzrte .gt_indent_1 {
+#hzkcimpvjk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ijmdetzrte .gt_indent_2 {
+#hzkcimpvjk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ijmdetzrte .gt_indent_3 {
+#hzkcimpvjk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ijmdetzrte .gt_indent_4 {
+#hzkcimpvjk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ijmdetzrte .gt_indent_5 {
+#hzkcimpvjk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ijmdetzrte .katex-display {
+#hzkcimpvjk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ijmdetzrte div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hzkcimpvjk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4390,13 +4390,13 @@ F-statistic: 177.5 on 1 and 148 DF,  p-value: &lt; 2.2e-16</code></pre>
     \textbackslash epsilon\$ para explicar seus experimentos},
   date = {2024-08-22},
   url = {https://gustavofrosi.com.br/recap/2024-08-21 regressão linear/},
-  doi = {10.59350/a3r8n-ee175},
+  doi = {10.59350/ettr2-9w559},
   langid = {pt}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-frosi2024" class="csl-entry quarto-appendix-citeas">
 Frosi, Gustavo. 2024. <span>“Do caos ao conhecimento: &lt;br&gt; use $y
 = \beta_{0} + \beta_{1}x + \epsilon$ para explicar seus
-experimentos.”</span> August 22. <a href="https://doi.org/10.59350/a3r8n-ee175">https://doi.org/10.59350/a3r8n-ee175</a>.
+experimentos.”</span> August 22. <a href="https://doi.org/10.59350/ettr2-9w559">https://doi.org/10.59350/ettr2-9w559</a>.
 </div></div></section></div> ]]></description>
   <category>R</category>
   <category>Regressão Linear</category>
