@@ -10,6 +10,7 @@ website:
   back-to-top-navigation: true
   favicon: "ima/FS2.png"
   site-url: https://gustavofrosi.com.br
+  # description: "A great sample blog"
   open-graph: true
   page-navigation: true
   search: false
@@ -44,27 +45,12 @@ website:
             text: "Artigos"
           - href: resumos.qmd
             text: "Resumos"
-          # - artigos.qmd
-          # - trabalhos_pos/resumos.qmd
       - text: "Posts"
         href: recap.qmd
       - text: "Gallery"
         href: gallery.qmd
       - icon: rss
         href: index.xml
-
-  # sidebar:
-  # - id: trabalhos
-  #   title: "Trabalho Científico"
-  #   # style: "docked"
-  #   # background: light
-  #   # collapse-level: 4
-  #   contents:
-  #     - text: "Artigos"
-  #       href: trabalhos_pos/artigos.qmd
-  #     - text: "Resumos e apresentações"
-  #       href: CV/index.qmd
-  #       # href: trabalhos_pos/resumos.qmd
 
 format:
   html:

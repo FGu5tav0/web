@@ -5,10 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Gustavo Frosi</title>
-<link>https://gustavofrosi.com.br/recap.html</link>
-<atom:link href="https://gustavofrosi.com.br/recap.xml" rel="self" type="application/rss+xml"/>
-<description></description>
+<title>GF&#39;s blog</title>
+<link>https://gustavofrosi.com.br/rss.html</link>
+<atom:link href="https://gustavofrosi.com.br/rss.xml" rel="self" type="application/rss+xml"/>
+<description>The blog</description>
+<language>pt</language>
 <generator>quarto-1.9.36</generator>
 <lastBuildDate>Sun, 31 Aug 2025 03:00:00 GMT</lastBuildDate>
 <item>
