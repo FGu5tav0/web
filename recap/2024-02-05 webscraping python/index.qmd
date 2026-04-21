@@ -8,6 +8,7 @@ categories:
   - R
   - python
   - Web scraping
+doi: 10.59350/k3qdt-7h328
 toc: true
 description: "Automatizando o download de notas para consumidor final e a extração de dados."
 image: logo.jpg
