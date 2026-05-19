@@ -131,23 +131,23 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
 </figcaption>
 <div aria-describedby="tbl-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="jvmrhrczzo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jvmrhrczzo table {
+<div id="jswkyuxbht" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jswkyuxbht table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jvmrhrczzo thead, #jvmrhrczzo tbody, #jvmrhrczzo tfoot, #jvmrhrczzo tr, #jvmrhrczzo td, #jvmrhrczzo th {
+#jswkyuxbht thead, #jswkyuxbht tbody, #jswkyuxbht tfoot, #jswkyuxbht tr, #jswkyuxbht td, #jswkyuxbht th {
   border-style: none;
 }
 
-#jvmrhrczzo p {
+#jswkyuxbht p {
   margin: 0;
   padding: 0;
 }
 
-#jvmrhrczzo .gt_table {
+#jswkyuxbht .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -173,12 +173,12 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-left-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_caption {
+#jswkyuxbht .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jvmrhrczzo .gt_title {
+#jswkyuxbht .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -190,7 +190,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-width: 0;
 }
 
-#jvmrhrczzo .gt_subtitle {
+#jswkyuxbht .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -202,7 +202,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-width: 0;
 }
 
-#jvmrhrczzo .gt_heading {
+#jswkyuxbht .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -214,13 +214,13 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_bottom_border {
+#jswkyuxbht .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_col_headings {
+#jswkyuxbht .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -235,7 +235,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_col_heading {
+#jswkyuxbht .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -255,7 +255,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#jvmrhrczzo .gt_column_spanner_outer {
+#jswkyuxbht .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -267,15 +267,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 4px;
 }
 
-#jvmrhrczzo .gt_column_spanner_outer:first-child {
+#jswkyuxbht .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jvmrhrczzo .gt_column_spanner_outer:last-child {
+#jswkyuxbht .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jvmrhrczzo .gt_column_spanner {
+#jswkyuxbht .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -287,11 +287,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   width: 100%;
 }
 
-#jvmrhrczzo .gt_spanner_row {
+#jswkyuxbht .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jvmrhrczzo .gt_group_heading {
+#jswkyuxbht .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -317,7 +317,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   text-align: left;
 }
 
-#jvmrhrczzo .gt_empty_group_heading {
+#jswkyuxbht .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -332,15 +332,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: middle;
 }
 
-#jvmrhrczzo .gt_from_md > :first-child {
+#jswkyuxbht .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jvmrhrczzo .gt_from_md > :last-child {
+#jswkyuxbht .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jvmrhrczzo .gt_row {
+#jswkyuxbht .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -359,7 +359,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#jvmrhrczzo .gt_stub {
+#jswkyuxbht .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -372,7 +372,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#jvmrhrczzo .gt_stub_row_group {
+#jswkyuxbht .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -386,15 +386,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: top;
 }
 
-#jvmrhrczzo .gt_row_group_first td {
+#jswkyuxbht .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jvmrhrczzo .gt_row_group_first th {
+#jswkyuxbht .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jvmrhrczzo .gt_summary_row {
+#jswkyuxbht .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -404,16 +404,16 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#jvmrhrczzo .gt_first_summary_row {
+#jswkyuxbht .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_first_summary_row.thick {
+#jswkyuxbht .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jvmrhrczzo .gt_last_summary_row {
+#jswkyuxbht .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -423,7 +423,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_grand_summary_row {
+#jswkyuxbht .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -433,7 +433,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#jvmrhrczzo .gt_first_grand_summary_row {
+#jswkyuxbht .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -443,7 +443,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_last_grand_summary_row_top {
+#jswkyuxbht .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -453,11 +453,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_striped {
+#jswkyuxbht .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jvmrhrczzo .gt_table_body {
+#jswkyuxbht .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -466,7 +466,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_footnotes {
+#jswkyuxbht .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -480,7 +480,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_footnote {
+#jswkyuxbht .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -489,7 +489,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#jvmrhrczzo .gt_sourcenotes {
+#jswkyuxbht .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -503,7 +503,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#jvmrhrczzo .gt_sourcenote {
+#jswkyuxbht .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -511,72 +511,72 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#jvmrhrczzo .gt_left {
+#jswkyuxbht .gt_left {
   text-align: left;
 }
 
-#jvmrhrczzo .gt_center {
+#jswkyuxbht .gt_center {
   text-align: center;
 }
 
-#jvmrhrczzo .gt_right {
+#jswkyuxbht .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jvmrhrczzo .gt_font_normal {
+#jswkyuxbht .gt_font_normal {
   font-weight: normal;
 }
 
-#jvmrhrczzo .gt_font_bold {
+#jswkyuxbht .gt_font_bold {
   font-weight: bold;
 }
 
-#jvmrhrczzo .gt_font_italic {
+#jswkyuxbht .gt_font_italic {
   font-style: italic;
 }
 
-#jvmrhrczzo .gt_super {
+#jswkyuxbht .gt_super {
   font-size: 65%;
 }
 
-#jvmrhrczzo .gt_footnote_marks {
+#jswkyuxbht .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jvmrhrczzo .gt_asterisk {
+#jswkyuxbht .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jvmrhrczzo .gt_indent_1 {
+#jswkyuxbht .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jvmrhrczzo .gt_indent_2 {
+#jswkyuxbht .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jvmrhrczzo .gt_indent_3 {
+#jswkyuxbht .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jvmrhrczzo .gt_indent_4 {
+#jswkyuxbht .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jvmrhrczzo .gt_indent_5 {
+#jswkyuxbht .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jvmrhrczzo .katex-display {
+#jswkyuxbht .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jvmrhrczzo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#jswkyuxbht div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1357,7 +1357,7 @@ font-style: inherit;">#        dpi = 1200)</span></span></code></pre></div></div
 <p>Os snippets são blocos de código que podem ser chamados rapidamente no corpo do script, utilizando palavras-chave. Exemplos são <code>if</code>, <code>for</code> e <code>fun</code>. Ao digitar essas palavras no RStudio, o autocomplete sugere o snippet que insere automaticamente a estrutura completa da função, otimizando o tempo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><video src="ima/2025-08-09%2016-56-27.mkv" class="img-fluid" controls=""><a href="ima/2025-08-09 16-56-27.mkv">Video</a></video></p>
+<p><video src="ima/2025-08-09-16-56-27.mkv" class="img-fluid" controls=""><a href="ima/2025-08-09-16-56-27.mkv">Video</a></video></p>
 <figcaption>Exemplo de uso de snippet</figcaption>
 </figure>
 </div>
@@ -2813,7 +2813,7 @@ Nota
 <item>
   <title>Do caos ao conhecimento:  use \(y = \beta_{0} + \beta_{1}x + \epsilon\) para explicar seus experimentos</title>
   <dc:creator>Gustavo Frosi</dc:creator>
-  <link>https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/</link>
+  <link>https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/</link>
   <description><![CDATA[ 
 
 
@@ -2840,7 +2840,7 @@ Nota
 <div id="fig-reg" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-reg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/fig-reg-1.png" class="img-fluid figure-img" width="672">
+<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/fig-reg-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1: Esquema de representação da regressão linear simples
@@ -2859,7 +2859,7 @@ Figura&nbsp;1: Esquema de representação da regressão linear simples
 <div id="fig-reg2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-reg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/fig-reg2-1.png" class="img-fluid figure-img" width="672">
+<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/fig-reg2-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-reg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2: Ajsute de curva para média de y (a) e ajsute de menor erro (b)
@@ -2873,7 +2873,7 @@ Figura&nbsp;2: Ajsute de curva para média de y (a) e ajsute de menor erro (b)
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/unnamed-chunk-4-1.gif" class="img-fluid figure-img"></p>
+<p><img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/unnamed-chunk-4-1.gif" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -2955,7 +2955,7 @@ Tabela&nbsp;1: Representação das variáveis dummy
 <div id="fig-dummy" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-dummy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/fig-dummy-1.png" class="img-fluid figure-img" width="672">
+<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/fig-dummy-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dummy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3: Representação esquemática da regressão com variável dummy
@@ -4169,7 +4169,7 @@ Tabela&nbsp;4: Resultado da regressão linear entre Dose e Cultivar para prever 
 <div id="fig-cook" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/fig-cook-1.png" class="img-fluid figure-img" width="672">
+<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/fig-cook-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4: Distância de cook para o modelo de regressão
@@ -4188,7 +4188,7 @@ Figura&nbsp;4: Distância de cook para o modelo de regressão
 <div id="fig-normalidade" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-normalidade-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/fig-normalidade-1.png" class="img-fluid figure-img" width="672">
+<img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/fig-normalidade-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normalidade-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5: QQ-plot dos resíduos do modelo
@@ -4277,7 +4277,7 @@ Tabela&nbsp;6: QQ-plot dos resíduos do modelo
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -4374,12 +4374,12 @@ F-statistic: 177.5 on 1 and 148 DF,  p-value: &lt; 2.2e-16</code></pre>
 </section>
 <section id="referências" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Referências</h1>
-<p><a href="&quot;https://galton.org/essays/1880-1889/galton-1886-jaigi-regression-stature.pdf&quot;">Galton, F.S. Regression Towards Mediocrity in Hereditary Stature. The Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246.</a></p>
-<p><a href="&quot;https://web.williams.edu/Mathematics/sjmiller/public_html/105Sp10/handouts/MethodLeastSquares.pdf&quot;">Miller, S. J. (2006). The method of least squares. Mathematics Department Brown University, 8(1), 5-11.</a></p>
+<p><a href="https://galton.org/essays/1880-1889/galton-1886-jaigi-regression-stature.pdf">Galton, F.S. Regression Towards Mediocrity in Hereditary Stature. The Journal of the Anthropological Institute of Great Britain and Ireland, 15, 246.</a></p>
+<p><a href="https://web.williams.edu/Mathematics/sjmiller/public_html/105Sp10/handouts/MethodLeastSquares.pdf">Miller, S. J. (2006). The method of least squares. Mathematics Department Brown University, 8(1), 5-11.</a></p>
 <p><a href="'">Field, A., Miles, J., &amp; Field, Z. (2012). Discovering statistics using R. SAGE Publications.</a></p>
-<p><a href="&quot;https://doi.org/10.1038/s41433-022-01949-z&quot;">Bzovsky, S., Phillips, M.R., Guymer, R.H. et al.&nbsp;The clinician’s guide to interpreting a regression analysis. Eye 36, 1715–1717 (2022).</a></p>
-<p><a href="&quot;https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wics.1198?casa_token=dBGX5Xe2CBgAAAAA%3A_H6oh6Ib_EjYxUhAAGlOsGOYDLVG8-Mr3_wBLFYWYBtB3Zbr-pltrMPkBKoDTn4GfL_ekrYJixXDag&quot;">Su, X., Yan, X., &amp; Tsai, C.-L. (2012). Linear regression. Wiley Interdisciplinary Reviews: Computational Statistics, 4(3), 275–294.</a></p>
-<p><a href="&quot;https://doi.org/10.1007/978-981-97-3385-9_7">Okoye, K., Hosseini, S. (2024). Regression Analysis in R: Linear Regression and Logistic Regression. In: R Programming. Springer, Singapore.</a></p>
+<p><a href="https://doi.org/10.1038/s41433-022-01949-z">Bzovsky, S., Phillips, M.R., Guymer, R.H. et al.&nbsp;The clinician’s guide to interpreting a regression analysis. Eye 36, 1715–1717 (2022).</a></p>
+<p><a href="https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wics.1198?casa_token=dBGX5Xe2CBgAAAAA%3A_H6oh6Ib_EjYxUhAAGlOsGOYDLVG8-Mr3_wBLFYWYBtB3Zbr-pltrMPkBKoDTn4GfL_ekrYJixXDag">Su, X., Yan, X., &amp; Tsai, C.-L. (2012). Linear regression. Wiley Interdisciplinary Reviews: Computational Statistics, 4(3), 275–294.</a></p>
+<p><a href="https://doi.org/10.1007/978-981-97-3385-9_7">Okoye, K., Hosseini, S. (2024). Regression Analysis in R: Linear Regression and Logistic Regression. In: R Programming. Springer, Singapore.</a></p>
 
 
 </section>
@@ -4390,7 +4390,7 @@ F-statistic: 177.5 on 1 and 148 DF,  p-value: &lt; 2.2e-16</code></pre>
     \textbackslash beta\_\{0\} + \textbackslash beta\_\{1\}x +
     \textbackslash epsilon\$ para explicar seus experimentos},
   date = {2024-08-22},
-  url = {https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/},
+  url = {https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/},
   doi = {10.59350/ettr2-9w559},
   langid = {pt}
 }
@@ -4402,9 +4402,9 @@ experimentos.”</span> August 22. <a href="https://doi.org/10.59350/ettr2-9w559
   <category>R</category>
   <category>Regressão Linear</category>
   <category>Estatística</category>
-  <guid>https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/</guid>
+  <guid>https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/</guid>
   <pubDate>Thu, 22 Aug 2024 03:00:00 GMT</pubDate>
-  <media:content url="https://gustavofrosi.com.br/recap/2024-08-21-regressão-linear/ima_fundo.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/ima_fundo.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Quantos artigos eu preciso ter no currículo até o fim do doutorado em Ciência do Solo?</title>

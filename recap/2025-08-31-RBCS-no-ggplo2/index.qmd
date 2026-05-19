@@ -344,7 +344,7 @@ ptt <- pt1 / p3
 
 Os snippets são blocos de código que podem ser chamados rapidamente no corpo do script, utilizando palavras-chave. Exemplos são `if`, `for` e `fun`. Ao digitar essas palavras no RStudio, o autocomplete sugere o snippet que insere automaticamente a estrutura completa da função, otimizando o tempo.
 
-![Exemplo de uso de snippet](ima/2025-08-09 16-56-27.mkv)
+![Exemplo de uso de snippet](ima/2025-08-09-16-56-27.mkv)
 
 ## Snippet rbcs
 
