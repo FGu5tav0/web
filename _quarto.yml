@@ -49,6 +49,7 @@ website:
         href: recap.qmd
       - text: "Gallery"
         href: gallery.qmd
+    right:
       - icon: rss
         href: rss.xml
 
