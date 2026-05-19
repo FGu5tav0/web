@@ -87,7 +87,7 @@ mouseInfo()
 
 O vídeo abaixo demonstra o funcionamento do MouseInfo, exibindo as marcações das coordenadas x e y à medida que o mouse é movido.
 
-![](clicks - 1707185627966.mp4)
+![](clicks-1707185627966.mp4)
 
 
 Para encontar os ponto certo basta realizar um teste com o MouseInfo aberto. Abra o [site](https://www.sefaz.rs.gov.br/ASP/AAE_ROOT/NFE/SAT-WEB-NFE-NFC_1.asp?HML=&chaveNFe=) onde as notas serão baixadas e identifique os pontos onde será necessário realizar os cliques. O atalho **F6** pode ser utilizado no MouseInfo para marcar as pontos x e y. Siga os passo:
