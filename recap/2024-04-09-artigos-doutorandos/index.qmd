@@ -9,6 +9,7 @@ categories:
   - Doutorado
   - DataViz
   - ggplot2
+doi: 10.59350/bzssr-kxs17
 toc: true
 description: "Aproximação da quantidade de artigos que alunos possuem publicados ao final do Doutorado"
 image: aritogos_ima.jpeg

@@ -4,7 +4,7 @@ code-fold: true
 toc: true
 listing:
   feed:
-    type: full
+    type: partial
   id: recap-listings
   contents: recap
   sort: "date desc"

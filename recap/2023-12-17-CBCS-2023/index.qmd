@@ -9,6 +9,7 @@ code-fold: true
 categories: 
   - R
   - Solos
+doi: 10.59350/k52fq-pv005
 toc: true
 description: "Explorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS."
 image: logo.png

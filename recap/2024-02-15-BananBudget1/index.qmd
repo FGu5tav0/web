@@ -10,6 +10,7 @@ categories:
   - R
   - DataViz
   - ggplot2
+doi: 10.59350/enae7-stj21
 toc: true
 description: "Análise exploratória de gastos do mercado com o R com foco em visualização."
 image: pao_choco.jpg
