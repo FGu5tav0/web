@@ -8,6 +8,7 @@ categories:
   - R
   - Solos
 doi: 10.59350/97z3m-yvf13
+citation: true
 toc: true
 description: "Explorando os trabalhos publicados e apresentados na XV RSBCS."
 image: logo.png

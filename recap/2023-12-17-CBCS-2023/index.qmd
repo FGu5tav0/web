@@ -10,6 +10,7 @@ categories:
   - R
   - Solos
 doi: 10.59350/k52fq-pv005
+citation: true
 toc: true
 description: "Explorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS."
 image: logo.png

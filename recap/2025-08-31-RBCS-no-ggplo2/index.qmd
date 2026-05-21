@@ -11,6 +11,7 @@ categories:
   - RBCS
   - ggplot2
 doi: 10.59350/tx9q9-mqy45
+citation: true
 toc: true
 image: th.png
 description: "Criando um snippet para o padrão gráfico da Revista Brasileira de Ciência do Solo"
