@@ -1,0 +1,48 @@
+/* Aplica Title Case a todos os títulos de parágrafos */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+}
+
+/* Aplica a primeira letra em maiúscula e o restante em minúsculas apenas ao título principal */
+.page-title::first-letter {
+    text-transform: uppercase;
+}
+
+.page-title {
+    text-transform: lowercase;
+}
+
+
+p {
+  text-align: justify;
+}
+
+/*  */
+
+.quarto-title-banner {
+  background: linear-gradient(
+    135deg,
+    #3F4347 0%,
+    #6E7478 35%,
+    #AEB4B7 55%,
+    #7B8286 75%,
+    #44484C 100%
+  ) !important;
+
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,.18),
+              0 6px 18px rgba(0,0,0,.18);
+}
+
+/* .quarto-title-banner {
+  background: linear-gradient(
+    120deg,
+    #5C5245,
+    #8B8878,
+    #C7C2A5,
+    #8B8878,
+    #5C5245
+  ) !important;
+
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.18),
+              0 6px 18px rgba(0,0,0,.18);
+} */
