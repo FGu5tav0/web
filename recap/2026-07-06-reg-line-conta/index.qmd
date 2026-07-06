@@ -879,3 +879,12 @@ Na @fig-dag há exemplos de algumas relações que podem ser encontradas. Como p
 ![Possíveis relações entre variáveis](plot_causa.jpeg){#fig-dag}
 
 Ainda assim, com os avanços dos estudos, essas variáveis ocultas podem ir sendo descobertas e aprimorando a nossa teoria... Incrível!
+
+
+
+::: {.callout-important collapse="true" title="Ajuda estatística"}
+
+Boa parte dos cálculos e das dúvidas foi resolvida graças à ajuda de Diogo Bolzan (um quase estatístico da UFRGS).
+
+:::
+
