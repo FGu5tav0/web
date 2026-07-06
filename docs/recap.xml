@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Gustavo Frosi</title>
+<link>https://gustavofrosi.com.br/recap.html</link>
+<atom:link href="https://gustavofrosi.com.br/recap.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Mon, 06 Jul 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Do ponto à linha: criando uma regressão para além de clicar em botão</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2026-07-06-reg-line-conta/</link>
+  <description><![CDATA[ Entender a regressão aos “pedaços” funciona, mas há limites. Aqui, reúno algumas “peças” de como a regressão linear funciona. Assim, um entendimento um pouco mais amplo dos cálculos que dão origem à regressão linear é exposto. A ideia é ir do plot dos pontos até as linhas de regressão e de intervalos de confiança. Isso pode servir como base para entender não só o funcionamento como também os usos e as limitações. ]]></description>
+  <category>R</category>
+  <category>Regressão Linear</category>
+  <category>Estatística</category>
+  <guid>https://gustavofrosi.com.br/recap/2026-07-06-reg-line-conta/</guid>
+  <pubDate>Mon, 06 Jul 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2026-07-06-reg-line-conta/Reg_mao.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Gráficos para Revista Brasileira de Ciência do Solo</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2025-08-31-RBCS-no-ggplo2/</link>
+  <description><![CDATA[ Criando um snippet para o padrão gráfico da Revista Brasileira de Ciência do Solo ]]></description>
+  <category>R</category>
+  <category>Solos</category>
+  <category>RBCS</category>
+  <category>ggplot2</category>
+  <guid>https://gustavofrosi.com.br/recap/2025-08-31-RBCS-no-ggplo2/</guid>
+  <pubDate>Sun, 31 Aug 2025 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2025-08-31-RBCS-no-ggplo2/th.png" medium="image" type="image/png" height="78" width="144"/>
+</item>
+<item>
+  <title>Trabalhos - XV Reunião Sul Brasileira de Ciência do Solo</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2025-01-05-RSBCS-2024/</link>
+  <description><![CDATA[ Explorando os trabalhos publicados e apresentados na XV RSBCS. ]]></description>
+  <category>R</category>
+  <category>Solos</category>
+  <guid>https://gustavofrosi.com.br/recap/2025-01-05-RSBCS-2024/</guid>
+  <pubDate>Sun, 05 Jan 2025 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2025-01-05-RSBCS-2024/logo.png" medium="image" type="image/png" height="45" width="144"/>
+</item>
+<item>
+  <title>Do caos ao conhecimento:  use \(y = \beta_{0} + \beta_{1}x + \epsilon\) para explicar seus experimentos</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/</link>
+  <description><![CDATA[ Aplicando a tecnologia de regressão linear para dados contínuos e/ou discretos ]]></description>
+  <category>R</category>
+  <category>Regressão Linear</category>
+  <category>Estatística</category>
+  <guid>https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/</guid>
+  <pubDate>Thu, 22 Aug 2024 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2024-08-21-regressao-linear/ima_fundo.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Quantos artigos eu preciso ter no currículo até o fim do doutorado em Ciência do Solo?</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2024-04-09-artigos-doutorandos/</link>
+  <description><![CDATA[ Aproximação da quantidade de artigos que alunos possuem publicados ao final do Doutorado ]]></description>
+  <category>R</category>
+  <category>Doutorado</category>
+  <category>DataViz</category>
+  <category>ggplot2</category>
+  <guid>https://gustavofrosi.com.br/recap/2024-04-09-artigos-doutorandos/</guid>
+  <pubDate>Mon, 15 Apr 2024 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2024-04-09-artigos-doutorandos/aritogos_ima.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>BananaBudget</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <dc:creator>Diogo Bolzan</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2024-02-15-BananBudget1/</link>
+  <description><![CDATA[ Análise exploratória de gastos do mercado com o R com foco em visualização. ]]></description>
+  <category>R</category>
+  <category>DataViz</category>
+  <category>ggplot2</category>
+  <guid>https://gustavofrosi.com.br/recap/2024-02-15-BananBudget1/</guid>
+  <pubDate>Thu, 15 Feb 2024 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2024-02-15-BananBudget1/pao_choco.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Web scraping Nota Fiscal Gaúcha</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2024-02-05-webscraping-python/</link>
+  <description><![CDATA[ Automatizando o download de notas para consumidor final e a extração de dados. ]]></description>
+  <category>R</category>
+  <category>python</category>
+  <category>Web scraping</category>
+  <guid>https://gustavofrosi.com.br/recap/2024-02-05-webscraping-python/</guid>
+  <pubDate>Tue, 06 Feb 2024 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2024-02-05-webscraping-python/logo.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Trabalhos - XXIII CLACS | XXXVIII CBCS</title>
+  <dc:creator>Gustavo Frosi</dc:creator>
+  <dc:creator>Dayana Eckert</dc:creator>
+  <link>https://gustavofrosi.com.br/recap/2023-12-17-CBCS-2023/</link>
+  <description><![CDATA[ Explorando a relação dos trabalhos publicados e apresentados no XXIII CLACS | XXXVIII CBCS. ]]></description>
+  <category>R</category>
+  <category>Solos</category>
+  <guid>https://gustavofrosi.com.br/recap/2023-12-17-CBCS-2023/</guid>
+  <pubDate>Sun, 17 Dec 2023 03:00:00 GMT</pubDate>
+  <media:content url="https://gustavofrosi.com.br/recap/2023-12-17-CBCS-2023/logo.png" medium="image" type="image/png" height="70" width="144"/>
+</item>
+</channel>
+</rss>
