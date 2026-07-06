@@ -20,6 +20,7 @@ image: Reg_mao.jpeg
 #title-block-banner-color: "#FFFFFF"
 title-block-banner: true
 title-block-banner-color: "#FFFFFF"
+description: "Construindo uma regressão linear simples passo a passo"
 css: styles.css
 date: "2026/07/06"
 lang: pt

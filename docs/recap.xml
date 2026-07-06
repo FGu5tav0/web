@@ -15,7 +15,7 @@
   <title>Do ponto à linha: criando uma regressão para além de clicar em botão</title>
   <dc:creator>Gustavo Frosi</dc:creator>
   <link>https://gustavofrosi.com.br/recap/2026-07-06-reg-line-conta/</link>
-  <description><![CDATA[ Entender a regressão aos “pedaços” funciona, mas há limites. Aqui, reúno algumas “peças” de como a regressão linear funciona. Assim, um entendimento um pouco mais amplo dos cálculos que dão origem à regressão linear é exposto. A ideia é ir do plot dos pontos até as linhas de regressão e de intervalos de confiança. Isso pode servir como base para entender não só o funcionamento como também os usos e as limitações. ]]></description>
+  <description><![CDATA[ Construindo uma regressão linear simples passo a passo ]]></description>
   <category>R</category>
   <category>Regressão Linear</category>
   <category>Estatística</category>
