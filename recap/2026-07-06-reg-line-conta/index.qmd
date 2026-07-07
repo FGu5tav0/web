@@ -33,7 +33,7 @@ execute:
     message: false
 format:
   html:
-    embed-resources: true
+    embed-resources: false
 ---
 
 
