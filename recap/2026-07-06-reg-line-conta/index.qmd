@@ -31,9 +31,9 @@ execute:
     eval: true
     warning: false
     message: false
-format:
-  html:
-    embed-resources: false
+# format:
+#   html:
+#     embed-resources: false
 ---
 
 

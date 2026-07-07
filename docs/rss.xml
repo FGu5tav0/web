@@ -94,23 +94,23 @@ Tabela&nbsp;1: Dados para a regressão
 </figcaption>
 <div aria-describedby="tbl-teste-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="jbekcezvyf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jbekcezvyf table {
+<div id="inrgqbnsnr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#inrgqbnsnr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jbekcezvyf thead, #jbekcezvyf tbody, #jbekcezvyf tfoot, #jbekcezvyf tr, #jbekcezvyf td, #jbekcezvyf th {
+#inrgqbnsnr thead, #inrgqbnsnr tbody, #inrgqbnsnr tfoot, #inrgqbnsnr tr, #inrgqbnsnr td, #inrgqbnsnr th {
   border-style: none;
 }
 
-#jbekcezvyf p {
+#inrgqbnsnr p {
   margin: 0;
   padding: 0;
 }
 
-#jbekcezvyf .gt_table {
+#inrgqbnsnr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -136,12 +136,12 @@ Tabela&nbsp;1: Dados para a regressão
   border-left-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_caption {
+#inrgqbnsnr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jbekcezvyf .gt_title {
+#inrgqbnsnr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -153,7 +153,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-bottom-width: 0;
 }
 
-#jbekcezvyf .gt_subtitle {
+#inrgqbnsnr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -165,7 +165,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-top-width: 0;
 }
 
-#jbekcezvyf .gt_heading {
+#inrgqbnsnr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -177,13 +177,13 @@ Tabela&nbsp;1: Dados para a regressão
   border-right-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_bottom_border {
+#inrgqbnsnr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_col_headings {
+#inrgqbnsnr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -198,7 +198,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-right-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_col_heading {
+#inrgqbnsnr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -218,7 +218,7 @@ Tabela&nbsp;1: Dados para a regressão
   overflow-x: hidden;
 }
 
-#jbekcezvyf .gt_column_spanner_outer {
+#inrgqbnsnr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -230,15 +230,15 @@ Tabela&nbsp;1: Dados para a regressão
   padding-right: 4px;
 }
 
-#jbekcezvyf .gt_column_spanner_outer:first-child {
+#inrgqbnsnr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jbekcezvyf .gt_column_spanner_outer:last-child {
+#inrgqbnsnr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jbekcezvyf .gt_column_spanner {
+#inrgqbnsnr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -250,11 +250,11 @@ Tabela&nbsp;1: Dados para a regressão
   width: 100%;
 }
 
-#jbekcezvyf .gt_spanner_row {
+#inrgqbnsnr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jbekcezvyf .gt_group_heading {
+#inrgqbnsnr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -280,7 +280,7 @@ Tabela&nbsp;1: Dados para a regressão
   text-align: left;
 }
 
-#jbekcezvyf .gt_empty_group_heading {
+#inrgqbnsnr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -295,15 +295,15 @@ Tabela&nbsp;1: Dados para a regressão
   vertical-align: middle;
 }
 
-#jbekcezvyf .gt_from_md > :first-child {
+#inrgqbnsnr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jbekcezvyf .gt_from_md > :last-child {
+#inrgqbnsnr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jbekcezvyf .gt_row {
+#inrgqbnsnr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -322,7 +322,7 @@ Tabela&nbsp;1: Dados para a regressão
   overflow-x: hidden;
 }
 
-#jbekcezvyf .gt_stub {
+#inrgqbnsnr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -335,7 +335,7 @@ Tabela&nbsp;1: Dados para a regressão
   padding-right: 5px;
 }
 
-#jbekcezvyf .gt_stub_row_group {
+#inrgqbnsnr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -349,15 +349,15 @@ Tabela&nbsp;1: Dados para a regressão
   vertical-align: top;
 }
 
-#jbekcezvyf .gt_row_group_first td {
+#inrgqbnsnr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jbekcezvyf .gt_row_group_first th {
+#inrgqbnsnr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jbekcezvyf .gt_summary_row {
+#inrgqbnsnr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -367,16 +367,16 @@ Tabela&nbsp;1: Dados para a regressão
   padding-right: 5px;
 }
 
-#jbekcezvyf .gt_first_summary_row {
+#inrgqbnsnr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_first_summary_row.thick {
+#inrgqbnsnr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jbekcezvyf .gt_last_summary_row {
+#inrgqbnsnr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -386,7 +386,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-bottom-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_grand_summary_row {
+#inrgqbnsnr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -396,7 +396,7 @@ Tabela&nbsp;1: Dados para a regressão
   padding-right: 5px;
 }
 
-#jbekcezvyf .gt_first_grand_summary_row {
+#inrgqbnsnr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -406,7 +406,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-top-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_last_grand_summary_row_top {
+#inrgqbnsnr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -416,11 +416,11 @@ Tabela&nbsp;1: Dados para a regressão
   border-bottom-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_striped {
+#inrgqbnsnr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jbekcezvyf .gt_table_body {
+#inrgqbnsnr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -429,7 +429,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-bottom-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_footnotes {
+#inrgqbnsnr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -443,7 +443,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-right-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_footnote {
+#inrgqbnsnr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -452,7 +452,7 @@ Tabela&nbsp;1: Dados para a regressão
   padding-right: 5px;
 }
 
-#jbekcezvyf .gt_sourcenotes {
+#inrgqbnsnr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -466,7 +466,7 @@ Tabela&nbsp;1: Dados para a regressão
   border-right-color: #D3D3D3;
 }
 
-#jbekcezvyf .gt_sourcenote {
+#inrgqbnsnr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -474,72 +474,72 @@ Tabela&nbsp;1: Dados para a regressão
   padding-right: 5px;
 }
 
-#jbekcezvyf .gt_left {
+#inrgqbnsnr .gt_left {
   text-align: left;
 }
 
-#jbekcezvyf .gt_center {
+#inrgqbnsnr .gt_center {
   text-align: center;
 }
 
-#jbekcezvyf .gt_right {
+#inrgqbnsnr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jbekcezvyf .gt_font_normal {
+#inrgqbnsnr .gt_font_normal {
   font-weight: normal;
 }
 
-#jbekcezvyf .gt_font_bold {
+#inrgqbnsnr .gt_font_bold {
   font-weight: bold;
 }
 
-#jbekcezvyf .gt_font_italic {
+#inrgqbnsnr .gt_font_italic {
   font-style: italic;
 }
 
-#jbekcezvyf .gt_super {
+#inrgqbnsnr .gt_super {
   font-size: 65%;
 }
 
-#jbekcezvyf .gt_footnote_marks {
+#inrgqbnsnr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jbekcezvyf .gt_asterisk {
+#inrgqbnsnr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jbekcezvyf .gt_indent_1 {
+#inrgqbnsnr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jbekcezvyf .gt_indent_2 {
+#inrgqbnsnr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jbekcezvyf .gt_indent_3 {
+#inrgqbnsnr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jbekcezvyf .gt_indent_4 {
+#inrgqbnsnr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jbekcezvyf .gt_indent_5 {
+#inrgqbnsnr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jbekcezvyf .katex-display {
+#inrgqbnsnr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jbekcezvyf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#inrgqbnsnr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -766,23 +766,23 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
 </figcaption>
 <div aria-describedby="tbl-anova-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="gfvceqmipe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gfvceqmipe table {
+<div id="thxwmqlepo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#thxwmqlepo table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gfvceqmipe thead, #gfvceqmipe tbody, #gfvceqmipe tfoot, #gfvceqmipe tr, #gfvceqmipe td, #gfvceqmipe th {
+#thxwmqlepo thead, #thxwmqlepo tbody, #thxwmqlepo tfoot, #thxwmqlepo tr, #thxwmqlepo td, #thxwmqlepo th {
   border-style: none;
 }
 
-#gfvceqmipe p {
+#thxwmqlepo p {
   margin: 0;
   padding: 0;
 }
 
-#gfvceqmipe .gt_table {
+#thxwmqlepo .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -808,12 +808,12 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-left-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_caption {
+#thxwmqlepo .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gfvceqmipe .gt_title {
+#thxwmqlepo .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -825,7 +825,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-bottom-width: 0;
 }
 
-#gfvceqmipe .gt_subtitle {
+#thxwmqlepo .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -837,7 +837,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-top-width: 0;
 }
 
-#gfvceqmipe .gt_heading {
+#thxwmqlepo .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -849,13 +849,13 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-right-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_bottom_border {
+#thxwmqlepo .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_col_headings {
+#thxwmqlepo .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -870,7 +870,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-right-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_col_heading {
+#thxwmqlepo .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -890,7 +890,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   overflow-x: hidden;
 }
 
-#gfvceqmipe .gt_column_spanner_outer {
+#thxwmqlepo .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -902,15 +902,15 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   padding-right: 4px;
 }
 
-#gfvceqmipe .gt_column_spanner_outer:first-child {
+#thxwmqlepo .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gfvceqmipe .gt_column_spanner_outer:last-child {
+#thxwmqlepo .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gfvceqmipe .gt_column_spanner {
+#thxwmqlepo .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -922,11 +922,11 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   width: 100%;
 }
 
-#gfvceqmipe .gt_spanner_row {
+#thxwmqlepo .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gfvceqmipe .gt_group_heading {
+#thxwmqlepo .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -952,7 +952,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   text-align: left;
 }
 
-#gfvceqmipe .gt_empty_group_heading {
+#thxwmqlepo .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -967,15 +967,15 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   vertical-align: middle;
 }
 
-#gfvceqmipe .gt_from_md > :first-child {
+#thxwmqlepo .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gfvceqmipe .gt_from_md > :last-child {
+#thxwmqlepo .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gfvceqmipe .gt_row {
+#thxwmqlepo .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -994,7 +994,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   overflow-x: hidden;
 }
 
-#gfvceqmipe .gt_stub {
+#thxwmqlepo .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1007,7 +1007,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   padding-right: 5px;
 }
 
-#gfvceqmipe .gt_stub_row_group {
+#thxwmqlepo .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1021,15 +1021,15 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   vertical-align: top;
 }
 
-#gfvceqmipe .gt_row_group_first td {
+#thxwmqlepo .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gfvceqmipe .gt_row_group_first th {
+#thxwmqlepo .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gfvceqmipe .gt_summary_row {
+#thxwmqlepo .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1039,16 +1039,16 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   padding-right: 5px;
 }
 
-#gfvceqmipe .gt_first_summary_row {
+#thxwmqlepo .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_first_summary_row.thick {
+#thxwmqlepo .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gfvceqmipe .gt_last_summary_row {
+#thxwmqlepo .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1058,7 +1058,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-bottom-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_grand_summary_row {
+#thxwmqlepo .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1068,7 +1068,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   padding-right: 5px;
 }
 
-#gfvceqmipe .gt_first_grand_summary_row {
+#thxwmqlepo .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1078,7 +1078,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-top-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_last_grand_summary_row_top {
+#thxwmqlepo .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1088,11 +1088,11 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-bottom-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_striped {
+#thxwmqlepo .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gfvceqmipe .gt_table_body {
+#thxwmqlepo .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1101,7 +1101,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-bottom-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_footnotes {
+#thxwmqlepo .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1115,7 +1115,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-right-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_footnote {
+#thxwmqlepo .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1124,7 +1124,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   padding-right: 5px;
 }
 
-#gfvceqmipe .gt_sourcenotes {
+#thxwmqlepo .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1138,7 +1138,7 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   border-right-color: #D3D3D3;
 }
 
-#gfvceqmipe .gt_sourcenote {
+#thxwmqlepo .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1146,72 +1146,72 @@ Tabela&nbsp;2: ANOVA para a regressão linear do exemplo
   padding-right: 5px;
 }
 
-#gfvceqmipe .gt_left {
+#thxwmqlepo .gt_left {
   text-align: left;
 }
 
-#gfvceqmipe .gt_center {
+#thxwmqlepo .gt_center {
   text-align: center;
 }
 
-#gfvceqmipe .gt_right {
+#thxwmqlepo .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gfvceqmipe .gt_font_normal {
+#thxwmqlepo .gt_font_normal {
   font-weight: normal;
 }
 
-#gfvceqmipe .gt_font_bold {
+#thxwmqlepo .gt_font_bold {
   font-weight: bold;
 }
 
-#gfvceqmipe .gt_font_italic {
+#thxwmqlepo .gt_font_italic {
   font-style: italic;
 }
 
-#gfvceqmipe .gt_super {
+#thxwmqlepo .gt_super {
   font-size: 65%;
 }
 
-#gfvceqmipe .gt_footnote_marks {
+#thxwmqlepo .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gfvceqmipe .gt_asterisk {
+#thxwmqlepo .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gfvceqmipe .gt_indent_1 {
+#thxwmqlepo .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gfvceqmipe .gt_indent_2 {
+#thxwmqlepo .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gfvceqmipe .gt_indent_3 {
+#thxwmqlepo .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gfvceqmipe .gt_indent_4 {
+#thxwmqlepo .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gfvceqmipe .gt_indent_5 {
+#thxwmqlepo .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gfvceqmipe .katex-display {
+#thxwmqlepo .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gfvceqmipe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#thxwmqlepo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1654,23 +1654,23 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
 </figcaption>
 <div aria-describedby="tbl-comp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="ghmelgtvcj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ghmelgtvcj table {
+<div id="qzrgiyxpwf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qzrgiyxpwf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ghmelgtvcj thead, #ghmelgtvcj tbody, #ghmelgtvcj tfoot, #ghmelgtvcj tr, #ghmelgtvcj td, #ghmelgtvcj th {
+#qzrgiyxpwf thead, #qzrgiyxpwf tbody, #qzrgiyxpwf tfoot, #qzrgiyxpwf tr, #qzrgiyxpwf td, #qzrgiyxpwf th {
   border-style: none;
 }
 
-#ghmelgtvcj p {
+#qzrgiyxpwf p {
   margin: 0;
   padding: 0;
 }
 
-#ghmelgtvcj .gt_table {
+#qzrgiyxpwf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1696,12 +1696,12 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-left-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_caption {
+#qzrgiyxpwf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ghmelgtvcj .gt_title {
+#qzrgiyxpwf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1713,7 +1713,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-width: 0;
 }
 
-#ghmelgtvcj .gt_subtitle {
+#qzrgiyxpwf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1725,7 +1725,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-width: 0;
 }
 
-#ghmelgtvcj .gt_heading {
+#qzrgiyxpwf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1737,13 +1737,13 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_bottom_border {
+#qzrgiyxpwf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_col_headings {
+#qzrgiyxpwf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1758,7 +1758,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_col_heading {
+#qzrgiyxpwf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1778,7 +1778,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#ghmelgtvcj .gt_column_spanner_outer {
+#qzrgiyxpwf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1790,15 +1790,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 4px;
 }
 
-#ghmelgtvcj .gt_column_spanner_outer:first-child {
+#qzrgiyxpwf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ghmelgtvcj .gt_column_spanner_outer:last-child {
+#qzrgiyxpwf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ghmelgtvcj .gt_column_spanner {
+#qzrgiyxpwf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1810,11 +1810,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   width: 100%;
 }
 
-#ghmelgtvcj .gt_spanner_row {
+#qzrgiyxpwf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ghmelgtvcj .gt_group_heading {
+#qzrgiyxpwf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1840,7 +1840,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   text-align: left;
 }
 
-#ghmelgtvcj .gt_empty_group_heading {
+#qzrgiyxpwf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1855,15 +1855,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: middle;
 }
 
-#ghmelgtvcj .gt_from_md > :first-child {
+#qzrgiyxpwf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ghmelgtvcj .gt_from_md > :last-child {
+#qzrgiyxpwf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ghmelgtvcj .gt_row {
+#qzrgiyxpwf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1882,7 +1882,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   overflow-x: hidden;
 }
 
-#ghmelgtvcj .gt_stub {
+#qzrgiyxpwf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1895,7 +1895,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ghmelgtvcj .gt_stub_row_group {
+#qzrgiyxpwf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1909,15 +1909,15 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   vertical-align: top;
 }
 
-#ghmelgtvcj .gt_row_group_first td {
+#qzrgiyxpwf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ghmelgtvcj .gt_row_group_first th {
+#qzrgiyxpwf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ghmelgtvcj .gt_summary_row {
+#qzrgiyxpwf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1927,16 +1927,16 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ghmelgtvcj .gt_first_summary_row {
+#qzrgiyxpwf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_first_summary_row.thick {
+#qzrgiyxpwf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ghmelgtvcj .gt_last_summary_row {
+#qzrgiyxpwf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1946,7 +1946,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_grand_summary_row {
+#qzrgiyxpwf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1956,7 +1956,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ghmelgtvcj .gt_first_grand_summary_row {
+#qzrgiyxpwf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1966,7 +1966,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-top-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_last_grand_summary_row_top {
+#qzrgiyxpwf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1976,11 +1976,11 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_striped {
+#qzrgiyxpwf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ghmelgtvcj .gt_table_body {
+#qzrgiyxpwf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1989,7 +1989,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-bottom-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_footnotes {
+#qzrgiyxpwf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2003,7 +2003,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_footnote {
+#qzrgiyxpwf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2012,7 +2012,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ghmelgtvcj .gt_sourcenotes {
+#qzrgiyxpwf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2026,7 +2026,7 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   border-right-color: #D3D3D3;
 }
 
-#ghmelgtvcj .gt_sourcenote {
+#qzrgiyxpwf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2034,72 +2034,72 @@ Tabela&nbsp;1: Comparação das fontes Arial e DejaVu
   padding-right: 5px;
 }
 
-#ghmelgtvcj .gt_left {
+#qzrgiyxpwf .gt_left {
   text-align: left;
 }
 
-#ghmelgtvcj .gt_center {
+#qzrgiyxpwf .gt_center {
   text-align: center;
 }
 
-#ghmelgtvcj .gt_right {
+#qzrgiyxpwf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ghmelgtvcj .gt_font_normal {
+#qzrgiyxpwf .gt_font_normal {
   font-weight: normal;
 }
 
-#ghmelgtvcj .gt_font_bold {
+#qzrgiyxpwf .gt_font_bold {
   font-weight: bold;
 }
 
-#ghmelgtvcj .gt_font_italic {
+#qzrgiyxpwf .gt_font_italic {
   font-style: italic;
 }
 
-#ghmelgtvcj .gt_super {
+#qzrgiyxpwf .gt_super {
   font-size: 65%;
 }
 
-#ghmelgtvcj .gt_footnote_marks {
+#qzrgiyxpwf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ghmelgtvcj .gt_asterisk {
+#qzrgiyxpwf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ghmelgtvcj .gt_indent_1 {
+#qzrgiyxpwf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ghmelgtvcj .gt_indent_2 {
+#qzrgiyxpwf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ghmelgtvcj .gt_indent_3 {
+#qzrgiyxpwf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ghmelgtvcj .gt_indent_4 {
+#qzrgiyxpwf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ghmelgtvcj .gt_indent_5 {
+#qzrgiyxpwf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ghmelgtvcj .katex-display {
+#qzrgiyxpwf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ghmelgtvcj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qzrgiyxpwf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
