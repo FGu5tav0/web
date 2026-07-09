@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://gustavofrosi.com.br/CV/index.html</loc>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/ima/FS2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/CV/ima/FS.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gustavofrosi.com.br/index.html</loc>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/ima/FS2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/ima/t1.jpeg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/ima/FS.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gustavofrosi.com.br/Projetos/index.html</loc>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/ima/FS2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://gustavofrosi.com.br/Projetos/ima/FS.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://gustavofrosi.com.br/recap/2023-12-17 CBCS 2023/index.html</loc>
+    <image:image>
+      <image:loc>../../ima/FS2.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>index_files/figure-html/unnamed-chunk-5-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>index_files/figure-html/unnamed-chunk-6-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>index_files/figure-html/unnamed-chunk-7-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>index_files/figure-html/unnamed-chunk-8-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>index_files/figure-html/unnamed-chunk-9-1.png</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>ima/FS.png</image:loc>
+    </image:image>
+  </url>
+</urlset>
